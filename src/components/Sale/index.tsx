@@ -12,17 +12,18 @@ export const Sale = () => {
             colorRadial: 'radial-gradient(#ffffff, #ffffff, #B7EFAD, #61F248, #61F248, #61F248)',
             color: '#61F248'
         },
-        {
-            img: semFundo2,
-            colorRadial: 'radial-gradient( #ffffff, #ffffff, #F5EB90, #EEDA29, #EEDA29, #EEDA29)',
-            color: '#EEDA29'
-        },
+        
         {
             img: semFundo3,
             colorRadial: 'radial-gradient( #ffffff, #ffffff, #F5B589, #F17F31, #F17F31, #F17F31)',
             color: '#F17F31'
             
-        }
+        },
+        {
+            img: semFundo2,
+            colorRadial: 'radial-gradient( #ffffff, #ffffff, #F5EB90, #EEDA29, #EEDA29, #EEDA29)',
+            color: '#EEDA29'
+        },
     ]
     return (
         <Grid container spacing={2} justifyContent='center' alignContent='center' sx={{width: '100%'}} >
@@ -31,7 +32,7 @@ export const Sale = () => {
                     <Grid sx={{width: '100%'}} alignItems='center' justifyContent='center' item xs={6} md={4} lg={4} >
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: {lg: '100%' , md: '100%', xs: '100%'  }}}>
 
-                            <img src={item.img} style={{ zIndex: 3, width: '100%' }} />
+                            <img src={item.img} style={{ zIndex: 3, height: '24rem' }} />
                             <Fundo style={{background: item.colorRadial}} />
                             <Button endIcon={<MdShoppingCart />}>
                                 Comprar agora
