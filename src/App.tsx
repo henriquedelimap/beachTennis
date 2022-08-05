@@ -8,18 +8,17 @@ function App() {
   return (
     <Router>
       <ScrollToTop>
-        
-      <Routes>
-        <Route path='/' element={<DefaultLayout />} />
-        <Route path='/*' element={<DefaultLayout />} >
-          <Route index element={<Home />} />
-          <Route path='raquetes' element={<RaquetesPage />} />
-          <Route path='emBreve' element={<EmBreve />} />
-          <Route path='sobreNos' element={<SobreNos />} />
-        </Route>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<DefaultLayout />} />
+          <Route path='/*' element={<DefaultLayout />} >
+            <Route index element={<Home />} />
+            <Route path='raquetes' element={<RaquetesPage />} />
+            <Route path='emBreve' element={<EmBreve />} />
+            <Route path='sobreNos' element={<SobreNos />} />
+          </Route>
+        </Routes>
       </ScrollToTop>
-      
+
     </Router>
   )
 }

@@ -12,7 +12,7 @@ export const RaquetesPage = () => {
                 <Grid container alignItems='stretch' spacing={2}>
                     {
                         Data.map(item => (
-                            <Grid item justifyContent='flex-start' xs={6} md={4} lg={3}  >
+                            <Grid item justifyContent='flex-start' xs={12} md={4} lg={3}  >
                                 <CardRaquetes item={item} />
                             </Grid>
                         ))
