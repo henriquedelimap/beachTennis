@@ -29,13 +29,15 @@ export const Sale = () => {
         <Grid container spacing={2} justifyContent='center' alignContent='center' sx={{width: '100%'}} >
             {
                 promocoes.map(item => (
-                    <Grid sx={{width: '100%'}} alignItems='center' justifyContent='center' item xs={6} md={4} lg={4} >
+                    <Grid sx={{width: '100%'}} alignItems='center' justifyContent='center' item xs={3} md={3} lg={4}>
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: {lg: '100%' , md: '100%', xs: '100%'  }}}>
 
-                            <img src={item.img} style={{ zIndex: 3, height: '24rem' }} />
+                            <img src={item.img} style={{ zIndex: 3, height: 320  }} />
                             <Fundo style={{background: item.colorRadial}} />
-                            <Button endIcon={<MdShoppingCart />}>
-                                Comprar agora
+                            <Button sx={{position:'absolute', color: '#666666', fontWeight: 'bold', zIndex: 5, background: item.color, bottom: '10%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5}}>
+                                30% off
+                                <Borda />
+                                <Borda2 />
                             </Button>
                         </Stack>
                     </Grid >
@@ -47,7 +49,7 @@ export const Sale = () => {
 
 const Fundo = styled('div')(({ }) => ({
     position: 'absolute',
-    top: '0%',
+    top: '-8%',
     left: '50%',
     right: 0,
     width: '60%',
@@ -55,4 +57,25 @@ const Fundo = styled('div')(({ }) => ({
     borderRadius: '150rem',
     transform: 'translateX(-50%)',
     zIndex: -1
+}))
+
+const Borda = styled('div')(({})=>({
+    width: '100%',
+    height: '100%',
+    border:'2px solid #666666',
+    borderRadius: 4,
+    position: 'absolute',
+    zIndex: -1,
+    top: -2,
+    left: 2
+}))
+const Borda2 = styled('div')(({})=>({
+    width: '100%',
+    height: '100%',
+    border:'2px solid #666666',
+    borderRadius: 4,
+    position: 'absolute',
+    zIndex: -1,
+    top: 2,
+    left: -2
 }))
