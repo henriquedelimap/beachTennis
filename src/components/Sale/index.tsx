@@ -29,7 +29,7 @@ export const Sale = () => {
         <Grid container spacing={2} justifyContent='center' alignContent='center' sx={{ width: '100%' }} >
             {
                 promocoes.map(item => (
-                    <Grid sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={3} md={3} lg={4}>
+                    <Grid sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={3.5} md={3.5} lg={3.5}>
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
 
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />
@@ -54,7 +54,7 @@ const Fundo = styled('div')(({ }) => ({
     top: '-8%',
     left: '50%',
     right: 0,
-    width: '60%',
+    width: '50%',
     height: '60%',
     borderRadius: '150rem',
     transform: 'translateX(-50%)',
