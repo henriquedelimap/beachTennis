@@ -3,6 +3,8 @@ import {BsWhatsapp} from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 export const FloatingButton = () => {
     const navigate = useNavigate()
+    const text = 'Oi, Wal. Tudo bem? Gostaria de encontrar a raquete ideal pro meu tipo de jogo'
+    const link = `https://wa.me/5534998664444?text=${text}`
     return (
         <Fab
             variant='extended'
@@ -13,7 +15,7 @@ export const FloatingButton = () => {
                 bottom: 16,
                 right: 16
             }}
-            href='https://wa.me/message/HX63ODKP56H5L1'
+            href={link}
         >
 
             <Stack direction='row' spacing={1} alignItems='center'>
