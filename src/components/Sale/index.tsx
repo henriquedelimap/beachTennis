@@ -29,7 +29,7 @@ export const Sale = () => {
         <Grid container spacing={2} justifyContent='center' alignContent='center' sx={{ width: '100%' }} >
             {
                 promocoes.map(item => (
-                    <Grid sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={3.5} md={3.5} lg={3.5}>
+                    <Grid sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
 
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />
