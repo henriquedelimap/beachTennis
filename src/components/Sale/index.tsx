@@ -34,7 +34,7 @@ export const Sale = () => {
 
                             <img src={item.img} style={{ zIndex: 3, height: 320  }} />
                             <Fundo style={{background: item.colorRadial}} />
-                            <Button sx={{position:'absolute', color: '#666666', fontWeight: 'bold', zIndex: 5, background: item.color, bottom: '10%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5}}>
+                            <Button sx={{position:'absolute', color: '#666666', fontWeight: 'bold', zIndex: 5, background: item.color, bottom: '10%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5, m:.5}}>
                                 30% off
                                 <Borda />
                                 <Borda2 />
@@ -63,7 +63,7 @@ const Borda = styled('div')(({})=>({
     width: '100%',
     height: '100%',
     border:'2px solid #666666',
-    borderRadius: 4,
+    borderRadius: 6,
     position: 'absolute',
     zIndex: -1,
     top: -2,
@@ -73,7 +73,7 @@ const Borda2 = styled('div')(({})=>({
     width: '100%',
     height: '100%',
     border:'2px solid #666666',
-    borderRadius: 4,
+    borderRadius: 6,
     position: 'absolute',
     zIndex: -1,
     top: 2,
