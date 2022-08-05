@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ScrollToTop } from 'Utils'
+import { ScrollToTop } from './Utils'
 import { DefaultLayout, EmBreve, Home, RaquetesPage, SobreNos } from './Pages'
 function App() {
   const [count, setCount] = useState(0)
