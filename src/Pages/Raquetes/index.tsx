@@ -9,7 +9,7 @@ export const RaquetesPage = () => {
     return (
        <ContainerPadding>
                 <Title text='raquetes' />
-                <Grid container alignItems='stretch' spacing={2}>
+                <Grid container alignItems='stretch' rowSpacing={2} spacing={{lg: 2, md: 2, xs: 0}}>
                     {
                         Data.map(item => (
                             <Grid item justifyContent='flex-start' xs={12} md={4} lg={3}  >
