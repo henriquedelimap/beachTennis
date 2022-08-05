@@ -2,8 +2,30 @@ import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typograph
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react"
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
-
-export const CardRaquetes = (item: { img: string | undefined; title: any; material: any; description: any; subtitle: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; price: { original: number; sale: number } } ) => {
+interface Prop {
+    item: {
+        id: number;
+        img: any;
+        title: string;
+        subtitle: string;
+        price: {
+            original: number;
+            sale: number;
+        };
+        stored: number;
+        description: string;
+        subDescription: string;
+        weight: number;
+        dimensions: number[];
+        color: string[];
+        material: string;
+        role: {
+            category: string
+            brand: any
+        }}
+}
+export const CardRaquetes = (prop: Prop ) => {
+    const {item} = prop
     return ( 
         <Card sx={{height: '100%'}}>
             <CardHeader

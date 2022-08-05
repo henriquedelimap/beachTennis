@@ -13,7 +13,7 @@ export const RaquetesPage = () => {
                     {
                         Data.map(item => (
                             <Grid item justifyContent='flex-start' xs={6} md={4} lg={3}  >
-                                <CardRaquetes {...item} />
+                                <CardRaquetes item={item} />
                             </Grid>
                         ))
 

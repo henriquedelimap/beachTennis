@@ -127,6 +127,7 @@ export const Data = [
         id: 6,
         img: dnaOrange,
         title: '',
+        subtitle: '',
         price: {
             original: 0,
             sale: 0
@@ -148,6 +149,8 @@ export const Data = [
         id: 7,
         img: revolutionFullcarbonBlue,
         title: '',
+        subtitle: '',
+
         price: {
             original: 0,
             sale: 0
@@ -169,6 +172,8 @@ export const Data = [
         id: 8,
         img: revolutionFullcarbonRed,
         title: '',
+        subtitle: '',
+
         price: {
             original: 0,
             sale: 0
@@ -190,6 +195,8 @@ export const Data = [
         id: 9,
         img: revolutionFullcarbonYellow,
         title: '',
+        subtitle: '',
+
         price: {
             original: 0,
             sale: 0
@@ -210,6 +217,8 @@ export const Data = [
         id: 10,
         img: revolutionFullcarbonYellow,
         title: '',
+        subtitle: '',
+
         price: {
             original: 0,
             sale: 0
@@ -231,6 +240,8 @@ export const Data = [
         id: 11,
         img: spitfire,
         title: '',
+        subtitle: '',
+        
         price: {
             original: 0,
             sale: 0
