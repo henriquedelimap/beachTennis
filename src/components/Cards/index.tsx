@@ -1,60 +1,40 @@
 import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typography } from "@mui/material"
+import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react"
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
-interface Prop{
-    id: number;
-    img: any;
-    title: string;
-    subtitle: string;
-    price: {
-        original: number;
-        sale: number;
-    };
-    stored: number;
-    description: string;
-    subDescription: string;
-    weight: number;
-    dimensions: number[];
-    color: string[];
-    material: string;
-    role: {
-        category: string
-        brand: any
-    };
-}
-export const CardRaquetes = (prop: Prop ) => {
-    const {img, title, description, material, subtitle, price, role} = prop
+
+export const CardRaquetes = (item: { img: string | undefined; title: any; material: any; description: any; subtitle: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; price: { original: number; sale: number } } ) => {
     return ( 
         <Card sx={{height: '100%'}}>
             <CardHeader
                 avatar={
-                    <Avatar variant='square' src={img} />
+                    <Avatar variant='square' src={item.img} />
                 }
                 action={
                     <IconButton aria-label='like'>
                         <BsHeart fontSize={18} />
                     </IconButton>
                 }
-                title={title}
-                subheader={material}
+                title={item.title}
+                subheader={item.material}
 
             />
             <CardMedia
             component="img"
             height="auto"
-            alt={`raquete ${title} feita de ${material}, confira mais detalhes: ${description}`}
-            image={img}
+            alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+            image={item.img}
             >
             </CardMedia>
             <CardContent>
                 <Typography variant='subtitle2' color='text.primary'>
-                    {subtitle}
+                    {item.subtitle}
                 </Typography>
                 <Typography sx={{textDecoration: 'line-through'}} variant='body2' color='text.secondary'>
-                    R$ {price.original.toFixed(3)},00
+                    R$ {item.price.original.toFixed(3)},00
                 </Typography>
                 <Typography sx={{fontWeight: 900}} variant='body1' color='text.primary'>
-                    R$ {price.sale.toFixed(3)},00
+                    R$ {item.price.sale.toFixed(3)},00
                 </Typography>
             </CardContent>
         </Card>
