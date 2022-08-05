@@ -35,7 +35,7 @@ export const Sale = () => {
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />
                             <Fundo style={{ background: item.colorRadial }} />
                             <Button sx={{ position: 'absolute', color: 'white', zIndex: 5, background: item.color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
-                                <Typography variant='body1' sx={{ textStroke: '2px red', fontWeight: 'bold' }}>
+                                <Typography variant='body1' sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold' }}>
                                     30% off
                                 </Typography>
                                 <Borda />
