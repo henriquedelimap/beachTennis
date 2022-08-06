@@ -60,7 +60,7 @@ export const Vector2 = (prop: Prop) => {
         <div style={{zIndex: index, position: 'absolute', top: top, left: left, right: right, transform: `rotate(${rotate}deg)` }}>
 
             <motion.svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <motion.rect x="15" y="15" width="570" height="570" rx="49" stroke={color} stroke-width="110" style={{ pathLength: scrollYProgress, rotate: scrollYProgress, transformOrigin: 'top center' }}/>
+            <motion.rect d="M0 15H536C571.346 15 600 43.6538 600 79V615" width="570" height="570" rx="49" stroke={color} stroke-width="110" style={{ pathLength: scrollYProgress, rotate: scrollYProgress, transformOrigin: 'top center'}}/>
             </motion.svg>
 
         </div>

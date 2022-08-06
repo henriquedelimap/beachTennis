@@ -39,18 +39,25 @@ export const Home = () => {
                 <Vector2 index={2} top={125} left={'-18%'} rotate={-90} color={'#D73F33'} />
                 <Vector2 index={2} top={190} left={'-22%'} rotate={-90} color={'#0066cc'} />
 
-                <Vector2 index={1} top={-55} left={'-5%'} rotate={-90} color={'#0066cc'} />
-                <Vector2 index={1} top={-125} left={'0%'} rotate={-90} color={'#0066cc'} />
-                <Vector2 index={1} top={-190} left={'5%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-55} left={'-6%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-125} left={'-2%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-150} left={'2%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'6%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'10%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'14%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'18%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'22%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'26%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'30%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'34%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'38%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'42%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'46%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'50%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'54%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-175} left={'58%'} rotate={-90} color={'#0066cc'} />
 
-                <Vector2 index={2} top={-10} right={'-10%'} rotate={-90} color={'#D73F33'} />
-                <Vector2 index={2} top={55} right={'-14%'} rotate={-90} color={'#ffffff'} />
-                <Vector2 index={2} top={125} right={'-18%'} rotate={-90} color={'#0066cc'} />
-                <Vector2 index={2} top={190} right={'-22%'} rotate={-90} color={'#D73F33'} />
-
-                <Vector2 index={1} top={-55} right={'-5%'} rotate={90} color={'#D73F33'} />
-                <Vector2 index={1} top={-125} right={'0%'} rotate={90} color={'#D73F33'} />
-                <Vector2 index={1} top={-190} right={'5%'} rotate={90} color={'#D73F33'} />
+                
             </Stack>
             <Stack sx={{ height: 1000 }}>
 
