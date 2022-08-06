@@ -35,11 +35,13 @@ export const Home = () => {
                     </Button>
                 </Stack>
                 <Vector2 top={-0} left={'-10%'} rotate={-90} color={'#0066cc'} />
-                <Vector2 top={70} left={'-14%'} rotate={-90} color={'#ffffff'} />
-                <Vector2 top={140} left={'-18%'} rotate={-90} color={'#D73F33'} />
+                <Vector2 top={70} left={'-13%'} rotate={-90} color={'#ffffff'} />
+                <Vector2 top={140} left={'-16%'} rotate={-90} color={'#D73F33'} />
+                <Vector2 top={210} left={'-19%'} rotate={-90} color={'#0066cc'} />
                 <Vector2 top={0} right={'-10%'} rotate={-180} color={'#D73F33'} />
-                <Vector2 top={70} right={'-14%'} rotate={-180} color={'#ffffff'} />
-                <Vector2 top={140} right={'-18%'} rotate={-180} color={'#0066cc'} />
+                <Vector2 top={70} right={'-13%'} rotate={-180} color={'#ffffff'} />
+                <Vector2 top={140} right={'-16%'} rotate={-180} color={'#0066cc'} />
+                <Vector2 top={210} right={'-19%'} rotate={-180} color={'#D73F33'} />
             </Stack>
             <Stack sx={{ height: 1000 }}>
 
