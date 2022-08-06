@@ -21,7 +21,7 @@ export const AppearEffect = (prop: Prop) => {
     const {img, height, width, isImg, children} =prop
     const cardVariants: Variants = {
         offscreen: {
-            y: 200,
+            y: 100,
             opacity: 0
         },
         onscreen: {
