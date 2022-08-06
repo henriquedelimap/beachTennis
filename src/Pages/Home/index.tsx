@@ -34,12 +34,12 @@ export const Home = () => {
                         tecnologia de ponta
                     </Button>
                 </Stack>
-                <Vector2 index={2} top={-10} left={'-10%'} rotate={-90} color={'#0066cc'} />
-                <Vector2 index={2} top={55} left={'-14%'} rotate={-90} color={'#ffffff'} />
-                <Vector2 index={2} top={125} left={'-18%'} rotate={-90} color={'#D73F33'} />
-                <Vector2 index={2} top={190} left={'-22%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={2} top={0} left={'0%'} rotate={-90} color={'green'} />
+                <Vector2 index={2} top={10} left={'4%'} rotate={-90} color={'#ffffff'} />
+                <Vector2 index={2} top={15} left={'8%'} rotate={-90} color={'#D73F33'} />
+                <Vector2 index={2} top={20} left={'12%'} rotate={-90} color={'#0066cc'} />
 
-                <Vector2 index={1} top={-55} left={'-6%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={1} top={-350} left={'-6%'} rotate={90} color={'yellow'} />
                 <Vector2 index={1} top={-125} left={'-2%'} rotate={-90} color={'#0066cc'} />
                 <Vector2 index={1} top={-150} left={'2%'} rotate={-90} color={'#0066cc'} />
                 <Vector2 index={1} top={-175} left={'6%'} rotate={-90} color={'#0066cc'} />
