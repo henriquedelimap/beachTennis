@@ -25,8 +25,8 @@ export const AppearEffect = (prop: Prop) => {
             opacity: .4
         },
         onscreen: {
-            y: 0,
-            rotate: -15,
+            y: -16,
+            rotate: -16,
             opacity: 1,
             transition: {
                 type: "spring",
