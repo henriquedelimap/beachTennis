@@ -13,11 +13,15 @@ import banner2 from './banner2.jpeg'
 import banner3 from './banner3.jpeg'
 import banner4 from './banner4.jpeg'
 import logoQuickSand from './logoQuickSand.png'
-import logoHeros from './logoHeros.png'
 import semFundo1 from './semFundo1.png'
 import semFundo2 from './semFundo2.png'
 import semFundo3 from './semFundo3.png'
 import fundoCarbono from './fundoCarbono.jpg'
+import fundoCarbono2 from './fundoCarbono2.png'
+import fundoCarbono3 from './fundoCarbono3.png'
+import LogoHeros from './LogoHeros.svg'
+import logoHeros from './logoHeros.png'
+import {X} from './X'
 
 export {
     blackDeathGold,
@@ -35,9 +39,13 @@ export {
     banner3,
     banner4,
     logoQuickSand,
-    logoHeros,
     semFundo1,
     semFundo2,
     semFundo3,
-    fundoCarbono
+    fundoCarbono,
+    fundoCarbono2,
+    fundoCarbono3,
+    LogoHeros,
+    X,
+    logoHeros
 }

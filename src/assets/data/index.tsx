@@ -10,7 +10,6 @@ import {
     revolutionFullcarbonYellow,
     spitfire,
     logoQuickSand,
-    logoHeros
 } from '../img'
 
 export const Data = [
@@ -97,7 +96,7 @@ export const Data = [
         material: 'Full Yellow Kevlar',
         role: {
             category: 'SKU',
-            brand: logoHeros
+            brand: logoQuickSand
 
         }
     },
@@ -119,7 +118,7 @@ export const Data = [
         material: 'Full Yellow Kevlar',
         role: {
             category: 'SKU',
-            brand: logoHeros
+            brand: logoQuickSand
 
         }
     },
@@ -141,7 +140,7 @@ export const Data = [
         material: '',
         role: {
             category: 'SKU',
-            brand: logoHeros
+            brand: logoQuickSand
 
         }
     },
@@ -164,7 +163,7 @@ export const Data = [
         material: '',
         role: {
             category: 'SKU',
-            brand: logoHeros
+            brand: logoQuickSand
 
         }
     },
@@ -187,7 +186,7 @@ export const Data = [
         material: '',
         role: {
             category: 'SKU',
-            brand: logoHeros
+            brand: logoQuickSand
 
         }
     },

@@ -51,7 +51,7 @@ export const Sale = () => {
     )
 }
 
-const Fundo = styled('div')(({ }) => ({
+export const Fundo = styled('div')(({ }) => ({
     position: 'absolute',
     top: '-8%',
     left: '50%',
