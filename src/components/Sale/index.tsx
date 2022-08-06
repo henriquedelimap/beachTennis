@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import { Box, Button, Grid, Stack, Typography } from "@mui/material"
+import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 import { MdBeachAccess, MdShop, MdShop2, MdShoppingCart, MdShopTwo } from "react-icons/md"
 import { semFundo1, semFundo2, semFundo3 } from "../../assets/img"
 
@@ -26,7 +27,8 @@ export const Sale = () => {
         },
     ]
     return (
-        <Grid container spacing={2} justifyContent='center' alignContent='center' sx={{ width: '100%' }} >
+        <Grid container spacing={2} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
+            <LogoQuicksand  />
             {
                 promocoes.map(item => (
                     <Grid sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
