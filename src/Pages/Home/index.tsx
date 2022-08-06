@@ -12,37 +12,71 @@ import { AppearEffect } from "../../components/Animation"
 export const Home = () => {
     const { scrollYProgress } = useScroll()
     const raquetes = [
+       
         {
             title: '',
-            img: promocoes[0].img
+            img: promocoes[0].img,
+            xA: '10%',
+            index: 1500
         },
         {
             title: '',
-            img: promocoes[0].img
+            img: promocoes[0].img,
+            xA: '20%',
+            index: 4
         },
         {
             title: '',
-            img: promocoes[0].img
+            img: promocoes[0].img,
+            xA: '30%',
+            index: 3
         },
         {
             title: '',
-            img: promocoes[0].img
+            img: promocoes[0].img,
+            xA: '40%',
+            index: 2
         },
         {
             title: '',
-            img: promocoes[0].img
+            img: promocoes[0].img,
+            xA: '50%',
+            index: 4
         },
         {
             title: '',
-            img: promocoes[0].img
+            img: promocoes[0].img,
+            xA: '60%',
+            index: 3
         },
         {
             title: '',
-            img: promocoes[0].img
-        }
+            img: promocoes[0].img,
+            xA: '70%',
+            index: 2
+        },
+        {
+            title: '',
+            img: promocoes[0].img,
+            xA: '80%',
+            index: 2
+        },
+        {
+            title: '',
+            img: promocoes[0].img,
+            xA: '90%',
+            index: 2
+        },
+        {
+            title: '',
+            img: promocoes[0].img,
+            xA: '0%',
+            index: 2
+        },
+        
     ]
 
-   
+
     return (
         <>
 
@@ -58,23 +92,28 @@ export const Home = () => {
             </Box>
 
             <Stack sx={{ overflow: 'hidden', position: 'relative', background: '#111217' }} direction='row' justifyContent='center' alignItems='center'>
-                <Stack sx={{ width: '32%', height: '16rem', }} justifyContent='space-evenly'>
-                    <img src={logoHeros} style={{ zIndex: 100 }} />
+                <Stack sx={{ width: '100%', height: '16rem', background: '#1f1f1faf', backdropFilter: 'blur(4px)', zIndex: 90 }} alignItems='center' justifyContent='space-evenly'>
+                    <img src={logoHeros} style={{ zIndex: 100, width:'12rem' }} />
                     <Button sx={{ zIndex: 100 }}>
                         tecnologia de ponta
                     </Button>
                 </Stack>
+                <Stack width='100%' height='100%' sx={{position: 'absolute'}}>
+
 
                 {
                     raquetes.map((raquete, index) => {
                         return (
-
-                            <Fundo top={25} right={index * 32}  >
-                                <AppearEffect isImg img={raquete.img} />
-                            </Fundo>
+                            
+                            <AppearEffect key={index} index={raquete.index} x={'50%'} xA={raquete.xA} y={0} yA={0} isImg={false} >
+                                <Fundo   >
+                                    <img style={{height: '16rem', zIndex: index}} src={raquete.img} />
+                                </Fundo>
+                            </AppearEffect >
                         )
                     })
                 }
+                </Stack>
 
 
             </Stack>

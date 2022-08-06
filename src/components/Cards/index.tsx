@@ -3,6 +3,7 @@ import { AppearEffect } from "../../components/Animation"
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react"
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
+import { Overflow } from "../../styles"
 interface Prop {
     item: {
         id: number;
@@ -42,7 +43,9 @@ export const CardRaquetes = (prop: Prop ) => {
                 subheader={item.material}
 
             />
-            <AppearEffect isImg={false}>
+            <Overflow>
+
+            <AppearEffect y={100} isImg={false} yA={-16} rotate={-16}>
 
             <CardMedia
             component="img"
@@ -52,6 +55,7 @@ export const CardRaquetes = (prop: Prop ) => {
             >
             </CardMedia>
             </AppearEffect>
+                </Overflow>
             <CardContent>
                 <Typography variant='subtitle2' color='text.primary'>
                     {item.subtitle}

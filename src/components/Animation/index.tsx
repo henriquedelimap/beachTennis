@@ -16,18 +16,27 @@ interface Prop {
     width?: number | string
     isImg: boolean
     children?:  ReactNode
+    y?: number
+    yA?: number
+    rotate?: number
+    x?: number | string
+    xA?: number | string
+    index?: number
 }
 export const AppearEffect = (prop: Prop) => {
-    const {img, height, width, isImg, children} =prop
+    const {img, height, width, isImg, children, index, y, yA, rotate, x, xA} =prop
     const cardVariants: Variants = {
         offscreen: {
-            y: 100,
+            y: y,
+            x: x,
             opacity: 0,
             rotate: 0
         },
         onscreen: {
-            y: -16,
-            rotate: -16,
+            y: yA,
+            rotate: rotate,
+            x: xA,
+            
             opacity: 1,
             transition: {
                 type: "spring",
@@ -41,14 +50,13 @@ export const AppearEffect = (prop: Prop) => {
         <motion.div
             initial="offscreen"
             whileInView="onscreen"
-            style={{overflow: 'hidden'}}
         >
-            {/* <motion.img
+            {isImg ? <motion.img
                 variants={cardVariants}
                 style={{ height: '10rem' }}
-                src={img} /> */}
+                src={img} /> : <motion.div style={{zIndex: index}}  variants={cardVariants}>{children}</motion.div> }
 
-             <motion.div  variants={cardVariants}>{children}</motion.div>
+             
 
         </motion.div>
 
