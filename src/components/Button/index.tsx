@@ -5,14 +5,15 @@ interface Prop{
     color: string
     position?: string
     size?: string
+    top: number | string
 }
 export const Btn = (prop: Prop) => {
 
-    const {text, color, position, size} = prop
+    const {text, color, position, size, top} = prop
     const fontSize = size ? size : 'body'
     const positionValue = position ? `position: position` : null
     return (
-        <Button sx={{ positionValue, color: 'white', zIndex: 5, background: color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
+        <Button sx={{ positionValue, top: top, color: 'white', zIndex: 5, background: color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
             <Typography sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold', fontSize:fontSize }}>
                 {text}
             </Typography>

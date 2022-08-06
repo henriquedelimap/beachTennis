@@ -37,11 +37,14 @@ export const Header = () => {
     const icones = [
         {
             icone: <MdPhone fontSize={24} />,
-            click: ()=>setPhone(true)
+            click: ()=>setPhone(true),
+            label: 'telefone'
         },
         {
             icone: <MdOutlineShoppingCart fontSize={24} />,
-            click: () => setShop(true)
+            click: () => setShop(true),
+            label: 'carrinho de compras'
+
         }
     ]
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -66,12 +69,12 @@ export const Header = () => {
                         <Tabs sx={{p:0}} centered value={value} onChange={handleChange} >
                             {
                                 menu.map((item, index) => (
-                                    <Tab key={index} onClick={()=>navigate(item.to)}  sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={item.label} />
+                                    <Tab key={index} onClick={()=>navigate(item.to)}  sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} value={item.label} label={item.label} />
                                 ))
                             }
                             {
                                 icones.map((icone, index) => (
-                                    <Tab key={index} onClick={icone.click} sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={icone.icone} />
+                                    <Tab value={icone.label} key={index} onClick={icone.click} sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={icone.icone} />
 
                                 ))
                             }
