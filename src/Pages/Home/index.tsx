@@ -4,6 +4,7 @@ import { Title, TitleCentred } from "../../components/Title"
 import { Sale } from "../../components/Sale"
 import { Beneficios } from "../../components/Beneficio"
 import { ContainerPadding } from "../../components/Container"
+import { fundoCarbono } from "../../assets/img"
 
 export const Home = () => {
     return (

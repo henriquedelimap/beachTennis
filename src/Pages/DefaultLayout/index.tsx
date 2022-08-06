@@ -11,7 +11,7 @@ import { OOLogo } from '../../OOTECHNOLOGY'
 
 export const DefaultLayout = () => {
     return (
-        <>
+        <div style={{overflow: 'hidden'}}>
             <FloatingButton />
             <Header />
             <Banner />
@@ -19,7 +19,7 @@ export const DefaultLayout = () => {
                 <Outlet />
             </Box>
             <OOLogo />
-        </>
+        </div>
 
     )
 }

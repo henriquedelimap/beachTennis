@@ -17,6 +17,7 @@ import logoHeros from './logoHeros.png'
 import semFundo1 from './semFundo1.png'
 import semFundo2 from './semFundo2.png'
 import semFundo3 from './semFundo3.png'
+import fundoCarbono from './fundoCarbono.jpg'
 
 export {
     blackDeathGold,
@@ -37,5 +38,6 @@ export {
     logoHeros,
     semFundo1,
     semFundo2,
-    semFundo3
+    semFundo3,
+    fundoCarbono
 }
