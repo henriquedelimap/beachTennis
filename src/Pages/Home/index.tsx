@@ -16,13 +16,13 @@ export const Home = () => {
         {
             title: '',
             img: promocoes[0].img,
-            xA: '10%',
+            xA: '0%',
             index: 1500
         },
         {
             title: '',
             img: promocoes[0].img,
-            xA: '20%',
+            xA: '15%',
             index: 4
         },
         {
@@ -34,32 +34,20 @@ export const Home = () => {
         {
             title: '',
             img: promocoes[0].img,
-            xA: '40%',
+            xA: '45%',
             index: 2
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '50%',
-            index: 4
         },
         {
             title: '',
             img: promocoes[0].img,
             xA: '60%',
+            index: 4
+        },
+        {
+            title: '',
+            img: promocoes[0].img,
+            xA: '75%',
             index: 3
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '70%',
-            index: 2
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '80%',
-            index: 2
         },
         {
             title: '',
@@ -67,12 +55,8 @@ export const Home = () => {
             xA: '90%',
             index: 2
         },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '0%',
-            index: 2
-        },
+      
+        
         
     ]
 
@@ -105,11 +89,11 @@ export const Home = () => {
                     raquetes.map((raquete, index) => {
                         return (
                             
-                            <AppearEffect key={index} index={raquete.index} x={'50%'} xA={raquete.xA} y={0} yA={0} isImg={false} >
+                            // <AppearEffect key={index} index={raquete.index} x={'50%'} xA={raquete.xA} y={0} yA={0} isImg={false} />
+                            
                                 <Fundo   >
                                     <img style={{height: '16rem', zIndex: index}} src={raquete.img} />
                                 </Fundo>
-                            </AppearEffect >
                         )
                     })
                 }
