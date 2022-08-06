@@ -37,7 +37,7 @@ export const Sale = () => {
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />
                             <Fundo style={{ background: item.colorRadial }} />
                             <Button sx={{ position: 'absolute', color: 'white', zIndex: 5, background: item.color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
-                                <Typography variant='body1' sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold' }}>
+                                <Typography variant='h5' sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold' }}>
                                     30% off
                                 </Typography>
                                 <Borda />
@@ -66,7 +66,7 @@ export const Fundo = styled('div')(({ }) => ({
 const Borda = styled('div')(({ }) => ({
     width: '100%',
     height: '100%',
-    border: '1px solid #111111',
+    border: '2px solid #111111',
     borderRadius: 6,
     position: 'absolute',
     zIndex: -1,
@@ -76,7 +76,7 @@ const Borda = styled('div')(({ }) => ({
 const Borda2 = styled('div')(({ }) => ({
     width: '100%',
     height: '100%',
-    border: '1px solid #111111',
+    border: '2px solid #111111',
     borderRadius: 6,
     position: 'absolute',
     zIndex: -1,
