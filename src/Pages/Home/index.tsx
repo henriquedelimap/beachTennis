@@ -36,6 +36,9 @@ export const Home = () => {
                 </Stack>
                 <motion.img   src={fundoCarbono3} style={{scaleX: scrollYProgress ,width: '100%', opacity: .4, boxShadow: '-4px 0px 8px 8px #1111114a', height: 'auto', transformOrigin: 'right'}} />
             </Stack>
+            <Stack sx={{height: 1000}}>
+
+            </Stack>
         </>
     )
 }
