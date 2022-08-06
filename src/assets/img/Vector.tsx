@@ -60,7 +60,22 @@ export const Vector2 = (prop: Prop) => {
         <div style={{zIndex: index, position: 'absolute', top: top, left: left, right: right, transform: `rotate(${rotate}deg)` }}>
 
             <motion.svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_127_423)">
             <motion.path d="M0 15H536C571.346 15 600 43.6538 600 79V15"  stroke={color} stroke-width="110" style={{ pathLength: scrollYProgress, rotate: scrollYProgress, transformOrigin: 'top center'}}/>
+</g>
+
+            <defs>
+<filter id="filter0_d_127_423" x="0" y="0" width="638" height="638" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_127_423"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_127_423" result="shape"/>
+</filter>
+</defs>
             </motion.svg>
 
         </div>
