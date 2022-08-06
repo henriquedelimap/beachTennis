@@ -34,9 +34,9 @@ export const Home = () => {
                         tecnologia de ponta
                     </Button>
                 </Stack>
-                <Vector top={-300} rotate={-45} left={-250} color={'#0066cc'} />
-                <Vector top={-250} left={'10%'} rotate={-25} color={'#ffffff'} />
-                <Vector top={-250} left={130} rotate={-45} color={'#D73F33'} />
+                <Vector top={-250} left={'5%'} rotate={-0} color={'#0066cc'} />
+                <Vector top={-240} left={'10%'} rotate={-10} color={'#ffffff'} />
+                <Vector top={-230} left={'15%'} rotate={-20} color={'#D73F33'} />
                 <Vector top={-130} right={'-8%'} rotate={180} color={'#D73F33'} />
                 <Vector top={-230} right={'-11%'} rotate={160} color={'#ffffff'} />
                 <Vector top={-170} right={'-10%'} rotate={170} color={'#0066cc'} />
