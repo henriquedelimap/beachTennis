@@ -22,7 +22,7 @@ export const AppearEffect = (prop: Prop) => {
     const cardVariants: Variants = {
         offscreen: {
             y: 200,
-            opacity: .4
+            opacity: 0
         },
         onscreen: {
             y: -16,
