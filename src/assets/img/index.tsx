@@ -22,7 +22,7 @@ import fundoCarbono3 from './fundoCarbono3.png'
 import LogoHeros from './LogoHeros.svg'
 import logoHeros from './logoHeros.png'
 import {X} from './X'
-import {Vector} from './Vector'
+import {Vector, Vector2} from './Vector'
 
 export {
     blackDeathGold,
@@ -49,5 +49,6 @@ export {
     LogoHeros,
     X,
     logoHeros,
-    Vector
+    Vector,
+    Vector2,
 }
