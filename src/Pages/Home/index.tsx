@@ -39,7 +39,7 @@ export const Home = () => {
                 <Vector2 index={2} top={90} left={'-20%'} rotate={0} color={'green'} />
 
                 <Vector2 index={1} top={-125} left={'-38%'} rotate={90} color={'#0066cc'} />
-                <Vector2 index={1} top={-120} left={'-34%'} rotate={90} color={'#0066cc'} />
+                <Vector2 index={2} top={-120} left={'-34%'} rotate={90} color={'#0066cc'} />
                 <Vector2 index={1} top={-125} left={'-30%'} rotate={90} color={'#0066cc'} />
                 <Vector2 index={2} top={-200} left={'-26%'} rotate={90} color={'#0066cc'} />
                 <Vector2 index={1} top={-225} left={'16%'} rotate={-90} color={'#0066cc'} />
