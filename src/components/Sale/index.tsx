@@ -3,6 +3,7 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material"
 import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 import { MdBeachAccess, MdShop, MdShop2, MdShoppingCart, MdShopTwo } from "react-icons/md"
 import { semFundo1, semFundo2, semFundo3, Vector } from "../../assets/img"
+import { Btn } from "../../components/Button"
 
 export const promocoes = [
     {
@@ -38,13 +39,7 @@ export const Sale = () => {
 
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />
                             <Fundo style={{ background: item.colorRadial }} />
-                            <Button sx={{ position: 'absolute', color: 'white', zIndex: 5, background: item.color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
-                                <Typography variant='h5' sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold' }}>
-                                    30% off
-                                </Typography>
-                                <Borda />
-                                <Borda2 />
-                            </Button>
+                            <Btn position={'absolute'} size={'h5'} text={'30% off'} color={item.color} />
                         </Stack>
                     </Grid >
                 ))

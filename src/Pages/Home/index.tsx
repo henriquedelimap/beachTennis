@@ -9,6 +9,7 @@ import { motion, useScroll, Variants } from 'framer-motion'
 import { Absolute } from "../../assets/img/logoQuicksand"
 import { Fundo } from '../../styles'
 import { AppearEffect } from "../../components/Animation"
+import { Btn } from "../../components/Button"
 export const Home = () => {
     const { scrollYProgress } = useScroll()
     const raquetes = [
@@ -40,19 +41,19 @@ export const Home = () => {
         {
             title: '',
             img: promocoes[0].img,
-            xA: '60%',
+            xA: '61.6%',
             index: 4
         },
         {
             title: '',
             img: promocoes[0].img,
-            xA: '75%',
+            xA: '76.6%',
             index: 3
         },
         {
             title: '',
             img: promocoes[0].img,
-            xA: '90%',
+            xA: '91.6%',
             index: 2
         },
       
@@ -80,8 +81,9 @@ export const Home = () => {
                     <img src={logoHeros} style={{ zIndex: 100, width:'12rem' }} />
                     <Typography sx={{p:4, pt: 0, pb:0, textAlign:'center'}} color='white' paragraph>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.</Typography>
                     <Button sx={{ zIndex: 100 }}>
-                        tecnologia de ponta
+                        
                     </Button>
+                    <Btn size={'h6'} color={'#f1f1f11f'} text={'tecnologia de ponta'}/>
                 </Stack>
                 <Stack width='100%' height='100%' sx={{position: 'absolute'}}>
 
