@@ -3,7 +3,7 @@ import { Box, Button, Grid, Stack, Typography } from "@mui/material"
 import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 import { MdBeachAccess, MdShop, MdShop2, MdShoppingCart, MdShopTwo } from "react-icons/md"
 import { semFundo1, semFundo2, semFundo3, Vector } from "../../assets/img"
-import { Btn } from "../../components/Button"
+import { Btn } from "../components/Button"
 
 export const promocoes = [
     {
