@@ -29,7 +29,7 @@ export const Home = () => {
             <Stack sx={{overflow: 'hidden', position: 'relative', background: '#111217'}} direction='row'justifyContent='center' alignItems='center'>
                 <motion.img  src={fundoCarbono2} style={{scaleX: scrollYProgress, width: '100%', opacity: .4, boxShadow: '4px 0px 8px 8px #1111114a', height: 'auto', transformOrigin: 'left'}} />
                 <Stack sx={{width: '32%', height: '16rem',}} justifyContent='space-evenly'>
-                      <img src={logoHeros} />
+                      <img src={logoHeros} style={{width: '100%'}} />
                     <Button>
                         tecnologia de ponta
                     </Button>
