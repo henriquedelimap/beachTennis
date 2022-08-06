@@ -27,7 +27,7 @@ export const Sale = () => {
         },
     ]
     return (
-        <Grid container spacing={{xs: 0, md: 2, lg: 2}} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
+        <Grid container rowSpacing={2} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
             <LogoQuicksand  />
             {
                 promocoes.map(item => (
