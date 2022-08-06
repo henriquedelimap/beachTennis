@@ -53,11 +53,11 @@ export const Sale = () => {
     )
 }
 
-export const Fundo = styled('div')(({ }) => ({
+export const Fundo = styled('div')(({right }:{right?: string | number}) => ({
     position: 'absolute',
     top: '-8%',
     left: '50%',
-    right: 0,
+    right: right,
     width: '50%',
     height: '60%',
     borderRadius: '150rem',

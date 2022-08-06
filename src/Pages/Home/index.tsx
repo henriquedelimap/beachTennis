@@ -76,8 +76,9 @@ export const Home = () => {
             </Box>
 
             <Stack sx={{ overflow: 'hidden', position: 'relative', background: '#111217' }} direction='row' justifyContent='center' alignItems='center'>
-                <Stack sx={{ width: '100%', height: '16rem', background: '#1f1f1faf', backdropFilter: 'blur(4px)', zIndex: 90 }} alignItems='center' justifyContent='space-evenly'>
+                <Stack spacing={2} sx={{ width: {lg: '32%', md: '64%', xs:'100%'}, height: '16rem', background: '#1f1f1faf', backdropFilter: 'blur(4px)', zIndex: 90 }} alignItems='center' justifyContent='center'>
                     <img src={logoHeros} style={{ zIndex: 100, width:'12rem' }} />
+                    <Typography sx={{p:4, pt: 0, pb:0, textAlign:'center'}} color='white' paragraph>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.</Typography>
                     <Button sx={{ zIndex: 100 }}>
                         tecnologia de ponta
                     </Button>
@@ -91,8 +92,8 @@ export const Home = () => {
                             
                             // <AppearEffect key={index} index={raquete.index} x={'50%'} xA={raquete.xA} y={0} yA={0} isImg={false} />
                             
-                                <Fundo   >
-                                    <img style={{height: '16rem', zIndex: index}} src={raquete.img} />
+                                <Fundo right={raquete.xA} >
+                                    <img src={raquete.img} style={{height: '16rem', zIndex: index}} />
                                 </Fundo>
                         )
                     })
