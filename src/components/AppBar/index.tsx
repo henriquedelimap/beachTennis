@@ -1,14 +1,16 @@
 import { AppBar, Box, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Tab, Tabs, Toolbar } from "@mui/material"
 import { Logo } from "../Logo"
 import { MdMenu, MdOutlineShoppingCart, MdPhone } from 'react-icons/md'
-import {useNavigate} from 'react-router-dom'
-
-import { useState } from "react"
+import { useRef, useState } from "react"
+import { useNavigate} from 'react-router-dom'
 import { DrawerMenu } from "../Drawer"
 import { DrawerShop } from "../Shop"
 import { ModalPhone } from "../ModalPhone"
+import { LogoBeachTennis } from "../../assets/img/logoBeachTennis"
 export const Header = () => {
     const navigate = useNavigate()
+    console.log(history);
+    
     const [open, setOpen] = useState(false)
     const [shop, setShop] = useState(false)
     const [phone, setPhone] = useState(false)
@@ -57,7 +59,7 @@ export const Header = () => {
                             <MdMenu />
                         </IconButton>
 
-                        <Logo />
+                        <LogoBeachTennis />
                     </Stack>
                     <Box>
 
