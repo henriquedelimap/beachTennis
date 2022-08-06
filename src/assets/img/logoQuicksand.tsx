@@ -16,7 +16,7 @@ export const LogoQuicksand = () => {
 }
 
 
-const Absolute = styled('div')(({})=>({
+export const Absolute = styled('div')(({})=>({
     position: 'absolute',
     top: '-25%',
     opacity: .4,

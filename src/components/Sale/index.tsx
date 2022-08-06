@@ -4,28 +4,29 @@ import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 import { MdBeachAccess, MdShop, MdShop2, MdShoppingCart, MdShopTwo } from "react-icons/md"
 import { semFundo1, semFundo2, semFundo3, Vector } from "../../assets/img"
 
+export const promocoes = [
+    {
+        img: semFundo1,
+        colorRadial: 'radial-gradient(#ffffff, #ffffff, #FFFAD2, #FFEA38, #FFEA38, #FFEA38)',
+        color: '#FFEA38'
+    },
+
+    {
+        img: semFundo2,
+        colorRadial: 'radial-gradient( #ffffff, #ffffff, #D3CFBE, #948753, #948753, #948753)',
+        color: '#948753'
+    },
+    {
+        img: semFundo3,
+        colorRadial: 'radial-gradient( #ffffff, #ffffff, #FFCDC3, #FE2B05, #FE2B05, #FE2B05)',
+        color: '#FE2B05'
+
+    },
+]
 
 export const Sale = () => {
 
-    const promocoes = [
-        {
-            img: semFundo1,
-            colorRadial: 'radial-gradient(#ffffff, #ffffff, #FFFAD2, #FFEA38, #FFEA38, #FFEA38)',
-            color: '#FFEA38'
-        },
 
-        {
-            img: semFundo2,
-            colorRadial: 'radial-gradient( #ffffff, #ffffff, #D3CFBE, #948753, #948753, #948753)',
-            color: '#948753'
-        },
-        {
-            img: semFundo3,
-            colorRadial: 'radial-gradient( #ffffff, #ffffff, #FFCDC3, #FE2B05, #FE2B05, #FE2B05)',
-            color: '#FE2B05'
-
-        },
-    ]
     return (
 
         <Grid container rowSpacing={4} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >

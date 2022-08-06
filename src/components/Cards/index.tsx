@@ -1,4 +1,5 @@
 import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typography } from "@mui/material"
+import { AppearEffect } from "../../components/Animation"
 import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react"
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
@@ -41,6 +42,8 @@ export const CardRaquetes = (prop: Prop ) => {
                 subheader={item.material}
 
             />
+            <AppearEffect isImg={false}>
+
             <CardMedia
             component="img"
             height="auto"
@@ -48,6 +51,7 @@ export const CardRaquetes = (prop: Prop ) => {
             image={item.img}
             >
             </CardMedia>
+            </AppearEffect>
             <CardContent>
                 <Typography variant='subtitle2' color='text.primary'>
                     {item.subtitle}
