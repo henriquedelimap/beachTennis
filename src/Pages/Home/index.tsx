@@ -35,13 +35,13 @@ export const Home = () => {
                     </Button>
                 </Stack>
                 <motion.img   src={fundoCarbono3} style={{scaleX: scrollYProgress ,width: '100%', opacity: .4, boxShadow: '-4px 0px 8px 8px #1111114a', height: 'auto', transformOrigin: 'right'}} />
-                <Vector top={-400} rotate={-45} left={-250} />
-                <Vector top={-250} left={-100} rotate={-45} />
-                <Vector top={-250} left={-100} rotate={-25} />
-                <Vector top={-250} left={130} rotate={-45} />
-                <Vector top={120} left={-180} rotate={-215} />
-                <Vector top={150} left={-180} rotate={-235} />
-                <Vector top={100} left={-180} rotate={-235} />
+                <Vector top={-400} rotate={-45} left={-250} color={'#D73F33'}/>
+                <Vector top={-250} left={-100} rotate={-45}color={'#0066cc'} />
+                <Vector top={-250} left={-100} rotate={-25}color={'#ffffff'} />
+                <Vector top={-250} left={130} rotate={-45}color={'#D73F33'} />
+                <Vector top={120} left={-180} rotate={-215}color={'#0066cc'} />
+                <Vector top={150} left={-180} rotate={-235}color={'#ffffff'} />
+                <Vector top={100} left={-180} rotate={-235}color={'#D73F33'} />
             </Stack>
             <Stack sx={{height: 1000}}>
 
