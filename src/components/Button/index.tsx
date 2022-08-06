@@ -5,7 +5,7 @@ interface Prop{
     color: string
     position?: string
     size?: string
-    top: number | string
+    top?: number | string
 }
 export const Btn = (prop: Prop) => {
 
