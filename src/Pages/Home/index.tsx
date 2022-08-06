@@ -40,7 +40,7 @@ export const Home = () => {
                 <Vector2 top={190} left={'-22%'} rotate={-90} color={'#0066cc'} />
 
                 <Vector2 top={-10} right={'-10%'} rotate={-180} color={'#D73F33'} />
-                <Vector2 top={55} right={'-15%'} rotate={-180} color={'#ffffff'} />
+                <Vector2 top={53} right={'-14%'} rotate={-180} color={'#ffffff'} />
                 <Vector2 top={125} right={'-18%'} rotate={-180} color={'#0066cc'} />
                 <Vector2 top={190} right={'-22%'} rotate={-180} color={'#D73F33'} />
             </Stack>
