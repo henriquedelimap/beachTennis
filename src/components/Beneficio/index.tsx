@@ -28,9 +28,9 @@ export const Beneficios = () => {
         <Box>
             <Grid container spacing={{md: 4, sx: 0, lg: 4}} rowSpacing={2} >
                 {
-                    itens.map(item => (
+                    itens.map((item, index) => (
 
-                        <Grid item xs={12} md={6} lg={6} >
+                        <Grid key={index} item xs={12} md={6} lg={6} >
 
                             <Stack spacing={2} alignItems='flex-start' direction='row' sx={{ p: 2}}>
 

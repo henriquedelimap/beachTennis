@@ -33,8 +33,8 @@ export const Sale = () => {
         <Grid container rowSpacing={4} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
             <LogoQuicksand  />
             {
-                promocoes.map(item => (
-                    <Grid sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
+                promocoes.map((item, index) => (
+                    <Grid key={index} sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
 
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />

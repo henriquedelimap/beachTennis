@@ -65,13 +65,13 @@ export const Header = () => {
 
                         <Tabs sx={{p:0}} centered value={value} onChange={handleChange} >
                             {
-                                menu.map(item => (
-                                    <Tab onClick={()=>navigate(item.to)}  sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={item.label} />
+                                menu.map((item, index) => (
+                                    <Tab key={index} onClick={()=>navigate(item.to)}  sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={item.label} />
                                 ))
                             }
                             {
-                                icones.map(icone => (
-                                    <Tab onClick={icone.click} sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={icone.icone} />
+                                icones.map((icone, index) => (
+                                    <Tab key={index} onClick={icone.click} sx={{display: {md: 'none', xs: 'none', lg: 'flex'}}} label={icone.icone} />
 
                                 ))
                             }

@@ -20,8 +20,8 @@ export const DrawerMenu = (prop: Prop ) => {
                 <Stack sx={{width: '100%', alignItems: 'center'}}>
                     <List sx={{width: '100%'}}>
                         {
-                            menu.map(item=> (
-                                <ListItem  >
+                            menu.map((item, index)=> (
+                                <ListItem key={index} >
                                     <ListItemButton  >
                                         <ListItemText onClick={()=>navigate(item.to)} sx={{textAlign: 'center'}} primary={item.label} />
                                     </ListItemButton>

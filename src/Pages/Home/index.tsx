@@ -94,7 +94,7 @@ export const Home = () => {
                             
                             // <AppearEffect key={index} index={raquete.index} x={'50%'} xA={raquete.xA} y={0} yA={0} isImg={false} />
                             
-                                <Fundo right={raquete.xA} >
+                                <Fundo key={index} right={raquete.xA} >
                                     <img src={raquete.img} style={{height: '16rem', zIndex: index}} />
                                 </Fundo>
                         )

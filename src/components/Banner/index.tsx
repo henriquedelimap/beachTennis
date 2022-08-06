@@ -33,8 +33,8 @@ export const Banner = () => {
                     }}
                 >
                     {
-                        images.map(image => (
-                            <Stack alignItems='center'  >
+                        images.map((image, index) => (
+                            <Stack key={index} alignItems='center'  >
                                 <img style={{ maxWidth: '100%', minWidth: '64rem', minHeight: '25rem' }} src={image} />
                             </Stack>
                         ))

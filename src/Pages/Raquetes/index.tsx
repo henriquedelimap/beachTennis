@@ -11,8 +11,8 @@ export const RaquetesPage = () => {
                 <Title text='raquetes' />
                 <Grid container alignItems='stretch' rowSpacing={2} spacing={{lg: 2, md: 2, xs: 0}}>
                     {
-                        Data.map(item => (
-                            <Grid item justifyContent='flex-start' xs={12} md={4} lg={3}  >
+                        Data.map((item, index) => (
+                            <Grid key={index} item justifyContent='flex-start' xs={12} md={4} lg={3}  >
                                 <CardRaquetes item={item} />
                             </Grid>
                         ))
