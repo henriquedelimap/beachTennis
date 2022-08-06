@@ -5,10 +5,11 @@ interface Prop {
     left?: number | string
     color?: string | string
     rotate?: number
+    index?: number
 }
 
 export const Vector = (prop: Prop) => {
-    const { top, right, left, color, rotate } = prop
+    const { top, right, left, color, rotate, index } = prop
     const { scrollX, scrollYProgress, scrollY } = useScroll()
     const draw = {
         hidden: {
@@ -37,7 +38,7 @@ export const Vector = (prop: Prop) => {
     )
 }
 export const Vector2 = (prop: Prop) => {
-    const { top, right, left, color, rotate } = prop
+    const { top, right, left, color, rotate, index } = prop
     const { scrollX, scrollYProgress, scrollY } = useScroll()
 
     const draw = {
@@ -56,7 +57,7 @@ export const Vector2 = (prop: Prop) => {
         }
     };
     return (
-        <div style={{ position: 'absolute', top: top, left: left, right: right, transform: `rotate(${rotate}deg)` }}>
+        <div style={{zIndex: index, position: 'absolute', top: top, left: left, right: right, transform: `rotate(${rotate}deg)` }}>
 
             <motion.svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
             <motion.rect x="15" y="15" width="570" height="570" rx="49" stroke={color} stroke-width="110" style={{ pathLength: scrollYProgress, rotate: scrollYProgress, transformOrigin: 'top center' }}/>
