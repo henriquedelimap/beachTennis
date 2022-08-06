@@ -8,10 +8,11 @@ import { Box, Grid } from '@mui/material'
 
 import {Outlet} from 'react-router-dom'
 import { OOLogo } from '../../OOTECHNOLOGY'
+import { Overflow } from '../../styles'
 
 export const DefaultLayout = () => {
     return (
-        <div style={{overflow: 'hidden'}}>
+        <Overflow>
             <FloatingButton />
             <Header />
             <Banner />
@@ -19,7 +20,7 @@ export const DefaultLayout = () => {
                 <Outlet />
             </Box>
             <OOLogo />
-        </div>
+        </Overflow>
 
     )
 }

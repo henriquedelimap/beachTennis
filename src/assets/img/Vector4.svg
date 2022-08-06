@@ -1,4 +1,4 @@
 
 <svg width="677" height="170" viewBox="0 0 677 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17 87.8796C123.001 284.194 335.216 -121.482 480.09 67.7056C611.501 239.314 661 108.971 661 67.7056" stroke="#0066CC" stroke-width="32" stroke-miterlimit="1.41421" stroke-linecap="round"/>
+<path d="M17 87.8796C123.001 284.194 335.216 -121.482 480.09 67.7056C611.501 239.314 661 108.971 661 67.7056" stroke={cor} stroke-width="32" stroke-miterlimit="1.41421" stroke-linecap="round"/>
 </svg>

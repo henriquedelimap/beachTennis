@@ -26,7 +26,7 @@ export const Beneficios = () => {
     ]
     return (
         <Box>
-            <Grid container spacing={4} >
+            <Grid container spacing={{md: 4, sx: 0, lg: 4}} rowSpacing={2} >
                 {
                     itens.map(item => (
 

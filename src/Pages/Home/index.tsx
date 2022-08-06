@@ -8,13 +8,13 @@ import { fundoCarbono, fundoCarbono2, fundoCarbono3, logoHeros, X, Vector, Vecto
 import { motion, useScroll } from 'framer-motion'
 import { useRef } from "react"
 import { LogoQuicksand } from "../../assets/img/logoQuicksand"
+import { Overflow } from "../../styles"
 export const Home = () => {
     const { scrollYProgress } = useScroll()
     console.log(scrollYProgress);
 
     return (
-        <>
-            <Vector top={-400} rotate={-45} left={-250} color={'#D73F33'} />
+        <Overflow>
 
             <ContainerPadding>
                 <Title text='promoção' />
@@ -41,10 +41,10 @@ export const Home = () => {
                 <Vector2 index={1} top={-125} left={'-38%'} rotate={90} color={'#0066cc'} />
                 <Vector2 index={2} top={-120} left={'-34%'} rotate={90} color={'#0066cc'} />
 
-                <Vector2 index={3} top={-125} left={'-30%'} rotate={90} color={'#0066cc'} />
+                <Vector2 index={1} top={-125} left={'-30%'} rotate={90} color={'#0066cc'} />
                 <Vector2 index={2} top={-200} left={'-26%'} rotate={90} color={'#0066cc'} />
-                <Vector2 index={1} top={-225} left={'16%'} rotate={-90} color={'#0066cc'} />
-                <Vector2 index={1} top={-250} left={'20%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={3} top={-225} left={'16%'} rotate={-90} color={'#0066cc'} />
+                <Vector2 index={2} top={-250} left={'20%'} rotate={-90} color={'#0066cc'} />
                 <Vector2 index={1} top={-275} left={'24%'} rotate={-90} color={'#0066cc'} />
                 <Vector2 index={1} top={-300} left={'28%'} rotate={-90} color={'#0066cc'} />
                 <Vector2 index={1} top={-300} left={'28%'} rotate={-90} color={'#0066cc'} />
@@ -61,8 +61,7 @@ export const Home = () => {
             <Stack sx={{ height: 1000 }}>
 
             </Stack>
-        </>
+        </Overflow>
     )
 }
-
 

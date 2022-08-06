@@ -27,6 +27,7 @@ export const Sale = () => {
         },
     ]
     return (
+
         <Grid container rowSpacing={4} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
             <LogoQuicksand  />
             {
