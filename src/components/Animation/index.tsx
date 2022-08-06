@@ -22,7 +22,8 @@ export const AppearEffect = (prop: Prop) => {
     const cardVariants: Variants = {
         offscreen: {
             y: 100,
-            opacity: 0
+            opacity: 0,
+            rotate: 0
         },
         onscreen: {
             y: -16,
@@ -30,7 +31,7 @@ export const AppearEffect = (prop: Prop) => {
             opacity: 1,
             transition: {
                 type: "spring",
-                bounce: 0.4,
+                bounce: .4,
                 duration: 0.6
             }
         }
