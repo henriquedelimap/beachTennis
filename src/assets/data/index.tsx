@@ -9,6 +9,7 @@ import {
     revolutionFullcarbonRed,
     revolutionFullcarbonYellow,
     spitfire,
+    gold22,
     logoQuickSand,
 } from '../img'
 
@@ -252,6 +253,33 @@ export const Data = [
         dimensions: [0, 0, 0],
         color: ['', ''],
         material: 'materialll',
+        role: {
+            category: 'SKU',
+            brand: logoQuickSand
+
+        }
+    },
+    {
+        id: 12,
+        img: gold22,
+        title: 'GOLD 2022',
+        subtitle: 'Beach Tennis Quicksand GOLD 2022',
+        
+        price: {
+            original: 1.900,
+            sale: 1.499
+        },
+        stored: 0,
+        description: `Composta por 100% CARBON 12K com o novo BLACK EVA EXTRA SOFT de alta densidade, mais macio, onde a batida da bola na raquete é sentida intensamente, sem deixar de lado o controle e o conforto. Ideal para jogadores de nível intermediário e avançado em Beach Tennis, que buscam um equipamento que gere mais potência em seus golpes. A raquete possui um jateamento rugoso especial que promove uma melhor performance de alguns golpes como smash e saque.​​​
+
+        `,
+        subDescription: `A raquete QUICKSAND GOLD é o mais novo lançamento da marca, é um modelo irmã da SILVER CLUB. Usa as tecnologias SLIM MOULD 21mm, com uma espessura mais fina que as outras raquetes da linha, MULTI-HOLE com furos espalhados somente ao redor do centro da raquete e ainda o exclusivo e patenteado FUTURA SYSTEM, um dispositivo tecnológico que permite uma redução consistente das vibrações causadas pelo impacto contínuo da bola, amenizando traumas do pulso, de cotovelo e de ombro, ao mesmo tempo em que mantém a raquete no mais alto nível de jogo.
+
+        `,
+        weight: 335,
+        dimensions: [50, 3, 30],
+        color: ['Dourado', 'Preto'],
+        material: '100% Full Carbon 12K',
         role: {
             category: 'SKU',
             brand: logoQuickSand

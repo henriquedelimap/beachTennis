@@ -25,7 +25,7 @@ import X from './X.svg'
 import {Vector, Vector2} from './Vector'
 import {LogoBeachTennis} from './logoBeachTennis'
 import {RaqueteIMG} from './raqueteImg'
-
+import gold22 from './gold22.jpeg'
 export {
     blackDeathGold,
     blackDeathSilver,
@@ -37,6 +37,8 @@ export {
     revolutionFullcarbonRed,
     revolutionFullcarbonYellow,
     spitfire,
+    gold22,
+
     banner1,
     banner2,
     banner3,
@@ -54,5 +56,5 @@ export {
     Vector,
     Vector2,
     LogoBeachTennis,
-    RaqueteIMG
+    RaqueteIMG,
 }
