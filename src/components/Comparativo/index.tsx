@@ -77,7 +77,7 @@ export const Comparativo = (prop: Prop) => {
 
             <Stack direction='column' spacing={4} >
                 <ItemContent title={'material'} content={object.material} content2={object2.material} />
-                <ItemContent title={'cores'} content={object.color} content2={object2.color} />
+                <ItemContent title={'cores'} content={object.color[0]} content2={object2.color[0]} />
                 <ItemContent title={'descrição'} content={object.description} content2={object2.description} />
             </Stack>
         </Stack>
