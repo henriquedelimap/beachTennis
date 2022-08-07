@@ -103,12 +103,6 @@ export const Home = () => {
                 </ContainerPadding>
             </Box>
 
-            <BannerGlass
-                raquetes={raquetes}
-                logo={logoHeros}
-                btnText={'tecnologia de ponta'}
-                description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
-            />
             <ContainerPadding>
             <Title text='compare os modelos' />
             <Stack spacing={2} direction='row' justifyContent='space-around'>
@@ -118,6 +112,12 @@ export const Home = () => {
             </Stack>
             <Comparativo object={firstItemComparative} object2={secondItemComparative} />
             </ContainerPadding>
+            <BannerGlass
+                raquetes={raquetes}
+                logo={logoHeros}
+                btnText={'tecnologia de ponta'}
+                description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
+            />
 
             <Stack sx={{ height: 1000 }}>
 
