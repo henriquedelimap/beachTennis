@@ -116,7 +116,7 @@ export const Home = () => {
             <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1}  />
             <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
             </Stack>
-            <Comparativo object2={firstItemComparative} object={secondItemComparative} />
+            <Comparativo object={firstItemComparative} object2={secondItemComparative} />
             </ContainerPadding>
 
             <Stack sx={{ height: 1000 }}>
