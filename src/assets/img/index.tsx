@@ -21,7 +21,7 @@ import fundoCarbono2 from './fundoCarbono2.png'
 import fundoCarbono3 from './fundoCarbono3.png'
 import LogoHeros from './LogoHeros.svg'
 import logoHeros from './logoHeros.png'
-import {X} from './X'
+import X from './X.svg'
 import {Vector, Vector2} from './Vector'
 import {LogoBeachTennis} from './logoBeachTennis'
 

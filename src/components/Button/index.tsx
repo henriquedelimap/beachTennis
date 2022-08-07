@@ -22,7 +22,7 @@ export const Btn = (prop: Prop) => {
         </Button>
     )
 }
-const Borda = styled('div')(({ }) => ({
+export const Borda = styled('div')(({ }) => ({
     width: '100%',
     height: '100%',
     border: '2px solid #111111',
@@ -32,7 +32,7 @@ const Borda = styled('div')(({ }) => ({
     top: -2,
     left: 2
 }))
-const Borda2 = styled('div')(({ }) => ({
+export const Borda2 = styled('div')(({ }) => ({
     width: '100%',
     height: '100%',
     border: '2px solid #111111',

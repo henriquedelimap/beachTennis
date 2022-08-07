@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { Overflow } from './styles'
 import App from './App'
 
-const theme = createTheme({
+let theme = createTheme({
   components: {
     MuiAppBar: {
       styleOverrides: {
@@ -12,9 +12,7 @@ const theme = createTheme({
           background: '#ffffffaf',
           backdropFilter: 'blur(8px)',
           borderBottom: '2px solid transparent',
-
           boxShadow: 'none'
-
         }
       }
     },
@@ -25,8 +23,19 @@ const theme = createTheme({
         }
       }
     },
-  }
-})
+      MuiAvatar: {
+      styleOverrides: {
+        root: {
+          width: 132,
+        },
+        img: {
+            width: 124,
+            objectFit: 'fill',
+          },
+        },
+      },
+  }})
+
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
