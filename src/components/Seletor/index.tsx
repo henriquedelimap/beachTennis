@@ -39,8 +39,8 @@ export const SelectItemToCompare = (prop: Prop) => {
     }
 
     return (
-        <FormControl variant="outlined" sx={{ width: '100%' }}>
-            <InputLabel htmlFor={id} sx={{mt : -.2}}>escolha</InputLabel>
+        <FormControl variant="outlined" sx={{ width: '100%'}}>
+            <InputLabel htmlFor={id} >escolha</InputLabel>
             <Select sx={{p:.5 }} size="small" onChange={(e) => handleComparative(e.target.value)} native defaultValue='' id={id} label='raquete'
             >
                 <option aria-label="None" value={itemComparative} />
