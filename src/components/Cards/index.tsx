@@ -24,12 +24,13 @@ export interface Prop {
         role: {
             category: string
             brand: any
-        }}
+        }
+    }
 }
-export const CardRaquetes = (prop: Prop ) => {
-    const {item} = prop
-    return ( 
-        <Card sx={{height: '100%'}}>
+export const CardRaquetes = (prop: Prop) => {
+    const { item } = prop
+    return (
+        <Card sx={{ height: '100%' }}>
             <CardHeader
                 avatar={
                     <Avatar variant='square' src={item.img} />
@@ -45,28 +46,38 @@ export const CardRaquetes = (prop: Prop ) => {
             />
             <Overflow>
 
-            <AppearEffect y={100} isImg={false} yA={-16} rotate={-16}>
+                <AppearEffect y={100} isImg={false} yA={-16} rotate={-16}>
 
-            <CardMedia
-            component="img"
-            height="auto"
-            alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-            image={item.img}
-            >
-            </CardMedia>
-            </AppearEffect>
-                </Overflow>
+                    <CardMedia
+                        component="img"
+                        height="auto"
+                        alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+                        image={item.img}
+                    >
+                    </CardMedia>
+                </AppearEffect>
+            </Overflow>
             <CardContent>
                 <Typography variant='subtitle2' color='text.primary'>
                     {item.subtitle}
                 </Typography>
-                <Typography sx={{textDecoration: 'line-through'}} variant='body2' color='text.secondary'>
-                    R$ {item.price.original.toFixed(3)},00
-                </Typography>
-                <Typography sx={{fontWeight: 900}} variant='body1' color='text.primary'>
-                    R$ {item.price.sale.toFixed(3)},00
-                </Typography>
+                <PriceSale original={item.price.original} sale={item.price.sale} />
+
             </CardContent>
         </Card>
+    )
+}
+
+
+export const PriceSale = ({original, sale}:{original: number, sale: number}) => {
+    return (
+        <>
+            <Typography sx={{ textDecoration: 'line-through' }} variant='body2' color='text.secondary'>
+                R$ {original.toFixed(3)},00
+            </Typography>
+            <Typography sx={{ fontWeight: 900 }} variant='body1' color='text.primary'>
+                R$ {sale.toFixed(3)},00
+            </Typography>
+        </>
     )
 }
