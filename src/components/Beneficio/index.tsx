@@ -33,29 +33,37 @@ export const Beneficios = () => {
         },
     ]
 
-interface Prop {
-    item: {
-        icone: JSX.Element;
-        title: string;
-        description: string;
-        brand: any;
+    interface Prop {
+        item: {
+            icone: JSX.Element;
+            title: string;
+            description: string;
+            brand: any;
+        }
+        index: number
+        direction: ResponsiveStyleValue<any>
     }
-    index: number
-    direction: ResponsiveStyleValue<any>
-}
     const Item = (prop: Prop) => {
-        const {item, index, direction} = prop
+        const { item, index, direction } = prop
         return (
             <Grid key={index} item xs={12} md={6} lg={6} >
-            <Stack direction={direction} spacing={2} alignItems='center' sx={{ p: 2, position: 'relative' }}>
-                <Avatar variant='square' src={item.brand} />
-                <Stack spacing={1}>
-                    <Typography variant='h5'>{item.title}</Typography>
-                    <Typography paragraph>{item.description}</Typography>
-                </Stack>
+                <Stack direction={direction} spacing={2} alignItems='center' sx={{ p: 2, position: 'relative' }}>
+                    <Avatar
+                        variant='square'
+                        src={item.brand}
+                        sx={{
+                            width: 132, '& img': {
+                                width: 124,
+                                objectFit: 'fill',
+                            },
+                        }} />
+                    <Stack spacing={1}>
+                        <Typography variant='h5'>{item.title}</Typography>
+                        <Typography paragraph>{item.description}</Typography>
+                    </Stack>
 
-            </Stack>
-        </Grid>
+                </Stack>
+            </Grid>
         )
     }
     return (
@@ -68,7 +76,7 @@ interface Prop {
                         } else {
                             return <Item item={item} index={index} direction='row' />
                         }
-                })
+                    })
                 }
             </Grid>
         </Box>

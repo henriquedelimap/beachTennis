@@ -22,18 +22,7 @@ let theme = createTheme({
           color: '#1f1f1f'
         }
       }
-    },
-      MuiAvatar: {
-      styleOverrides: {
-        root: {
-          width: 132,
-        },
-        img: {
-            width: 124,
-            objectFit: 'fill',
-          },
-        },
-      },
+    }
   }})
 
 
