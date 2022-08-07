@@ -12,27 +12,26 @@ interface Prop {
 
 const ItemHeader = ({ subtitle, title, description, img, material, role, price }: IRaquete) => {
     return (
-        <Card elevation={0}>
-            <CardMedia
-                component='img'
-                height='auto'
-                alt={`raquete ${title} feita de ${material}, confira mais detalhes: ${description}`}
-                image={img}
-                sx={{width: '12rem', maxWidth: '24rem'}}
-                ></CardMedia>
+      
 
-            <CardContent>
 
-                <Stack sx={{ pt: 2 }} spacing={2} direction='column' alignItems='center' justifyContent='center'>
-                    <Typography align='center' variant='body1'>
-                        {title}
-                    </Typography>
+            <Grid container alignItems='start' justifyContent='space-between' sx={{width: '100%'}}>
+                <Grid rowSpacing={4} item container xs={12} justifyContent='center' sx={{ minHeight: '20rem'}} >
+                    <Grid item container justifyContent='center' xs={12}>
 
-                    <PriceSale original={price.original} sale={price.sale} />
+                    <img src={img} style={{width:'auto', height: '10rem', objectFit: 'contain'}} />
+                    </Grid>
+                    <Stack  direction='column' alignItems='center' justifyContent='center'>
+                        <Typography align='center' variant='body1'>
+                            {title}
+                        </Typography>
 
-                </Stack>
-            </CardContent>
-        </Card>
+                        <PriceSale original={price.original} sale={price.sale} />
+
+                    </Stack>
+                </Grid>
+                
+            </Grid>
     )
 }
 

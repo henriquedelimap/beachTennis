@@ -126,19 +126,19 @@ export const Data = [
     {
         id: 6,
         img: dnaOrange,
-        title: '',
-        subtitle: '',
+        title: 'DNA EXTREME 2.2 ORANGE 2022',
+        subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2  ORANGE 2022',
         price: {
-            original: 0,
-            sale: 0
+            original: 2.450,
+            sale: 1.999
         },
         stored: 0,
-        description: ``,
+        description: `Em material FULL YELLOW KEVLAR, manejável e reativo, excelente na defesa e extremamente poderoso no ataque, embelezado com gráficos em folha de ouro. O RADIAL HOLES SYSTEM, melhorando o manuseio e o dinamismo, deixa a raquete ainda mais estável.`,
         subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
+        weight: 0.34,
+        dimensions: [50, 2, 27],
+        color: ['Preto', 'Dourado', 'Laranja'],
+        material: 'Full Yellow Kevlar',
         role: {
             category: 'SKU',
             brand: logoQuickSand

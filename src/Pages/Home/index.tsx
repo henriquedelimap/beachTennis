@@ -18,10 +18,10 @@ import { useEffect, useState } from "react"
 
 export const Home = () => {
     const { scrollYProgress } = useScroll()
-    const [itemComparative1, setItemComparative1] = useState('')
+    const [itemComparative1, setItemComparative1] = useState('black death 10.2 gold 2022')
     const [firstItemComparative, setFirstItemComparative] = useState<IRaquete >(Data.map(item=>item)[0])
     const [secondItemComparative, setSecondItemComparative] = useState<IRaquete >(Data.map(item=>item)[1])
-    const [itemComparative2, setItemComparative2] = useState('')
+    const [itemComparative2, setItemComparative2] = useState('DNA EXTREME 2.2 ORANGE 2022')
     const raquetes = [
 
         {
