@@ -4,7 +4,7 @@ import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
 import { Overflow } from "../../styles"
-interface Prop {
+export interface Prop {
     item: {
         id: number;
         img: any;

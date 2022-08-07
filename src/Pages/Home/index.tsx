@@ -11,10 +11,19 @@ import { Fundo } from '../../styles'
 import { AppearEffect } from "../../components/Animation"
 import { Btn } from "../../components/Button"
 import { BannerGlass } from "../../components/Banner"
+import { Comparativo } from "../../components/Comparativo"
+import { Data } from "../../assets/data"
+import { IRaquete, SelectItemToCompare } from "../../components/Seletor"
+import { useEffect, useState } from "react"
+
 export const Home = () => {
     const { scrollYProgress } = useScroll()
+    const [itemComparative1, setItemComparative1] = useState('')
+    const [firstItemComparative, setFirstItemComparative] = useState<IRaquete | undefined>()
+    const [secondItemComparative, setSecondItemComparative] = useState<IRaquete | undefined>()
+    const [itemComparative2, setItemComparative2] = useState('')
     const raquetes = [
-       
+
         {
             title: '',
             img: promocoes[0].img,
@@ -57,12 +66,24 @@ export const Home = () => {
             xA: '91.6%',
             index: 2
         },
-      
-        
-        
+
+
+
     ]
+    let object1 = Data.map(item=> {if(item.title === itemComparative1) {
+        return item
+    }}).filter(i=>i)[0]
+    let object2 = Data.map(item=> {if(item.title === itemComparative2) {
+        return item
+    }}).filter(i=>i)[0]
+    console.log(object1);
+    console.log(object2);
+    
+    useEffect(() => {
+        setFirstItemComparative(object1)
+        setSecondItemComparative(object2)
 
-
+    }, [ itemComparative1, object1,object2])
     return (
         <>
 
@@ -77,12 +98,22 @@ export const Home = () => {
                 </ContainerPadding>
             </Box>
 
-            <BannerGlass 
-                raquetes={raquetes} 
+            <BannerGlass
+                raquetes={raquetes}
                 logo={logoHeros}
                 btnText={'tecnologia de ponta'}
                 description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
             />
+            <ContainerPadding>
+            <Title text='compare os modelos' />
+            <Stack spacing={2} direction='row' justifyContent='space-around'>
+
+            <SelectItemToCompare setItemComparative={setItemComparative1}   id='primeira' raquetes={Data}  />
+            <SelectItemToCompare setItemComparative={setItemComparative2}  id='segunda' raquetes={Data} />
+            </Stack>
+            <Comparativo object={firstItemComparative} object2={secondItemComparative} />
+            </ContainerPadding>
+
             <Stack sx={{ height: 1000 }}>
 
             </Stack>
