@@ -69,7 +69,7 @@ export const Comparativo = (prop: Prop) => {
 
     return (
 
-        <Stack spacing={0} >
+        <Stack spacing={0} sx={{overflow: 'hidden'}} >
             <Stack spacing={0} direction='row' justifyContent='space-around' sx={{ width: '100%' }}>
                 <ItemHeader {...object} />
                 <ItemHeader {...object2} />
