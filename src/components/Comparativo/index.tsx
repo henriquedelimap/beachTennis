@@ -9,7 +9,7 @@ interface Prop {
     object2: IRaquete
 }
 
-const Item = ({ title, description, img, material, role, price }: IRaquete) => {
+const ItemHeader = ({ title, description, img, material, role, price }: IRaquete) => {
     return (
         <Card elevation={0}>
             <CardMedia
@@ -19,40 +19,66 @@ const Item = ({ title, description, img, material, role, price }: IRaquete) => {
                 image={img}></CardMedia>
 
             <CardContent>
-                <Divider />
 
-                <Stack sx={{pt:2}} spacing={2} direction='column' alignItems='center' justifyContent='center'>
+                <Stack sx={{ pt: 2 }} spacing={2} direction='column' alignItems='center' justifyContent='center'>
                     <Typography align='center' variant='body1'>
                         {title}
                     </Typography>
 
                     <PriceSale original={price.original} sale={price.sale} />
 
-                    <Divider flexItem sx={{p:2}}>MATERIAL</Divider>
+                </Stack>
+            </CardContent>
+        </Card>
+    )
+}
 
+const ItemContentCreator = ({
+    content
+}: { content: string }) => {
+    return (
+        <Card sx={{ width: '100%' }} elevation={0}>
+            <CardContent>
+                <Stack direction='column' alignItems='center' justifyContent='center'>
                     <Typography align='center' variant='body1'>
-                        {material}
+                        {content}
                     </Typography>
                 </Stack>
             </CardContent>
         </Card>
     )
 }
+const ItemContent = ({
+    content, content2, title
+}: { content: string, title: string, content2: string }) => {
+    return (
+        <Stack>
+            <Typography variant={'h4'}>{title}</Typography>
+            <Divider sx={{ width: '100%' }} />
+            <Stack direction='row'>
+                <ItemContentCreator content={content} />
+                <ItemContentCreator content={content2} />
+            </Stack>
+        </Stack>
+    )
+}
+
 export const Comparativo = (prop: Prop) => {
     const { object, object2 } = prop
 
 
     return (
-        <Grid container justifyContent='space-around'>
 
-            <Grid item xs={6}>
-                <Item {...object} />
-            </Grid>
+        <Stack spacing={4} >
+            <Stack spacing={0} direction='row' justifyContent='space-around' sx={{ width: '100%' }}>
+                <ItemHeader {...object} />
+                <ItemHeader {...object2} />
+            </Stack>
 
-
-            <Grid item xs={6}>
-                <Item {...object2} />
-            </Grid>
-        </Grid>
+            <Stack direction='column' spacing={4} >
+                <ItemContent title={'material'} content={object.material} content2={object2.material} />
+                <ItemContent title={'descrição'} content={object.description} content2={object2.description} />
+            </Stack>
+        </Stack>
     )
 }

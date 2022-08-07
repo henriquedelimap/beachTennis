@@ -71,7 +71,7 @@ export const Data = [
         weight: 0,
         dimensions: [50, 2, 27],
         color: ['Preto', 'Dourado', 'Azul'],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
@@ -137,7 +137,7 @@ export const Data = [
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
@@ -160,7 +160,7 @@ export const Data = [
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
@@ -183,7 +183,7 @@ export const Data = [
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
@@ -206,7 +206,7 @@ export const Data = [
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
@@ -228,7 +228,7 @@ export const Data = [
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
@@ -251,7 +251,7 @@ export const Data = [
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: 'materialll',
         role: {
             category: 'SKU',
             brand: logoQuickSand
