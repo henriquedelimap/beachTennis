@@ -59,7 +59,7 @@ const ItemContent = ({
         <Grid item width='100%' >
             <Typography variant={'h4'}>{title}</Typography>
             <Divider sx={{ width: '100%' }} />
-            <Stack direction='row'>
+            <Stack direction='row' sx={{pt: 4}}>
                 <ItemContentCreator content={content} />
                 <ItemContentCreator content={content2} />
                 
