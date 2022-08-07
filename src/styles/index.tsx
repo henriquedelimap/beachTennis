@@ -15,10 +15,9 @@ export const Fundo = styled('div')(({top, left, rotate, right}:{top?: number, le
 
 export const Sticky = styled('div')(({})=>({
     position: 'sticky',
-    top: 64,
+    top: 56,
     left: 0,
     background:'#ffffffaf',
     backdropFilter: 'blur(8px)',
-    paddingTop: 2,
     zIndex: 200
 }))

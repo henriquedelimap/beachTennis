@@ -39,20 +39,20 @@ export const SelectItemToCompare = (prop: Prop) => {
     }
 
     return (
-        <FormControl variant="outlined" sx={{  width: '100%', border: 'none' }}>
-                <InputLabel htmlFor={id}>raquete</InputLabel>
-                <Select onChange={(e) => handleComparative(e.target.value)} native defaultValue='' id={id} label='raquete'
-                >
-                    <option aria-label="None" value={itemComparative} />
-                    <optgroup label={id}>
-                        {
-                            raquetes?.map((item, index) => (
-                                <option key={index} value={item?.title}>{item?.title}</option>
+        <FormControl variant="outlined" sx={{ width: '100%' }}>
+            <InputLabel htmlFor={id}>raquete</InputLabel>
+            <Select onChange={(e) => handleComparative(e.target.value)} native defaultValue='' id={id} label='raquete'
+            >
+                <option aria-label="None" value={itemComparative} />
+                <optgroup label={id}>
+                    {
+                        raquetes?.map((item, index) => (
+                            <option key={index} value={item?.title}>{item?.title}</option>
 
-                            ))
-                        }
-                    </optgroup>
-                </Select>
-            </FormControl>
+                        ))
+                    }
+                </optgroup>
+            </Select>
+        </FormControl>
     )
 }
