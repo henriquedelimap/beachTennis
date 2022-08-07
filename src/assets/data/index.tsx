@@ -145,120 +145,120 @@ export const Data = [
 
         }
     },
-    {
-        id: 7,
-        img: revolutionFullcarbonBlue,
-        title: '',
-        subtitle: '',
+    // {
+    //     id: 7,
+    //     img: revolutionFullcarbonBlue,
+    //     title: '',
+    //     subtitle: '',
 
-        price: {
-            original: 0,
-            sale: 0
-        },
-        stored: 0,
-        description: ``,
-        subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
-        role: {
-            category: 'SKU',
-            brand: logoQuickSand
+    //     price: {
+    //         original: 0,
+    //         sale: 0
+    //     },
+    //     stored: 0,
+    //     description: ``,
+    //     subDescription: ``,
+    //     weight: 0,
+    //     dimensions: [0, 0, 0],
+    //     color: ['', ''],
+    //     material: 'materialll',
+    //     role: {
+    //         category: 'SKU',
+    //         brand: logoQuickSand
 
-        }
-    },
-    {
-        id: 8,
-        img: revolutionFullcarbonRed,
-        title: '',
-        subtitle: '',
+    //     }
+    // },
+    // {
+    //     id: 8,
+    //     img: revolutionFullcarbonRed,
+    //     title: '',
+    //     subtitle: '',
 
-        price: {
-            original: 0,
-            sale: 0
-        },
-        stored: 0,
-        description: ``,
-        subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
-        role: {
-            category: 'SKU',
-            brand: logoQuickSand
+    //     price: {
+    //         original: 0,
+    //         sale: 0
+    //     },
+    //     stored: 0,
+    //     description: ``,
+    //     subDescription: ``,
+    //     weight: 0,
+    //     dimensions: [0, 0, 0],
+    //     color: ['', ''],
+    //     material: 'materialll',
+    //     role: {
+    //         category: 'SKU',
+    //         brand: logoQuickSand
 
-        }
-    },
-    {
-        id: 9,
-        img: revolutionFullcarbonYellow,
-        title: '',
-        subtitle: '',
+    //     }
+    // },
+    // {
+    //     id: 9,
+    //     img: revolutionFullcarbonYellow,
+    //     title: '',
+    //     subtitle: '',
 
-        price: {
-            original: 0,
-            sale: 0
-        },
-        stored: 0,
-        description: ``,
-        subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
-        role: {
-            category: 'SKU',
-            brand: logoQuickSand
-        }
-    },
-    {
-        id: 10,
-        img: revolutionFullcarbonYellow,
-        title: '',
-        subtitle: '',
+    //     price: {
+    //         original: 0,
+    //         sale: 0
+    //     },
+    //     stored: 0,
+    //     description: ``,
+    //     subDescription: ``,
+    //     weight: 0,
+    //     dimensions: [0, 0, 0],
+    //     color: ['', ''],
+    //     material: 'materialll',
+    //     role: {
+    //         category: 'SKU',
+    //         brand: logoQuickSand
+    //     }
+    // },
+    // {
+    //     id: 10,
+    //     img: revolutionFullcarbonYellow,
+    //     title: '',
+    //     subtitle: '',
 
-        price: {
-            original: 0,
-            sale: 0
-        },
-        stored: 0,
-        description: ``,
-        subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
-        role: {
-            category: 'SKU',
-            brand: logoQuickSand
+    //     price: {
+    //         original: 0,
+    //         sale: 0
+    //     },
+    //     stored: 0,
+    //     description: ``,
+    //     subDescription: ``,
+    //     weight: 0,
+    //     dimensions: [0, 0, 0],
+    //     color: ['', ''],
+    //     material: 'materialll',
+    //     role: {
+    //         category: 'SKU',
+    //         brand: logoQuickSand
 
-        }
-    },
-    {
-        id: 11,
-        img: spitfire,
-        title: '',
-        subtitle: '',
+    //     }
+    // },
+    // {
+    //     id: 11,
+    //     img: spitfire,
+    //     title: '',
+    //     subtitle: '',
         
-        price: {
-            original: 0,
-            sale: 0
-        },
-        stored: 0,
-        description: ``,
-        subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
-        role: {
-            category: 'SKU',
-            brand: logoQuickSand
+    //     price: {
+    //         original: 0,
+    //         sale: 0
+    //     },
+    //     stored: 0,
+    //     description: ``,
+    //     subDescription: ``,
+    //     weight: 0,
+    //     dimensions: [0, 0, 0],
+    //     color: ['', ''],
+    //     material: 'materialll',
+    //     role: {
+    //         category: 'SKU',
+    //         brand: logoQuickSand
 
-        }
-    },
+    //     }
+    // },
     {
         id: 12,
         img: gold22,

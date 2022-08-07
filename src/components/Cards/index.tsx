@@ -72,10 +72,10 @@ export const CardRaquetes = (prop: Prop) => {
 export const PriceSale = ({original, sale}:{original: number, sale: number}) => {
     return (
         <>
-            <Typography sx={{ textDecoration: 'line-through' }} variant='body2' color='text.secondary'>
+            <Typography sx={{ textDecoration: 'line-through', textAlign: 'center' }} variant='body2' color='text.secondary'>
                 R$ {original.toFixed(3)},00
             </Typography>
-            <Typography sx={{ fontWeight: 900 }} variant='body1' color='text.primary'>
+            <Typography sx={{ fontWeight: 900, textAlign: 'center'  }} variant='body1' color='text.primary'>
                 R$ {sale.toFixed(3)},00
             </Typography>
         </>

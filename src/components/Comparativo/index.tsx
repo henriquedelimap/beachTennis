@@ -15,14 +15,15 @@ const ItemHeader = ({ subtitle, title, description, img, material, role, price }
       
 
 
-            <Grid container alignItems='start' justifyContent='space-between' sx={{width: '100%'}}>
-                <Grid rowSpacing={4} item container xs={12} justifyContent='center' sx={{ minHeight: '20rem'}} >
+            <Grid container  alignItems='start' justifyContent='space-between' sx={{width: '100%'}}>
+                <Grid rowSpacing={4} item container xs={12} justifyContent='center' sx={{ minHeight: '24rem'}} >
                     <Grid item container justifyContent='center' xs={12}>
 
-                    <img src={img} style={{width:'auto', height: '10rem', objectFit: 'contain'}} />
+                        <img src={img} style={{width:'auto', height: '13rem', objectFit: 'contain'}} />
                     </Grid>
+                    
                     <Stack  direction='column' alignItems='center' justifyContent='center'>
-                        <Typography align='center' variant='body1'>
+                        <Typography align='center' variant='body1' sx={{p: .5, pb: 2}}>
                             {title}
                         </Typography>
 
