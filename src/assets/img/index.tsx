@@ -24,6 +24,7 @@ import logoHeros from './logoHeros.png'
 import X from './X.svg'
 import {Vector, Vector2} from './Vector'
 import {LogoBeachTennis} from './logoBeachTennis'
+import {RaqueteIMG} from './raqueteImg'
 
 export {
     blackDeathGold,
@@ -52,5 +53,6 @@ export {
     logoHeros,
     Vector,
     Vector2,
-    LogoBeachTennis
+    LogoBeachTennis,
+    RaqueteIMG
 }

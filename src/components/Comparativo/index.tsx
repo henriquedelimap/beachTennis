@@ -1,9 +1,10 @@
 import { Card, CardContent, List, ListItem, ListItemButton, ListItemText, ListItemIcon, CardHeader, CardMedia, Divider, Grid, Paper, Stack, Typography } from "@mui/material"
 import { PriceSale } from "../Cards"
-import { useEffect } from "react"
+import { ReactNode, useEffect } from "react"
 import { MdWork } from "react-icons/md"
 import { Data } from "../../assets/data"
 import { IRaquete } from "../Seletor"
+import { DimensaoRaquete } from "../../components/Dimensions"
 interface Prop {
     object: IRaquete
     object2: IRaquete
@@ -34,14 +35,15 @@ const ItemHeader = ({ subtitle, title, description, img, material, role, price }
 }
 
 const ItemContentCreator = ({
-    content
-}: { content: string }) => {
+    content, children
+}: { content?: string, children?: ReactNode }) => {
     return (
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
                     <Typography align='center' variant='body1'>
                         {content}
+                        {children}
                     </Typography>
                 </Stack>
             </CardContent>
@@ -58,6 +60,27 @@ const ItemContent = ({
             <Stack direction='row'>
                 <ItemContentCreator content={content} />
                 <ItemContentCreator content={content2} />
+                
+            </Stack>
+        </Grid>
+    )
+}
+
+const ItemContentDimensionCreator = ({
+    dimension, dimension2, title,
+}: { title: string, dimension: number[], dimension2: number[]}) => {
+    return (
+        <Grid item width='100%' >
+            <Typography variant={'h4'}>{title}</Typography>
+            <Divider sx={{ width: '100%' }} />
+            <Stack direction='row' sx={{pt: 4}}>
+                <ItemContentCreator>
+                    <DimensaoRaquete altura={dimension[0]} largura={dimension[1]} comprimento={dimension[2]} />
+                </ItemContentCreator>
+                <ItemContentCreator>
+                    <DimensaoRaquete altura={dimension2[0]} largura={dimension2[1]} comprimento={dimension2[2]} />
+                </ItemContentCreator>
+
             </Stack>
         </Grid>
     )
@@ -80,8 +103,12 @@ export const Comparativo = (prop: Prop) => {
                 <ItemContent title={'cores'} content={cor1} content2={cor2} />
                 <ItemContent title={'materiais'} content={object.material} content2={object2.material} />
                 <ItemContent title={'descrições'} content={object.description} content2={object2.description} />
-                <ItemContent title={'dimensões'} content={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} content2={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} />
+                <ItemContentDimensionCreator title={'dimensões'} 
+                    dimension={object.dimensions}
+                    dimension2={object2.dimensions} 
+                    /> 
             </Grid>
+
         </Stack>
     )
 }
