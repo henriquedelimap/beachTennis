@@ -66,7 +66,8 @@ const ItemContent = ({
 export const Comparativo = (prop: Prop) => {
     const { object, object2 } = prop
 
-
+    const cor1 = object.color[0] !== undefined ? object.color[0] : '---' 
+    const cor2 = object2.color[0] !== undefined ? object2.color[0] : '---' 
     return (
 
         <Stack spacing={0} sx={{overflow: 'hidden'}} >
@@ -76,7 +77,7 @@ export const Comparativo = (prop: Prop) => {
             </Stack>
 
             <Grid container  >
-                <ItemContent title={'cores'} content={`${object.color[0]}  ${object.color[1]}  ${object.color[2]}`} content2={`${object.color[0]}  ${object.color[1]}  ${object.color[2]}`} />
+                <ItemContent title={'cores'} content={cor1} content2={cor2} />
                 <ItemContent title={'materiais'} content={object.material} content2={object2.material} />
                 <ItemContent title={'descrições'} content={object.description} content2={object2.description} />
                 <ItemContent title={'dimensões'} content={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} content2={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} />
