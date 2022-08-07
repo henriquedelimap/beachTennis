@@ -39,7 +39,7 @@ export const Sale = () => {
 
                             <img src={item.img} style={{ zIndex: 3, height: 320 }} />
                             <Fundo style={{ background: item.colorRadial }} />
-                            <Btn position={'absolute'} top={-64} size={'h5'} text={'30% off'} color={item.color} />
+                            <Btn position={'absolute'} top={-64} size={20} text={'30% off'} color={item.color} />
                         </Stack>
                     </Grid >
                 ))

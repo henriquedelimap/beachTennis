@@ -4,17 +4,17 @@ interface Prop{
     text: string
     color: string
     position?: string
-    size?: string
+    size?: number
     top?: number | string
 }
 export const Btn = (prop: Prop) => {
 
     const {text, color, position, size, top} = prop
-    const fontSize = size ? size : 'body'
+    const fontSize = size !== null ? size : 16
     const positionValue = position ? `position: position` : null
     return (
         <Button sx={{ positionValue, top: top, color: 'white', zIndex: 5, background: color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
-            <Typography sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold', fontSize:fontSize }}>
+            <Typography sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold', fontSize:size }}>
                 {text}
             </Typography>
             <Borda />

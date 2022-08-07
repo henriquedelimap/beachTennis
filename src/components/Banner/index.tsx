@@ -71,7 +71,7 @@ export const BannerGlass = (prop: Prop) => {
                     {description}
                     
                 </Typography>
-                <Btn size={'h6'} color={'#f1f1f11f'} text={btnText} />
+                <Btn size={18} color={'#f1f1f11f'} text={btnText} />
             </Stack>
             <Stack width='100%' height='100%' sx={{ position: 'absolute' }}>
 
