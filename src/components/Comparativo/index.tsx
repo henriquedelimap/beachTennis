@@ -77,9 +77,9 @@ export const Comparativo = (prop: Prop) => {
 
             <Grid container  >
                 <ItemContent title={'cores'} content={`${object.color[0]}  ${object.color[1]}  ${object.color[2]}`} content2={`${object.color[0]}  ${object.color[1]}  ${object.color[2]}`} />
-                <ItemContent title={'material'} content={object.material} content2={object2.material} />
-                <ItemContent title={'descrição'} content={object.description} content2={object2.description} />
-                <ItemContent title={'dimensão'} content={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} content2={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} />
+                <ItemContent title={'materiais'} content={object.material} content2={object2.material} />
+                <ItemContent title={'descrições'} content={object.description} content2={object2.description} />
+                <ItemContent title={'dimensões'} content={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} content2={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} />
             </Grid>
         </Stack>
     )
