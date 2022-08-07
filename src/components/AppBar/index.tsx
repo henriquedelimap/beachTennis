@@ -55,8 +55,15 @@ export const Header = () => {
     };
     return (
         <AppBar sx={{ p: 1, pb: 0 }}>
-            <Stack sx={{ width: '100%', pl: 1, pr: 1 }} direction='row' alignItems='center' justifyContent='space-between' >
-                <Stack spacing={0} direction='row' alignItems='center' >
+            <Stack 
+                sx={{ width: '100%', pl: 1, pr: 1 }} 
+                direction='row' 
+                alignItems='center' 
+                justifyContent='space-between' >
+                <Stack 
+                    spacing={0} 
+                    direction='row' 
+                    alignItems='center' >
                     <IconButton
                         onClick={() => setOpen(true)}
                         sx={{ display: { xs: 'flex', md: 'flex', lg: 'none' }, transition: 'all 1s ease' }}>
@@ -70,12 +77,23 @@ export const Header = () => {
                     <Tabs sx={{ p: 0 }} centered value={value} onChange={handleChange} >
                         {
                             menu.map((item, index) => (
-                                <Tab key={index} onClick={() => navigate(item.to)} sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} value={item.label} label={item.label} />
+                                <Tab 
+                                    key={index} 
+                                    onClick={() => navigate(item.to)} 
+                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} 
+                                    value={item.label} 
+                                    label={item.label}  />
+                                    
                             ))
                         }
                         {
                             icones.map((icone, index) => (
-                                <Tab value={icone.label} key={index} onClick={icone.click} sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} label={icone.icone} />
+                                <Tab 
+                                    value={icone.label} 
+                                    key={index} 
+                                    onClick={icone.click} 
+                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} 
+                                    label={icone.icone} />
 
                             ))
                         }
