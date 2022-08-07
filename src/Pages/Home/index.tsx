@@ -100,7 +100,7 @@ export const Home = () => {
             </Overflow>
             <Box sx={{ background: '#F1FCFF' }}>
                 <ContainerPadding>
-                    <TitleCentred text='experimente o novo' />
+                    <TitleCentred text='conheça as marcas' />
                     <Beneficios />
                 </ContainerPadding>
             </Box>
