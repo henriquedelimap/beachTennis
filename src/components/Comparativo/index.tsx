@@ -52,14 +52,14 @@ const ItemContent = ({
     content, content2, title
 }: { content: string, title: string, content2: string }) => {
     return (
-        <Stack>
+        <Grid item width='100%' >
             <Typography variant={'h4'}>{title}</Typography>
             <Divider sx={{ width: '100%' }} />
             <Stack direction='row'>
                 <ItemContentCreator content={content} />
                 <ItemContentCreator content={content2} />
             </Stack>
-        </Stack>
+        </Grid>
     )
 }
 
@@ -75,11 +75,12 @@ export const Comparativo = (prop: Prop) => {
                 <ItemHeader {...object2} />
             </Stack>
 
-            <Stack direction='column' spacing={4} >
+            <Grid container  >
+                <ItemContent title={'cores'} content={`${object.color[0]}  ${object.color[1]}  ${object.color[2]}`} content2={`${object.color[0]}  ${object.color[1]}  ${object.color[2]}`} />
                 <ItemContent title={'material'} content={object.material} content2={object2.material} />
-                <ItemContent title={'cores'} content={object.color[0]} content2={object2.color[0]} />
                 <ItemContent title={'descrição'} content={object.description} content2={object2.description} />
-            </Stack>
+                <ItemContent title={'dimensão'} content={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} content2={`${object.dimensions[0]} x ${object.dimensions[1]} x ${object.dimensions[2]}`} />
+            </Grid>
         </Stack>
     )
 }
