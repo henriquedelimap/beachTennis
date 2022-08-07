@@ -11,6 +11,7 @@ const theme = createTheme({
         root: {
           background: '#ffffffaf',
           backdropFilter: 'blur(8px)',
+          borderBottom: '2px solid transparent',
 
           boxShadow: 'none'
 
