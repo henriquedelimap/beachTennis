@@ -3,8 +3,8 @@ import { useEffect } from "react"
 import { Data } from "../../assets/data"
 import { IRaquete } from "../Seletor"
 interface Prop {
-    object?: IRaquete
-    object2?: IRaquete
+    object: IRaquete
+    object2: IRaquete
 }
 
 const Item = ({ title, description, img, material }: IRaquete) => {

@@ -2,8 +2,8 @@ import { FormControl, InputLabel, Select } from "@mui/material"
 import { Dispatch, SetStateAction, useEffect } from "react"
 
 interface Prop {
-    setItemComparative?: Dispatch<SetStateAction<string>>
-    itemComparative?: string
+    setItemComparative: Dispatch<SetStateAction<string>>
+    itemComparative: string
     raquetes: IRaquete[]
     id: string
 }
@@ -37,10 +37,6 @@ export const SelectItemToCompare = (prop: Prop) => {
 
     }
 
-    useEffect(() => {
-        console.log(itemComparative);
-
-    }, [handleComparative, setItemComparative])
     return (
         <FormControl sx={{ width: '100%' }}>
             <InputLabel htmlFor={id}>raquete</InputLabel>
