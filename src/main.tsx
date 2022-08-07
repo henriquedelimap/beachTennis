@@ -9,7 +9,9 @@ const theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          background: '#fff',
+          background: '#ffffffaf',
+          backdropFilter: 'blur(8px)',
+
           boxShadow: 'none'
 
         }
@@ -21,8 +23,7 @@ const theme = createTheme({
           color: '#1f1f1f'
         }
       }
-    }
-
+    },
   }
 })
 
@@ -30,12 +31,10 @@ const theme = createTheme({
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Overflow>
-        
 
-      <CssBaseline />
-      <App />
-      </Overflow>
+
+        <CssBaseline />
+        <App />
     </ThemeProvider>
   </React.StrictMode>
 )

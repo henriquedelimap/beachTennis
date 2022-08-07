@@ -12,7 +12,7 @@ import { Overflow } from '../../styles'
 
 export const DefaultLayout = () => {
     return (
-        <Overflow>
+        <>
             <FloatingButton />
             <Header />
             <Banner />
@@ -20,7 +20,7 @@ export const DefaultLayout = () => {
                 <Outlet />
             </Box>
             <OOLogo />
-        </Overflow>
+        </>
 
     )
 }

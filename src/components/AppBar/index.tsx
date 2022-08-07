@@ -7,6 +7,8 @@ import { DrawerMenu } from "../Drawer"
 import { DrawerShop } from "../Shop"
 import { ModalPhone } from "../ModalPhone"
 import { LogoBeachTennis } from "../../assets/img/logoBeachTennis"
+
+
 export const Header = () => {
     const navigate = useNavigate()
     console.log(history);

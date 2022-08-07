@@ -34,6 +34,7 @@ export const Sale = () => {
             <LogoQuicksand  />
             {
                 promocoes.map((item, index) => (
+                    
                     <Grid key={index} sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
 

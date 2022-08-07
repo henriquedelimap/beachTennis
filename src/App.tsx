@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop>
-        <Overflow>
           
         <Routes>
           <Route path='/' element={<DefaultLayout />} />
@@ -20,7 +19,6 @@ function App() {
             <Route path='sobreNos' element={<SobreNos />} />
           </Route>
         </Routes>
-        </Overflow>
       </ScrollToTop>
 
     </Router>

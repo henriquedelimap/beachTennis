@@ -7,7 +7,7 @@ import { ContainerPadding } from "../../components/Container"
 import { logoHeros, fundoCarbono2, fundoCarbono3 } from "../../assets/img"
 import { motion, useScroll, Variants } from 'framer-motion'
 import { Absolute } from "../../assets/img/logoQuicksand"
-import { Fundo } from '../../styles'
+import { Fundo, Sticky, Overflow } from '../../styles'
 import { AppearEffect } from "../../components/Animation"
 import { Btn } from "../../components/Button"
 import { BannerGlass } from "../../components/Banner"
@@ -91,11 +91,13 @@ export const Home = () => {
     }, [ itemComparative1, object1,object2])
     return (
         <>
+            <Overflow>
 
             <ContainerPadding>
                 <Title text='promoção' />
                 <Sale />
             </ContainerPadding>
+            </Overflow>
             <Box sx={{ background: '#F1FCFF' }}>
                 <ContainerPadding>
                     <TitleCentred text='experimente o novo' />
@@ -105,11 +107,14 @@ export const Home = () => {
 
             <ContainerPadding>
             <Title text='compare os modelos' />
+
+            <Sticky>
             <Stack spacing={2} direction='row' justifyContent='space-around'>
 
             <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1}  />
             <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
             </Stack>
+            </Sticky>
             <Comparativo object={firstItemComparative} object2={secondItemComparative} />
             </ContainerPadding>
             <BannerGlass
