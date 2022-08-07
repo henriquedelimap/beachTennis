@@ -18,7 +18,7 @@ const ItemHeader = ({ subtitle, title, description, img, material, role, price }
                 height='auto'
                 alt={`raquete ${title} feita de ${material}, confira mais detalhes: ${description}`}
                 image={img}
-                sx={{width: '14rem', maxWidth: '24rem'}}
+                sx={{width: '12rem', maxWidth: '24rem'}}
                 ></CardMedia>
 
             <CardContent>
