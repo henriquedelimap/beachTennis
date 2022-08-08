@@ -43,7 +43,7 @@ export const CardRaquetes = (prop: Prop) => {
 
     
     return (
-        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', maxWidth: '32rem' }}>
+        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', maxWidth: '24rem' }}>
             <CardHeader
                 avatar={
                     <Avatar
