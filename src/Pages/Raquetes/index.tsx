@@ -9,10 +9,10 @@ export const RaquetesPage = () => {
     return (
        <ContainerPadding>
                 <Title text='raquetes' />
-                <Grid container alignItems='stretch' rowSpacing={2} spacing={{lg: 2, md: 2, xs: 0}}>
+                <Grid  container justifyContent='center' alignItems='cneter' rowSpacing={2} spacing={{lg: 2, md: 2, xs: 0}}>
                     {
                         Data.map((item, index) => (
-                            <Grid key={index} item justifyContent='flex-start' xs={12} md={4} lg={3}  >
+                            <Grid key={index} item container justifyContent='center' alignItems='center' xs={12} md={4} lg={3}  >
                                 <CardRaquetes animated={false} item={item} />
                             </Grid>
                         ))

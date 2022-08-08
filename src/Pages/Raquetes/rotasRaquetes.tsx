@@ -15,9 +15,9 @@ export const RotasRaquetes = ( ) => {
                         
                         <ContainerPadding>
 
-                            <Stack alignItems='center' spacing={2} sx={{width: '100%'}}>
+                            <Stack alignItems='center'  spacing={2} sx={{width: '100%'}}>
 
-                            <RaquetePage />
+                                <RaquetePage />
                             </Stack>
                         </ContainerPadding>
                     

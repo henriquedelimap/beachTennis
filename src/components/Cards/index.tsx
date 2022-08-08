@@ -43,7 +43,7 @@ export const CardRaquetes = (prop: Prop) => {
 
     
     return (
-        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', maxWidth: '24rem' }}>
+        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', width: '100%', maxWidth: '28rem' }}>
             <CardHeader
                 avatar={
                     <Avatar
@@ -91,7 +91,9 @@ export const CardRaquetes = (prop: Prop) => {
             <CardContent>
                 <Typography
                     variant='subtitle2'
-                    color='text.primary'>
+                    color='text.primary'
+                    sx={{textAlign: 'center'}}
+                    >
                     {item.subtitle}
                 </Typography>
                 <PriceSale

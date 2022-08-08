@@ -22,7 +22,7 @@ export const RaquetePage = ( ) => {
     
     return (
         <>
-        <Stack direction='column' sx={{height: '100%'}} >
+        <Stack  justifyContent='center' sx={{height: '100%', width: '100%'}} >
             <CardRaquetes navigation={false} animated={true} item={raquete} />
         </Stack>
         </>
