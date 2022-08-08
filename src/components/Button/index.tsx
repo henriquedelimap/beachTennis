@@ -13,7 +13,7 @@ export const Btn = (prop: Prop) => {
     const fontSize = size !== null ? size : 16
     const positionValue = position ? `position: position` : null
     return (
-        <Button sx={{ positionValue, top: top, color: 'white', zIndex: 5, background: color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
+        <Button sx={{ positionValue, top: top, color: 'white', zIndex: 100, background: color, bottom: '12%', whiteSpace: 'nowrap', p: 2, pt: .5, pb: .5 }}>
             <Typography sx={{ textShadow: '-2px 2px #111111', fontWeight: 'bold', fontSize:size }}>
                 {text}
             </Typography>
@@ -28,7 +28,7 @@ export const Borda = styled('div')(({ }) => ({
     border: '2px solid #111111',
     borderRadius: 6,
     position: 'absolute',
-    zIndex: -1,
+    zIndex: -90,
     top: -2,
     left: 2
 }))
@@ -38,7 +38,7 @@ export const Borda2 = styled('div')(({ }) => ({
     border: '2px solid #111111',
     borderRadius: 6,
     position: 'absolute',
-    zIndex: -1,
+    zIndex: -90,
     top: 2,
     left: -2
 }))
