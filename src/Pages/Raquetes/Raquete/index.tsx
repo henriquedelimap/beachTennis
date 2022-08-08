@@ -23,7 +23,7 @@ export const RaquetePage = ( ) => {
     return (
         <>
         <Stack sx={{height: 56}} />
-        <Stack direction='column' sx={{height: '10rem', background: 'red'}} >
+        <Stack direction='column' sx={{height: '10rem'}} >
         {title}
         </Stack>
         </>
