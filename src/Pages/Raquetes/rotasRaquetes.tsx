@@ -11,7 +11,7 @@ export const RotasRaquetes = ( ) => {
             <Route path='*' element={<DefaultLayout noBanner buttonBack={true} />}>
                 <Route index element={
                     <>
-                        <Stack sx={{height: 56, width: '100%'}} />
+                        <Stack sx={{height: 16, width: '100%'}} />
                         
                         <ContainerPadding>
 

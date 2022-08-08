@@ -58,7 +58,7 @@ export const Header = ({
         setValue(newValue);
     };
     return (
-        <AppBar sx={{ p: 1, pb: 0 }}>
+        <AppBar sx={{ p: 0, pb: 0 }}>
             <Stack
                 sx={{ width: '100%', pl: 1, pr: 1 }}
                 direction='row'
