@@ -8,7 +8,7 @@ import { ContainerPadding } from "../../components/Container"
 export const RotasRaquetes = ( ) => {
     return ( 
         <Routes>
-            <Route path='*' element={<DefaultLayout noBanner buttonBack />}>
+            <Route path='*' element={<DefaultLayout noBanner buttonBack={true} />}>
                 <Route index element={
                     <>
                         <Stack sx={{height: 56, width: '100%'}} />

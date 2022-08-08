@@ -21,7 +21,7 @@ export const DefaultLayout = (
     return (
         <>
             <FloatingButton />
-            <Header buttonBack />
+            <Header buttonBack={buttonBack} />
             {noBanner ? '' : <Banner />}
             <Box minHeight={'40vh'}>
                 <Outlet />

@@ -73,7 +73,7 @@ export const Header = ({
                     {buttonBack
                         ? <IconButton
                             onClick={() => navigate(-1)}
-                            sx={{ display: { xs: 'flex', md: 'flex', lg: 'none' }, transition: 'all 1s ease' }}>
+                            sx={{ display: { xs: 'flex', md: 'flex', lg: 'flex' }, transition: 'all 1s ease' }}>
                             <MdArrowBack />
                         </IconButton>
                         : <IconButton
