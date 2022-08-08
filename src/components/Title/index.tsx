@@ -9,7 +9,7 @@ export const Title = (prop: Prop) => {
     return (
         <Stack spacing={2} direction='row' alignItems='center' >
             <Decoration />
-            <Typography variant='h4' color='#1F9DBE'>{text}</Typography>
+            <Typography variant='h4' color='#1F9DBE' sx={{'&:first-letter':{textTransform: 'capitalize'}}} >{text}</Typography>
         </Stack>
     )
 }

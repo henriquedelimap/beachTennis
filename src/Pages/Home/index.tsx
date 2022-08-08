@@ -94,7 +94,7 @@ export const Home = () => {
             <Overflow>
 
             <ContainerPadding>
-                <Title text='promoção' />
+                <Title text='mais procuradas' />
                 <Sale />
             </ContainerPadding>
             </Overflow>

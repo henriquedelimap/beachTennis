@@ -4,6 +4,7 @@ import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
 import { Overflow } from "../../styles"
+import { useNavigate } from "react-router-dom"
 export interface Prop {
     item: {
         id: number;
@@ -29,15 +30,22 @@ export interface Prop {
 }
 export const CardRaquetes = (prop: Prop) => {
     const { item } = prop
+    const navigate = useNavigate()
     return (
-        <Card sx={{ height: '100%' }}>
+        <Card  onClick={()=>navigate(`${item.id}`)} sx={{ height: '100%', cursor:'pointer' }}>
             <CardHeader
                 avatar={
-                    <Avatar variant='square' src={item.img} />
+                    <Avatar
+                        variant='square'
+                        src={item.img} />
                 }
                 action={
-                    <IconButton aria-label='like'>
-                        <BsHeart fontSize={18} />
+                    <IconButton
+                        aria-label='like'
+                    >
+                        <BsHeart
+                            fontSize={18}
+                        />
                     </IconButton>
                 }
                 title={item.title}
@@ -46,7 +54,11 @@ export const CardRaquetes = (prop: Prop) => {
             />
             <Overflow>
 
-                <AppearEffect y={100} isImg={false} yA={-16} rotate={-16}>
+                <AppearEffect
+                    y={100}
+                    isImg={false}
+                    yA={-16}
+                    rotate={-16}>
 
                     <CardMedia
                         component="img"
@@ -58,10 +70,14 @@ export const CardRaquetes = (prop: Prop) => {
                 </AppearEffect>
             </Overflow>
             <CardContent>
-                <Typography variant='subtitle2' color='text.primary'>
+                <Typography
+                    variant='subtitle2'
+                    color='text.primary'>
                     {item.subtitle}
                 </Typography>
-                <PriceSale original={item.price.original} sale={item.price.sale} />
+                <PriceSale
+                    original={item.price.original}
+                    sale={item.price.sale} />
 
             </CardContent>
         </Card>
@@ -69,13 +85,34 @@ export const CardRaquetes = (prop: Prop) => {
 }
 
 
-export const PriceSale = ({original, sale}:{original: number, sale: number}) => {
+export const PriceSale = (
+    { 
+        original, 
+        sale 
+    }: { 
+        original: number, 
+        sale: number 
+    }) => {
     return (
         <>
-            <Typography sx={{ textDecoration: 'line-through', textAlign: 'center' }} variant='body2' color='text.secondary'>
+            <Typography
+                sx={{
+                    textDecoration: 'line-through',
+                    textAlign: 'center'
+                }}
+                variant='body2'
+                color='text.secondary'
+            >
                 R$ {original.toFixed(3)},00
             </Typography>
-            <Typography sx={{ fontWeight: 900, textAlign: 'center'  }} variant='body1' color='text.primary'>
+            <Typography
+                sx={{
+                    fontWeight: 900,
+                    textAlign: 'center'
+                }}
+                variant='body1'
+                color='text.primary'
+            >
                 R$ {sale.toFixed(3)},00
             </Typography>
         </>

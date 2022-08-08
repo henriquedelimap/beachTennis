@@ -79,7 +79,7 @@ export const Header = () => {
                             menu.map((item, index) => (
                                 <Tab 
                                     key={index} 
-                                    onClick={() => navigate(item.to)} 
+                                    onClick={() => navigate(`/${item.to}`)} 
                                     sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} 
                                     value={item.label} 
                                     label={item.label}  />
