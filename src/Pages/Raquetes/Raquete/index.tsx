@@ -1,11 +1,12 @@
-import { Stack } from "@mui/material"
+import { Stack, Typography } from "@mui/material"
 import { Data } from "../../../assets/data"
 import { useParams } from "react-router-dom"
 import { IRaquete } from "../../../components/Seletor"
+import { CardRaquetes } from "../../../components/Cards"
 
 export const RaquetePage = ( ) => {
     const {id} = useParams()
-    const page = Data.map(item => {
+    const raquete = Data.map(item => {
         let itemPage
         if(item.id === Number(id)){
             itemPage = item
@@ -13,18 +14,18 @@ export const RaquetePage = ( ) => {
         }
         return itemPage
     }).filter(i=>i)[0]
-    if(!page){
+    if(!raquete){
         return <p>nao encontrado</p>
     }
-    const title = page.title
-    console.log(page);
-    
+    const Title = () => <Typography sx={{textTransform: 'lowercase'}} >{raquete.title}</Typography>
+    const Image = () => <img src={raquete.img} alt={raquete.title} />
     
     return (
         <>
         <Stack sx={{height: 56}} />
-        <Stack direction='column' sx={{height: '10rem'}} >
-        {title}
+        <Stack direction='column' sx={{height: '100%'}} >
+            <CardRaquetes item={raquete} />
+
         </Stack>
         </>
     )
