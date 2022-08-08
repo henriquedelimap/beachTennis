@@ -51,13 +51,16 @@ export const CardRaquetes = (prop: Prop) => {
                         src={item.img} />
                 }
                 action={
-                    <IconButton
-                        aria-label='like'
-                    >
-                        <BsHeart
-                            fontSize={18}
+                    <Avatar
+                        variant='square'
+                        src={item.role.brand}
+                        sx={{
+                            width: 132, '& img': {
+                                width: 124,
+                                objectFit: 'fill',
+                            },
+                        }} 
                         />
-                    </IconButton>
                 }
                 title={item.title}
                 subheader={item.material}
