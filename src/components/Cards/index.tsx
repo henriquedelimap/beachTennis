@@ -27,12 +27,13 @@ export interface Prop {
             brand: any
         }
     }
+    animated?: boolean
 }
 export const CardRaquetes = (prop: Prop) => {
-    const { item } = prop
+    const { item, animated } = prop
     const navigate = useNavigate()
     return (
-        <Card  onClick={()=>navigate(`${item.id}`)} sx={{ height: '100%', cursor:'pointer' }}>
+        <Card onClick={() => navigate(`${item.id}`)} sx={{ height: '100%', cursor: 'pointer' }}>
             <CardHeader
                 avatar={
                     <Avatar
@@ -54,20 +55,28 @@ export const CardRaquetes = (prop: Prop) => {
             />
             <Overflow>
 
-                <AppearEffect
-                    y={100}
-                    isImg={false}
-                    yA={-16}
-                    rotate={-16}>
+                {animated
+                    ? <AppearEffect
+                        y={100}
+                        isImg={false}
+                        yA={-16}
+                        rotate={-16}>
 
-                    <CardMedia
+                        <CardMedia
+                            component="img"
+                            height="auto"
+                            alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+                            image={item.img}
+                        >
+                        </CardMedia>
+                    </AppearEffect>
+                    : <CardMedia
                         component="img"
                         height="auto"
                         alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
                         image={item.img}
                     >
-                    </CardMedia>
-                </AppearEffect>
+                    </CardMedia>}
             </Overflow>
             <CardContent>
                 <Typography
@@ -86,12 +95,12 @@ export const CardRaquetes = (prop: Prop) => {
 
 
 export const PriceSale = (
-    { 
-        original, 
-        sale 
-    }: { 
-        original: number, 
-        sale: number 
+    {
+        original,
+        sale
+    }: {
+        original: number,
+        sale: number
     }) => {
     return (
         <>
