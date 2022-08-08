@@ -43,7 +43,19 @@ export const CardRaquetes = (prop: Prop) => {
 
     
     return (
-        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', width: '100%', maxWidth: '28rem', maxHeight: '80vh' }}>
+        <Card  
+            elevation={animated ? 0 : 1} 
+            onClick={
+                () => NavigationValidate(navigation, item.id)} 
+                sx={{ 
+                    height: '100%', 
+                    cursor: 'pointer', 
+                    width: '100%', 
+                    position: 'relative',
+                    maxWidth: '28rem',
+                     maxHeight: '80vh'
+                    }}
+                >
             <CardHeader
                 avatar={
                     <Avatar
@@ -55,7 +67,13 @@ export const CardRaquetes = (prop: Prop) => {
                         variant='square'
                         src={item.role.brand}
                         sx={{
-                            width: 132, '& img': {
+                            width: '100%', 
+                            position: 'absolute', 
+                            right: '-32%',
+                            top: '5%',
+                            transform: 'rotate(16deg)',
+                            opacity: .06,
+                            '& img': {
                                 width: 124,
                                 objectFit: 'fill',
                             },
