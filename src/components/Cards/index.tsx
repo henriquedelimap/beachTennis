@@ -28,12 +28,21 @@ export interface Prop {
         }
     }
     animated?: boolean
+    navigation?: boolean
 }
 export const CardRaquetes = (prop: Prop) => {
-    const { item, animated } = prop
     const navigate = useNavigate()
+    const { item, animated, navigation } = prop
+    function NavigationValidate(nav: boolean | undefined, to?: number){
+        if(nav === false){
+            return null
+        } 
+        return  navigate(`${to}`)
+    }
+
+    
     return (
-        <Card onClick={() => navigate(`${item.id}`)} sx={{ height: '100%', cursor: 'pointer' }}>
+        <Card onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer' }}>
             <CardHeader
                 avatar={
                     <Avatar

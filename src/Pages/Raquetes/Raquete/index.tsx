@@ -23,7 +23,7 @@ export const RaquetePage = ( ) => {
     return (
         <>
         <Stack direction='column' sx={{height: '100%'}} >
-            <CardRaquetes animated={true} item={raquete} />
+            <CardRaquetes navigation={false} animated={true} item={raquete} />
         </Stack>
         </>
     )
