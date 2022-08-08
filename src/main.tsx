@@ -10,7 +10,7 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           background: '#ffffffaf',
-          backdropFilter: 'blur(8px)',
+          backdropFilter: 'blur(16px)',
           boxShadow: 'none'
         }
       }
