@@ -43,7 +43,7 @@ export const CardRaquetes = (prop: Prop) => {
 
     
     return (
-        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', width: '100%', maxWidth: '28rem' }}>
+        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', width: '100%', maxWidth: '28rem', maxHeight: '80vh' }}>
             <CardHeader
                 avatar={
                     <Avatar
@@ -78,14 +78,16 @@ export const CardRaquetes = (prop: Prop) => {
                             height="auto"
                             alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
                             image={item.img}
-                        >
+                            sx={{maxHeight: '56vh', objectFit: 'contain'}}
+                            >
                         </CardMedia>
                     </AppearEffect>
                     : <CardMedia
-                        component="img"
-                        height="auto"
-                        alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-                        image={item.img}
+                    component="img"
+                    height="auto"
+                    alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+                    image={item.img}
+                    sx={{maxHeight: '56vh', objectFit: 'contain'}}
                     >
                     </CardMedia>}
             </Overflow>
