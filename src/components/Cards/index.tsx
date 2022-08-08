@@ -33,6 +33,7 @@ export interface Prop {
 export const CardRaquetes = (prop: Prop) => {
     const navigate = useNavigate()
     const { item, animated, navigation } = prop
+
     function NavigationValidate(nav: boolean | undefined, to?: number){
         if(nav === false){
             return null
@@ -42,7 +43,7 @@ export const CardRaquetes = (prop: Prop) => {
 
     
     return (
-        <Card onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer' }}>
+        <Card  elevation={animated ? 0 : 1} onClick={() => NavigationValidate(navigation, item.id)} sx={{ height: '100%', cursor: 'pointer', maxWidth: '32rem' }}>
             <CardHeader
                 avatar={
                     <Avatar
