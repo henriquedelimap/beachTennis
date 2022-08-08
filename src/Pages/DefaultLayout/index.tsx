@@ -10,11 +10,18 @@ import {Outlet} from 'react-router-dom'
 import { OOLogo } from '../../OOTECHNOLOGY'
 import { Overflow } from '../../styles'
 
-export const DefaultLayout = ({noBanner}: {noBanner?: boolean}) => {
+export const DefaultLayout = (
+    {
+        noBanner, 
+        buttonBack
+    }: {
+        noBanner?: boolean
+        buttonBack?: boolean
+    }) => {
     return (
         <>
             <FloatingButton />
-            <Header />
+            <Header buttonBack />
             {noBanner ? '' : <Banner />}
             <Box minHeight={'40vh'}>
                 <Outlet />

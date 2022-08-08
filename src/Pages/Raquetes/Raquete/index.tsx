@@ -22,10 +22,8 @@ export const RaquetePage = ( ) => {
     
     return (
         <>
-        <Stack sx={{height: 56}} />
         <Stack direction='column' sx={{height: '100%'}} >
             <CardRaquetes item={raquete} />
-
         </Stack>
         </>
     )

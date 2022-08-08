@@ -1,6 +1,6 @@
 import { AppBar, Box, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Tab, Tabs, Toolbar } from "@mui/material"
 import { Logo } from "../Logo"
-import { MdMenu, MdOutlineShoppingCart, MdPhone } from 'react-icons/md'
+import { MdArrowBack, MdMenu, MdOutlineShoppingCart, MdPhone } from 'react-icons/md'
 import { useRef, useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import { DrawerMenu } from "../Drawer"
@@ -10,7 +10,11 @@ import { LogoBeachTennis } from "../../assets/img/logoBeachTennis"
 import { ContainerPadding } from "../../components/Container"
 
 
-export const Header = () => {
+export const Header = ({
+    buttonBack
+}: {
+    buttonBack?: boolean
+}) => {
     const navigate = useNavigate()
     console.log(history);
 
@@ -55,20 +59,28 @@ export const Header = () => {
     };
     return (
         <AppBar sx={{ p: 1, pb: 0 }}>
-            <Stack 
-                sx={{ width: '100%', pl: 1, pr: 1 }} 
-                direction='row' 
-                alignItems='center' 
+            <Stack
+                sx={{ width: '100%', pl: 1, pr: 1 }}
+                direction='row'
+                alignItems='center'
                 justifyContent='space-between' >
-                <Stack 
-                    spacing={0} 
-                    direction='row' 
+                <Stack
+                    spacing={0}
+                    direction='row'
                     alignItems='center' >
-                    <IconButton
-                        onClick={() => setOpen(true)}
-                        sx={{ display: { xs: 'flex', md: 'flex', lg: 'none' }, transition: 'all 1s ease' }}>
-                        <MdMenu />
-                    </IconButton>
+
+
+                    {buttonBack
+                        ? <IconButton
+                            onClick={() => navigate(-1)}
+                            sx={{ display: { xs: 'flex', md: 'flex', lg: 'none' }, transition: 'all 1s ease' }}>
+                            <MdArrowBack />
+                        </IconButton>
+                        : <IconButton
+                            onClick={() => setOpen(true)}
+                            sx={{ display: { xs: 'flex', md: 'flex', lg: 'none' }, transition: 'all 1s ease' }}>
+                            <MdMenu />
+                        </IconButton>}
 
                     <LogoBeachTennis />
                 </Stack>
@@ -77,22 +89,22 @@ export const Header = () => {
                     <Tabs sx={{ p: 0 }} centered value={value} onChange={handleChange} >
                         {
                             menu.map((item, index) => (
-                                <Tab 
-                                    key={index} 
-                                    onClick={() => navigate(`/${item.to}`)} 
-                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} 
-                                    value={item.label} 
-                                    label={item.label}  />
-                                    
+                                <Tab
+                                    key={index}
+                                    onClick={() => navigate(`/${item.to}`)}
+                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
+                                    value={item.label}
+                                    label={item.label} />
+
                             ))
                         }
                         {
                             icones.map((icone, index) => (
-                                <Tab 
-                                    value={icone.label} 
-                                    key={index} 
-                                    onClick={icone.click} 
-                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }} 
+                                <Tab
+                                    value={icone.label}
+                                    key={index}
+                                    onClick={icone.click}
+                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
                                     label={icone.icone} />
 
                             ))
