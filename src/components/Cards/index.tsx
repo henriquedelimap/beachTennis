@@ -67,9 +67,10 @@ export const CardRaquetes = (prop: Prop) => {
 
                 {animated
                     ? <AppearEffect
-                        y={100}
+                        y={0}
+                        
                         isImg={false}
-                        yA={-16}
+                        yA={-32}
                         rotate={-16}>
 
                         <CardMedia
