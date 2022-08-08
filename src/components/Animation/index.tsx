@@ -29,7 +29,6 @@ export const AppearEffect = (prop: Prop) => {
         offscreen: {
             y: y,
             x: x,
-            opacity: 0,
             rotate: 0
         },
         onscreen: {
@@ -37,7 +36,6 @@ export const AppearEffect = (prop: Prop) => {
             rotate: rotate,
             x: xA,
             
-            opacity: 1,
             transition: {
                 type: "spring",
                 bounce: .4,
