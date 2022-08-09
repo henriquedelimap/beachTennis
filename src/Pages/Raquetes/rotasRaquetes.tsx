@@ -5,22 +5,14 @@ import { IconButton, Stack } from "@mui/material"
 import { MdArrowBack } from "react-icons/md"
 import { ContainerPadding } from "../../components/Container"
 
-export const RotasRaquetes = ( ) => {
-    return ( 
+export const RotasRaquetes = () => {
+    return (
         <Routes>
             <Route path='*' element={<DefaultLayout noBanner buttonBack={true} />}>
                 <Route index element={
                     <>
-                        <Stack sx={{height: 16, width: '100%'}} />
-                        
-                        <ContainerPadding>
-
-                            <Stack alignItems='center'  spacing={2} sx={{width: '100%'}}>
-
-                                <RaquetePage />
-                            </Stack>
-                        </ContainerPadding>
-                    
+                        <Stack sx={{ height: 20, width: '100%' }} />
+                        <RaquetePage />
                     </>
                 } />
             </Route>
