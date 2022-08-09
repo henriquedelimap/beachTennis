@@ -29,7 +29,7 @@ export interface Prop {
         material: string;
         role: {
             category: string
-            brand: string
+            brand: any
         }
     }
     animated?: boolean
