@@ -51,6 +51,8 @@ export const RaquetePage = () => {
                     item
                     container
                     alignItems='flex-start'
+                    justifyContent='center'
+
                     xs={12}
                     md={6}
                     lg={6} 
