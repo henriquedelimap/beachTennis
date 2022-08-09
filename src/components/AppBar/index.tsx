@@ -91,7 +91,7 @@ export const Header = ({
                             key={1}
                             onClick={() => setShop(true)}
                             sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
-                            label={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
+                            icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
 
                     </Tabs>
 

@@ -42,8 +42,6 @@ export const CardRaquetes = (prop: Prop) => {
         }
         return navigate(`${to}`)
     }
-
-
     return (
         <Card
             elevation={animated ? 0 : 1}
@@ -58,69 +56,24 @@ export const CardRaquetes = (prop: Prop) => {
                 maxHeight: '80vh'
             }}
         >
-
-            {
-                animated
-                    ? <AppearEffect
-                        x={0}
-
-                        xA={-320}
-                    >
-                        <CardHeader
-                            avatar={
-                                <Avatar
-                                    variant='square'
-                                    src={item.img} />
-                            }
-
-                            title={item.title}
-                            subheader={item.material}
-
-                        />
-
-                    </AppearEffect>
-                    : <CardHeader
-                        avatar={
-                            <Avatar
-                                variant='square'
-                                src={item.img} />
-                        }
-
-                        title={item.title}
-                        subheader={item.material}
-
-                    />
-            }
-
-            <Overflow>
-
-                {animated
-                    ? <AppearEffect
-                        y={0}
-
-                        yA={-32}
-                        rotate={-16}>
-
-                        <CardMedia
-                            component="img"
-                            height="auto"
-                            alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-                            image={item.img}
-                            sx={{ maxHeight: '52vh', objectFit: 'contain' }}
-                        >
-                        </CardMedia>
-                    </AppearEffect>
-                    : <CardMedia
-                        component="img"
-                        height="auto"
-                        alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-                        image={item.img}
-                        sx={{ maxHeight: '52vh', objectFit: 'contain' }}
-                    >
-                    </CardMedia>
-
-
+            <CardHeader
+                avatar={
+                    <Avatar
+                        variant='square'
+                        src={item.img} />
                 }
+                title={item.title}
+                subheader={item.material}
+            />
+            <Overflow>
+                <CardMedia
+                    component="img"
+                    height="auto"
+                    alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+                    image={item.img}
+                    sx={{ maxHeight: '52vh', objectFit: 'contain' }}
+                >
+                </CardMedia>
             </Overflow>
             <CardContent>
                 <Typography
@@ -130,23 +83,9 @@ export const CardRaquetes = (prop: Prop) => {
                 >
                     {item.subtitle}
                 </Typography>
-                {animated
-                    ? <AppearEffect
-                        x={0}
-
-                        xA={320}
-                    >
-                        <PriceSale
+                <PriceSale
                     original={item.price.original}
                     sale={item.price.sale} />
-
-                    </AppearEffect>
-                    : <PriceSale
-                    original={item.price.original}
-                    sale={item.price.sale} />
-
-                }
-                
             </CardContent>
         </Card>
     )
