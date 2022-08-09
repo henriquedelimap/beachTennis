@@ -18,9 +18,9 @@ export const FixaTecnica = () => {
           id="panel1bh-header"
           >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            General settings
+            ...
           </Typography>
-          <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>....</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -35,9 +35,9 @@ export const FixaTecnica = () => {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
           >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>..........</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            You are currently not an owner
+            .....
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -55,10 +55,10 @@ export const FixaTecnica = () => {
           id="panel3bh-header"
           >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Advanced settings
+            ......
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Filtering has been entirely disabled for whole web server
+            .......
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -74,7 +74,7 @@ export const FixaTecnica = () => {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
           >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Personal data</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>...</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
