@@ -67,6 +67,7 @@ export const RaquetePage = () => {
                 <Grid 
                     item 
                     alignItems='flex-start' 
+                    justifyContent='center'
                     xs={12} 
                     md={6} 
                     lg={6} >
