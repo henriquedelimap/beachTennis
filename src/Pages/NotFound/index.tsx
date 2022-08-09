@@ -14,42 +14,28 @@ export const NotfFound = () => {
                     <Front>
                     </Front>
 
-
-
                     <Back>
-
-                    
                         <p>404</p>
 
                     </Back>
 
-
-
                     <Right>
-                    <p>404</p>
+                        <p>404</p>
 
                     </Right>
 
-
-
                     <Left>
-                    <p>404</p>
+                        <p>404</p>
 
                     </Left>
-
-
 
                     <Top>
 
                     </Top>
 
-
-
                     <Bottom></Bottom>
 
                 </Box>
-
-
 
             </Scene>
 
@@ -67,7 +53,7 @@ const Scene = styled('div')(({ }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    
+
 }))
 
 const Box = styled('div')(({ }) => ({
@@ -75,7 +61,7 @@ const Box = styled('div')(({ }) => ({
     height: '100vh',
     position: 'relative',
     transformStyle: 'preserve-3d',
-    transform: 'translateZ(0rem) translateX(-7rem) rotateX(1deg) rotateZ(0deg)'
+    transform: 'translateZ(0rem) translateX(-16rem) rotateX(1deg) rotateZ(0deg)'
 }))
 
 const Front = styled('div')(({ }) => ({
@@ -88,7 +74,8 @@ const Front = styled('div')(({ }) => ({
     top: '-100%',
 
     color: 'white',
-    fontSize: '32rem',
+    fontSize: '16rem',
+    fontWight: 'bold',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -106,7 +93,8 @@ const Back = styled('div')(({ }) => ({
     top: '0%',
 
     color: 'white',
-    fontSize: '32rem',
+    fontSize: '16rem',
+    fontWight: 'bold',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -123,7 +111,8 @@ const Right = styled('div')(({ }) => ({
     left: '-0rem',
 
     color: 'white',
-    fontSize: '32rem',
+    fontSize: '16rem',
+    fontWight: 'bold',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -134,14 +123,15 @@ const Left = styled('div')(({ }) => ({
 
     position: 'absolute',
     background: '#111111af',
-    
+
     transform: 'rotateY( 90deg) translateZ(-32rem)',
     width: '64rem',
     height: '32rem',
     left: '-0rem',
 
     color: 'white',
-    fontSize: '32rem',
+    fontSize: '16rem',
+    fontWight: 'bold',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -159,7 +149,8 @@ const Top = styled('div')(({ }) => ({
     left: '0',
 
     color: 'white',
-    fontSize: '32rem',
+    fontSize: '16rem',
+    fontWight: 'bold',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -169,7 +160,7 @@ const Top = styled('div')(({ }) => ({
 const Bottom = styled('div')(({ }) => ({
 
     position: 'absolute',
- 
+
     background: '#1111116f',
 
     transform: 'rotateX( 90deg)  translateZ(2rem)',
@@ -178,7 +169,8 @@ const Bottom = styled('div')(({ }) => ({
     left: '0',
 
     color: 'white',
-    fontSize: '32rem',
+    fontSize: '16rem',
+    fontWight: 'bold',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
