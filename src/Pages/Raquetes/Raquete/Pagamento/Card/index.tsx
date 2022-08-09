@@ -8,7 +8,7 @@ export const CardPagamnto = () => {
                 cursor: 'pointer',
                 width: '100%',
                 position: 'relative',
-                height: '220vh'
+                height: '220vh',
             }}
         >
 
