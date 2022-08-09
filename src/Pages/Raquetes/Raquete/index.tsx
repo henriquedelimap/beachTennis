@@ -3,6 +3,7 @@ import { Data } from "../../../assets/data"
 import { useParams } from "react-router-dom"
 import { IRaquete } from "../../../components/Seletor"
 import { CardRaquetes } from "../../../components/Cards"
+import { NotfFound } from "../../NotFound"
 
 export const RaquetePage = ( ) => {
     const {id} = useParams()
@@ -15,11 +16,9 @@ export const RaquetePage = ( ) => {
         return itemPage
     }).filter(i=>i)[0]
     if(!raquete){
-        return <p>nao encontrado</p>
+        return <NotfFound />
     }
-    const Title = () => <Typography sx={{textTransform: 'lowercase'}} >{raquete.title}</Typography>
-    const Image = () => <img src={raquete.img} alt={raquete.title} />
-    
+
     return (
         <>
         <Stack  justifyContent='center' alignItems='center' sx={{height: '100%', width: '100%'}} >

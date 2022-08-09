@@ -1,10 +1,12 @@
 import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typography } from "@mui/material"
-import { AppearEffect } from "../../components/Animation"
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react"
 import { BsHeart } from "react-icons/bs"
 import { MdMoreVert } from "react-icons/md"
-import { Overflow } from "../../styles"
 import { useNavigate } from "react-router-dom"
+
+
+import { Overflow } from "../../styles"
+import { AppearEffect } from "../../components/Animation"
+
 export interface Prop {
     item: {
         id: number;
@@ -34,35 +36,35 @@ export const CardRaquetes = (prop: Prop) => {
     const navigate = useNavigate()
     const { item, animated, navigation } = prop
 
-    function NavigationValidate(nav: boolean | undefined, to?: number){
-        if(nav === false){
+    function NavigationValidate(nav: boolean | undefined, to?: number) {
+        if (nav === false) {
             return null
-        } 
-        return  navigate(`${to}`)
+        }
+        return navigate(`${to}`)
     }
 
-    
+
     return (
-        <Card  
-            elevation={animated ? 0 : 1} 
+        <Card
+            elevation={animated ? 0 : 1}
             onClick={
-                () => NavigationValidate(navigation, item.id)} 
-                sx={{ 
-                    height: '100%', 
-                    cursor: 'pointer', 
-                    width: '100%', 
-                    position: 'relative',
-                    maxWidth: '28rem',
-                     maxHeight: '80vh'
-                    }}
-                >
+                () => NavigationValidate(navigation, item.id)}
+            sx={{
+                height: '100%',
+                cursor: 'pointer',
+                width: '100%',
+                position: 'relative',
+                maxWidth: '28rem',
+                maxHeight: '80vh'
+            }}
+        >
             <CardHeader
                 avatar={
                     <Avatar
                         variant='square'
                         src={item.img} />
                 }
-                
+
                 title={item.title}
                 subheader={item.material}
 
@@ -72,7 +74,7 @@ export const CardRaquetes = (prop: Prop) => {
                 {animated
                     ? <AppearEffect
                         y={0}
-                        
+
                         isImg={false}
                         yA={-32}
                         rotate={-16}>
@@ -82,25 +84,28 @@ export const CardRaquetes = (prop: Prop) => {
                             height="auto"
                             alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
                             image={item.img}
-                            sx={{maxHeight: '56vh', objectFit: 'contain'}}
-                            >
+                            sx={{ maxHeight: '56vh', objectFit: 'contain' }}
+                        >
                         </CardMedia>
                     </AppearEffect>
                     : <CardMedia
-                    component="img"
-                    height="auto"
-                    alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-                    image={item.img}
-                    sx={{maxHeight: '56vh', objectFit: 'contain'}}
+                        component="img"
+                        height="auto"
+                        alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+                        image={item.img}
+                        sx={{ maxHeight: '56vh', objectFit: 'contain' }}
                     >
-                    </CardMedia>}
+                    </CardMedia>
+
+
+                }
             </Overflow>
             <CardContent>
                 <Typography
                     variant='subtitle2'
                     color='text.primary'
-                    sx={{textAlign: 'center'}}
-                    >
+                    sx={{ textAlign: 'center' }}
+                >
                     {item.subtitle}
                 </Typography>
                 <PriceSale
