@@ -25,21 +25,59 @@ export const RaquetePage = () => {
 
     return (
         <ContainerPadding>
-            <Grid columnSpacing={2} container justifyContent='center' alignItems='flex-start' rowSpacing={2} sx={{pt: 4}}>
+            <Grid 
+                columnSpacing={2} 
+                container 
+                justifyContent='center' 
+                alignItems='flex-start' 
+                rowSpacing={4} 
+                sx={{ pt: 4 }}>
 
-                <Grid item xs={12} sx={{pb: 4}}>
+                <Grid 
+                    item 
+                    xs={12} >
                     <Typography variant='h4'>Compre sua raquete</Typography>
                 </Grid>
 
-                <Grid sx={{ order: { xs: 1, md: 1, lg: 1 }, height: '220vh' }} item container alignItems='flex-start' justifyContent='center' xs={6} lg={8} md={8}>
+                <Grid 
+                    sx={
+                        { 
+                            height: { 
+                                xs: '100%', 
+                                md: '220vh', 
+                                lg: '220vh' 
+                            }
+                        }}
+                    item
+                    container
+                    alignItems='flex-start'
+                    xs={12}
+                    md={6}
+                    lg={6} 
+                >
                     <Sticky top={100}>
-                        <CardRaquetes navigation={false} animated={true} item={raquete} />
+                        <CardRaquetes 
+                            navigation={false} 
+                            animated={true} 
+                            item={raquete} 
+                        />
                     </Sticky>
                 </Grid>
-                <Grid sx={{ order: { xs: 3, md: 3, lg: 3 } }} item alignItems='flex-start' xs={6} lg={4} md={4}>
+
+                <Grid 
+                    item 
+                    alignItems='flex-start' 
+                    xs={12} 
+                    md={6} 
+                    lg={6} >
                     <CardPagamnto />
                 </Grid>
-                <Grid sx={{ order: { xs: 3, md: 3, lg: 3 } }} item alignItems='flex-start' xs={12}>
+
+                <Grid 
+                    item 
+                    alignItems='flex-start' 
+                    xs={12}
+                >
                     <CardPagamnto />
                 </Grid>
             </Grid>
