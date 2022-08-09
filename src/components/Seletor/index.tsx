@@ -11,7 +11,7 @@ interface Prop {
 
 export interface IRaquete {
     id: number;
-    img: any;
+    img: any[];
     title: string;
     subtitle: string;
     price: {

@@ -9,9 +9,9 @@ export const Banner = () => {
     const images = [banner1, banner2, banner3, banner4]
     return (
         <Box>
-            <Paper elevation={0}>
+            <Paper elevation={1}>
                 <Carousel
-                    navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
+                    navButtonsProps={{
                         style: {
                             display: 'none',
                             backgroundColor: 'transparent',

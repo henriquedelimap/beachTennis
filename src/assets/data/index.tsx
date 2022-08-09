@@ -17,7 +17,7 @@ import {
 export const Data = [
     {
         id: 1,
-        img: blackDeathGold,
+        img: [blackDeathGold, blackDeathGold],
         title: 'black death 10.2 gold',
         subtitle: 'black death 10.2 gold',
         price: {
@@ -40,7 +40,7 @@ export const Data = [
     },
     {
         id: 2,
-        img: blackDeathSilver,
+        img: [blackDeathSilver, blackDeathSilver],
         title: 'BLACK DEATH 10.2 SILVER ',
         subtitle: 'Beach Tennis Turquoise BLACK DEATH 10.2 SILVER ',
         price: {
@@ -64,7 +64,7 @@ export const Data = [
     },
     {
         id: 3,
-        img: dnaBlue,
+        img: [dnaBlue, dnaBlue],
         title: 'DNA EXTREME 2.2 BLUE',
         subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2 BLUE',
         price: {
@@ -88,7 +88,7 @@ export const Data = [
     },
     {
         id: 4,
-        img: dnaGold,
+        img: [dnaGold, dnaGold],
         title: `DNA  GOLD`,
         subtitle: 'Beach Tennis Turquoise DNA GOLD',
         price: {
@@ -111,7 +111,7 @@ export const Data = [
     },
     {
         id: 5,
-        img: dnaRed,
+        img: [dnaRed, dnaRed],
         title: `DNA EXTREME 2.2 RED`,
         subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2 RED',
         price: {
@@ -135,7 +135,7 @@ export const Data = [
     },
     {
         id: 6,
-        img: dnaOrange,
+        img: [dnaOrange, dnaOrange],
         title: 'DNA EXTREME 2.2 ORANGE',
         subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2 ORANGE',
         price: {
@@ -273,7 +273,7 @@ export const Data = [
     // },
     {
         id: 12,
-        img: gold22,
+        img: [gold22, gold22],
         title: 'GOLD',
         subtitle: 'Beach Tennis Quicksand GOLD',
         

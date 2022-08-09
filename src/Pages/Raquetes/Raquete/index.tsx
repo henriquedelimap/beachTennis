@@ -9,6 +9,7 @@ import { ContainerPadding } from "../../../components/Container"
 import { FixaTecnica } from "./FixaTecnica"
 import { Sticky } from "../../../styles"
 import { FormatPrice } from "../../../Utils"
+import { CreateCarousel } from "../../../components/Carousel"
 
 export const RaquetePage = () => {
     const { id } = useParams()
@@ -87,6 +88,7 @@ export const RaquetePage = () => {
                             animated={true}
                             item={raquete}
                         /> */}
+                        <CreateCarousel images={raquete.img} />
                     </Sticky>
                 </Grid>
 

@@ -7,31 +7,10 @@ import { useNavigate } from "react-router-dom"
 import { Overflow } from "../../styles"
 import { AppearEffect } from "../../components/Animation"
 import { FormatPrice } from "../../Utils"
+import { IRaquete } from "../../components/Seletor"
 
 export interface Prop {
-    item: {
-        id: number;
-        img: any;
-        title: string;
-        subtitle: string;
-        price: {
-            original: number;
-            sale: number;
-        };
-        chips: string[]
-        year: string
-        stored: number;
-        description: string;
-        subDescription: string;
-        weight: number;
-        dimensions: number[];
-        color: string[];
-        material: string;
-        role: {
-            category: string
-            brand: any
-        }
-    }
+    item: IRaquete
     animated?: boolean
     navigation?: boolean
 }
@@ -63,7 +42,7 @@ export const CardRaquetes = (prop: Prop) => {
                 avatar={
                     <Avatar
                         variant='square'
-                        src={item.img} />
+                        src={item.img[1]} />
                 }
                 title={item.title}
                 subheader={item.material}
@@ -73,7 +52,7 @@ export const CardRaquetes = (prop: Prop) => {
                     component="img"
                     height="auto"
                     alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-                    image={item.img}
+                    image={item.img[0]}
                     sx={{ maxHeight: '52vh', objectFit: 'contain' }}
                 >
                 </CardMedia>
