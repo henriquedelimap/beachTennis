@@ -84,7 +84,7 @@ export const CardRaquetes = (prop: Prop) => {
                             height="auto"
                             alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
                             image={item.img}
-                            sx={{ maxHeight: '56vh', objectFit: 'contain' }}
+                            sx={{ maxHeight: '52vh', objectFit: 'contain' }}
                         >
                         </CardMedia>
                     </AppearEffect>
@@ -93,7 +93,7 @@ export const CardRaquetes = (prop: Prop) => {
                         height="auto"
                         alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
                         image={item.img}
-                        sx={{ maxHeight: '56vh', objectFit: 'contain' }}
+                        sx={{ maxHeight: '52vh', objectFit: 'contain' }}
                     >
                     </CardMedia>
 

@@ -1,19 +1,24 @@
 import { Fab, Link, Stack, Typography } from '@mui/material'
 import {BsWhatsapp} from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
-export const FloatingButton = () => {
+interface Prop {
+    disappear?: boolean
+}
+export const FloatingButton = (prop: Prop) => {
+    const {disappear} = prop
     const navigate = useNavigate()
     const text = 'Oi, Wal. Tudo bem? Gostaria de encontrar a raquete ideal pro meu tipo de jogo'
-    const link = `https://wa.me/5534998664444?text=${text}`
+    const link = `https://wa.me/5534998664444?text=${text}` 
     return (
         <Fab
             variant='extended'
             size='medium'
             color='primary'
-            style={{
+            sx={{
                 position: 'fixed',
-                bottom: 16,
-                right: 16
+                bottom: 8,
+                right: 8.,
+                display: disappear ? 'none' : 'flex'
             }}
             href={link}
         >

@@ -13,14 +13,16 @@ import { Overflow } from '../../styles'
 export const DefaultLayout = (
     {
         noBanner, 
-        buttonBack
+        buttonBack,
+        disappear
     }: {
         noBanner?: boolean
-        buttonBack?: boolean
+        buttonBack?: boolean,
+        disappear?: boolean
     }) => {
     return (
         <>
-            <FloatingButton />
+            <FloatingButton disappear={disappear} />
             <Header buttonBack={buttonBack} />
             {noBanner ? '' : <Banner />}
             <Box minHeight={'40vh'}>
