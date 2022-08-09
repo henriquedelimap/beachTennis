@@ -72,9 +72,9 @@ export const Header = ({
 
                     <LogoBeachTennis />
                 </Stack>
-                <Box>
+                <Stack direction='row'>
 
-                    <Tabs sx={{ p: 0 }} centered value={value} onChange={handleChange} >
+                    <Tabs indicatorColor={undefined}  sx={{ p: 0, display: { md: 'none', xs: 'none', lg: 'flex' } }} centered  onChange={handleChange} >
                         {
                             menu.map((item, index) => (
                                 <Tab
@@ -86,16 +86,20 @@ export const Header = ({
 
                             ))
                         }
-                        <Tab
-                            value={8}
-                            key={1}
-                            onClick={() => setShop(true)}
-                            sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
-                            icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
+                        
 
                     </Tabs>
 
-                </Box>
+                    <Tabs indicatorColor={undefined}>
+                    <Tab
+                            value={8}
+                            key={1}
+                            onClick={() => setShop(true)}
+                            
+                            icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
+                    </Tabs>
+
+                </Stack>
 
 
             </Stack>

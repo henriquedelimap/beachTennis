@@ -20,7 +20,7 @@ export const useWindowDimensions = () => {
   return windowDimensions
 }
 
-export function ScrollToTop(props: { children: any; }) {
+export const ScrollToTop = (props: { children: any; }) => {
   const location = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -28,3 +28,5 @@ export function ScrollToTop(props: { children: any; }) {
 
   return <>{props.children}</>
 }
+
+export const FormatPrice = (price: number) => `R$ ${price.toFixed(3)},00`

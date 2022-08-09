@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 import { Overflow } from "../../styles"
 import { AppearEffect } from "../../components/Animation"
+import { FormatPrice } from "../../Utils"
 
 export interface Prop {
     item: {
@@ -110,7 +111,7 @@ export const PriceSale = (
                 variant='body2'
                 color='text.secondary'
             >
-                R$ {original.toFixed(3)},00
+                {FormatPrice(original)} 
             </Typography>
             <Typography
                 sx={{
@@ -119,8 +120,8 @@ export const PriceSale = (
                 }}
                 variant='body1'
                 color='text.primary'
-            >
-                R$ {sale.toFixed(3)},00
+                >
+                {FormatPrice(sale)} 
             </Typography>
         </>
     )

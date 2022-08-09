@@ -8,6 +8,7 @@ import { CardPagamnto } from "./Pagamento"
 import { ContainerPadding } from "../../../components/Container"
 import { FixaTecnica } from "./FixaTecnica"
 import { Sticky } from "../../../styles"
+import { FormatPrice } from "../../../Utils"
 
 export const RaquetePage = () => {
     const { id } = useParams()
@@ -37,6 +38,7 @@ export const RaquetePage = () => {
                     item 
                     xs={12} >
                     <Typography variant='h4'>Compre sua raquete</Typography>
+                    <Typography variant='subtitle1'>{FormatPrice(raquete.price.sale)}</Typography>
                 </Grid>
 
                 <Grid 
