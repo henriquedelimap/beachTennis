@@ -62,24 +62,7 @@ export const CardRaquetes = (prop: Prop) => {
                         variant='square'
                         src={item.img} />
                 }
-                action={
-                    <Avatar
-                        variant='square'
-                        src={item.role.brand}
-                        sx={{
-                            width: '100%', 
-                            position: 'absolute', 
-                            right: '-32%',
-                            top: '5%',
-                            transform: 'rotate(16deg)',
-                            opacity: .06,
-                            '& img': {
-                                width: 124,
-                                objectFit: 'fill',
-                            },
-                        }} 
-                        />
-                }
+                
                 title={item.title}
                 subheader={item.material}
 
