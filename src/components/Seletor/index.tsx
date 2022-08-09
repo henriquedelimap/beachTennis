@@ -18,6 +18,8 @@ export interface IRaquete {
         original: number;
         sale: number;
     };
+    chip: string[],
+    year: string
     stored: number;
     description: string;
     subDescription: string;
@@ -27,7 +29,7 @@ export interface IRaquete {
     material: string;
     role: {
         category: string
-        brand: any
+        brand: string
     }
 }
 export const SelectItemToCompare = (prop: Prop) => {

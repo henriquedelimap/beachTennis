@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography } from "@mui/material"
+import { Chip, Grid, Stack, Typography } from "@mui/material"
 import { Data } from "../../../assets/data"
 import { useParams } from "react-router-dom"
 import { IRaquete } from "../../../components/Seletor"
@@ -26,28 +26,49 @@ export const RaquetePage = () => {
 
     return (
         <ContainerPadding>
-            <Grid 
-                columnSpacing={2} 
-                container 
-                justifyContent='center' 
-                alignItems='flex-start' 
-                rowSpacing={4} 
+            <Grid
+                columnSpacing={2}
+                container
+                justifyContent='center'
+                alignItems='flex-start'
+                rowSpacing={4}
                 sx={{ pt: 4 }}>
 
-                <Grid 
-                    item 
-                    xs={12} >
-                    <Typography variant='h4'>Compre sua raquete</Typography>
-                    <Typography variant='subtitle1'>{FormatPrice(raquete.price.sale)}</Typography>
+                <Grid
+                    item
+                    container
+                    rowSpacing={.5}
+                    xs={12}
+                >
+                    
+                    <Grid item xs={12}>
+
+                        <Typography sx={{ ml: -.6 }} variant='h4' fontWeight={100}>Compre sua raquete</Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+
+                        <Typography variant='h5' fontWeight={600}>{raquete.title}</Typography>
+                    </Grid>
+
+                    <Grid item container columnSpacing={.5} xs={12}>
+                        {
+                            raquete.chips.map(chip => (
+                                <Grid item>
+
+                                    <Chip label={chip} size="small" variant='outlined' />
+                                </Grid>
+                            ))
+                        }
+                    </Grid>
                 </Grid>
 
-                <Grid 
+                <Grid
                     sx={
-                        { 
-                            height: { 
-                                xs: '100%', 
-                                md: '220vh', 
-                                lg: '220vh' 
+                        {
+                            height: {
+                                xs: '100%',
+                                md: '220vh',
+                                lg: '220vh'
                             }
                         }}
                     item
@@ -57,30 +78,30 @@ export const RaquetePage = () => {
 
                     xs={12}
                     md={6}
-                    lg={6} 
+                    lg={6}
                 >
                     <Sticky top={100}>
-                        <CardRaquetes 
-                            navigation={false} 
-                            animated={true} 
-                            item={raquete} 
-                        />
+                        {/* <CardRaquetes
+                            navigation={false}
+                            animated={true}
+                            item={raquete}
+                        /> */}
                     </Sticky>
                 </Grid>
 
-                <Grid 
-                    item 
-                    alignItems='flex-start' 
+                <Grid
+                    item
+                    alignItems='flex-start'
                     justifyContent='center'
-                    xs={12} 
-                    md={6} 
+                    xs={12}
+                    md={6}
                     lg={6} >
                     <CardPagamnto />
                 </Grid>
 
-                <Grid 
-                    item 
-                    alignItems='flex-start' 
+                <Grid
+                    item
+                    alignItems='flex-start'
                     xs={12}
                 >
                     <CardPagamnto />
