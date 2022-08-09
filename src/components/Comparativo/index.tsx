@@ -19,7 +19,7 @@ const ItemHeader = ({ subtitle, title, description, img, material, role, price }
                 <Grid rowSpacing={4} item container xs={12} justifyContent='center' sx={{ minHeight: '24rem'}} >
                     <Grid item container justifyContent='center' xs={12}>
 
-                        <img src={img} style={{width:'auto', height: '13rem', objectFit: 'contain'}} />
+                        <img src={img[0]} style={{width:'auto', height: '13rem', objectFit: 'contain'}} />
                     </Grid>
                     
                     <Stack  direction='column' alignItems='center' justifyContent='center'>
