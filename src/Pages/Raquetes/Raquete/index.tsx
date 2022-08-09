@@ -54,8 +54,9 @@ export const RaquetePage = () => {
                         {
                             raquete.chips.map(chip => (
                                 <Grid item>
-
-                                    <Chip label={chip} size="small" variant='outlined' />
+                                    {chip === 'novidade' ? <Chip sx={{fontWeight: 600}} color='success' label={chip} size="small"/> 
+                                    : <Chip  label={chip} size="small" variant='outlined' />
+                                    }
                                 </Grid>
                             ))
                         }

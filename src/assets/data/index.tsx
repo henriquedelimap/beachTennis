@@ -47,7 +47,7 @@ export const Data = [
             original: 2.250,
             sale: 1.899
         },
-        chips: ['2022', 'carbon 3k'],
+        chips: ['2022', 'carbon 3k', 'novidade'],
         year: '2022',
         stored: 0,
         description: `O lendário TRI SHOCK SYSTEM V3 posicionado no coração da raquete e o RADIAL HOLES SYSTEM EVOLUTION 2.1 criado para melhorar a aerodinâmica e estabilidade, dar-lhe potência e precisão impecáveis, para jogadores exigentes que procuram controle e desempenho extraordinários.`,
@@ -118,7 +118,7 @@ export const Data = [
             original: 1.799,
             sale: 2.450
         },
-        chips: ['2022'],
+        chips: ['2022', 'novidade'],
         year: '2022',
         stored: 0,
         description: `Em material FULL YELLOW KEVLAR, manejável e reativo, excelente na defesa e extremamente poderoso no ataque, embelezado com gráficos em folha de ouro. O RADIAL HOLES SYSTEM, melhorando o manuseio e o dinamismo, deixa a raquete ainda mais estável.`,
