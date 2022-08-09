@@ -42,7 +42,7 @@ export const CreateCarousel = (prop: Prop) => {
                         <img
                             style={{
                                 minWidth: 'auto',
-                                height: '52vh'
+                                height: '56vh'
                             }}
                             src={image}
                         />
