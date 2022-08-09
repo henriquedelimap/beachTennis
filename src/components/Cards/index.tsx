@@ -18,6 +18,8 @@ export interface Prop {
             original: number;
             sale: number;
         };
+        chips: string[]
+        year: string
         stored: number;
         description: string;
         subDescription: string;
@@ -27,7 +29,7 @@ export interface Prop {
         material: string;
         role: {
             category: string
-            brand: any
+            brand: string
         }
     }
     animated?: boolean
