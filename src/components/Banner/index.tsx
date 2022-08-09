@@ -124,22 +124,6 @@ export const BannerGlass = (prop: Prop) => {
                     position: 'absolute'
                 }}>
 
-
-                {
-                    raquetes?.map((raquete, index) => {
-                        return (
-
-                            <AppearEffect key={index} y={100} isImg={false} yA={0} rotate={-8}>
-
-
-                                {/* <Fundo key={index} right={raquete.xA} >
-                                <img src={raquete.img} style={{ height: '16rem', zIndex: index }} />
-                            </Fundo> */}
-
-                            </AppearEffect>
-                        )
-                    })
-                }
             </Stack>
 
 
