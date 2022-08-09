@@ -20,7 +20,9 @@ export const Home = () => {
     const { scrollYProgress } = useScroll()
     const [itemComparative1, setItemComparative1] = useState('black death 10.2 gold 2022')
     const [firstItemComparative, setFirstItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
-    const [secondItemComparative, setSecondItemComparative] = useState<IRaquete>(Data.map(item => item)[1])
+    const [secondItemComparative, setSecondItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
+
+    
     const [itemComparative2, setItemComparative2] = useState('DNA EXTREME 2.2 ORANGE 2022')
     const raquetes = [
 
@@ -75,6 +77,7 @@ export const Home = () => {
             return item
         }
     }).filter(i => i)[0]
+
     let object2 = Data.map(item => {
         if (item.title === itemComparative2) {
             return item
@@ -83,16 +86,16 @@ export const Home = () => {
 
     useEffect(() => {
 
-        if (object1 === undefined || object2 === undefined) {
-            setFirstItemComparative(Data.map(item => item)[0])
-            setSecondItemComparative(Data.map(item => item)[1])
-        } else {
+        object1 === undefined 
+        ? setFirstItemComparative(Data.map(item => item)[0]) 
+        : setFirstItemComparative(object1)
+        
+        object2 === undefined
+        ? setSecondItemComparative(Data.map(item => item)[1])
+        : setSecondItemComparative(object2)
 
-            setFirstItemComparative(object1)
-            setSecondItemComparative(object2)
-        }
 
-    }, [itemComparative1, object1, object2])
+    }, [itemComparative1,  itemComparative2])
     return (
         <>
             <Overflow>

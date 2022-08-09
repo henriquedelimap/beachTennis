@@ -37,7 +37,6 @@ export const SelectItemToCompare = (prop: Prop) => {
 
     function handleComparative(value: string) {
         return setItemComparative(value)
-
     }
 
     return (

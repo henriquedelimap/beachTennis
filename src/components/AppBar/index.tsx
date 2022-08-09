@@ -17,7 +17,6 @@ export const Header = ({
 }) => {
     const navigate = useNavigate()
     const params = useParams()
-    console.log(params);
 
     const [open, setOpen] = useState(false)
     const [shop, setShop] = useState(false)

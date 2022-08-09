@@ -9,7 +9,7 @@ export const Banner = () => {
     const images = [banner1, banner2, banner3, banner4]
     return (
         <Box>
-            <Paper elevation={1}>
+            <Paper elevation={0}>
                 <Carousel
                     navButtonsProps={{
                         style: {
