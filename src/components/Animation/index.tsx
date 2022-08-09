@@ -13,7 +13,6 @@ interface Prop {
     img?: any
     height?: number | string
     width?: number | string
-    isImg: boolean
     children?: ReactNode
     y?: number
     yA?: number
@@ -24,7 +23,7 @@ interface Prop {
 }
 
 export const AppearEffect = (prop: Prop) => {
-    const { img, height, width, isImg, children, index, y, yA, rotate, x, xA } = prop
+    const { img, height, width, children, index, y, yA, rotate, x, xA } = prop
     const cardVariants: Variants = {
         offscreen: {
             y: y,
@@ -49,12 +48,7 @@ export const AppearEffect = (prop: Prop) => {
             initial="offscreen"
             whileInView="onscreen"
         >
-            {isImg 
-                ? <motion.img
-                variants={cardVariants}
-                style={{ height: '10rem' }}
-                src={img} /> 
-                : <motion.div style={{ zIndex: index }} variants={cardVariants}>{children}</motion.div>}
+            <motion.div style={{ zIndex: index }} variants={cardVariants}>{children}</motion.div>
 
 
 

@@ -2,7 +2,7 @@ import { AppBar, Box, IconButton, List, ListItem, ListItemButton, ListItemIcon, 
 import { Logo } from "../Logo"
 import { MdArrowBack, MdMenu, MdOutlineShoppingCart, MdPhone } from 'react-icons/md'
 import { useRef, useState } from "react"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { DrawerMenu } from "../Drawer"
 import { DrawerShop } from "../Shop"
 import { ModalPhone } from "../ModalPhone"
@@ -16,11 +16,11 @@ export const Header = ({
     buttonBack?: boolean
 }) => {
     const navigate = useNavigate()
-    console.log(history);
+    const params = useParams()
+    console.log(params);
 
     const [open, setOpen] = useState(false)
     const [shop, setShop] = useState(false)
-    const [phone, setPhone] = useState(false)
     const [value, setValue] = useState(0)
     const menu = [
         {
@@ -41,24 +41,12 @@ export const Header = ({
         },
 
     ]
-    const icones = [
-        {
-            icone: <MdPhone fontSize={24} />,
-            click: () => setPhone(true),
-            label: 'telefone'
-        },
-        {
-            icone: <MdOutlineShoppingCart fontSize={24} />,
-            click: () => setShop(true),
-            label: 'carrinho de compras'
 
-        }
-    ]
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
     return (
-        <AppBar sx={{ p: 0, pb: 0 }}>
+        <AppBar sx={{ p: 0, pb: 0, zIndex: 1000 }}>
             <Stack
                 sx={{ width: '100%', pl: 1, pr: 1 }}
                 direction='row'
@@ -93,22 +81,18 @@ export const Header = ({
                                     key={index}
                                     onClick={() => navigate(`/${item.to}`)}
                                     sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
-                                    value={item.label}
+                                    value={index}
                                     label={item.label} />
 
                             ))
                         }
-                        {
-                            icones.map((icone, index) => (
-                                <Tab
-                                    value={icone.label}
-                                    key={index}
-                                    onClick={icone.click}
-                                    sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
-                                    label={icone.icone} />
+                        <Tab
+                            value={8}
+                            key={1}
+                            onClick={() => setShop(true)}
+                            sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
+                            label={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
 
-                            ))
-                        }
                     </Tabs>
 
                 </Box>
@@ -117,7 +101,6 @@ export const Header = ({
             </Stack>
             <DrawerMenu open={open} setOpen={setOpen} menu={menu} />
             <DrawerShop shop={shop} setShop={setShop} />
-            <ModalPhone phone={phone} setPhone={setPhone} />
         </AppBar >
     )
 }

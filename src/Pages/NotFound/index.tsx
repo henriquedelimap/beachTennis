@@ -6,7 +6,7 @@ export const NotfFound = () => {
     const { id } = useParams()
 
     return (
-        <Stack width='100vw' height='100vh' sx={{ position: 'fixed', zIndex: '1200', background: 'white' }}>
+        <Stack width='100vw' height='100vh' sx={{ position: 'fixed', background: 'white', zIndex: 900 }}>
 
             <Scene>
                 <Box>
@@ -61,7 +61,7 @@ const Box = styled('div')(({ }) => ({
     height: '100vh',
     position: 'relative',
     transformStyle: 'preserve-3d',
-    transform: 'translateZ(0rem) translateX(-16rem) rotateX(1deg) rotateZ(0deg)'
+    transform: 'translateZ(-3rem) translateY(13rem) translateX(-16rem) rotateX(1deg) rotateZ(0deg)'
 }))
 
 const Front = styled('div')(({ }) => ({

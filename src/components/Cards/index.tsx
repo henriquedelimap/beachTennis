@@ -58,24 +58,46 @@ export const CardRaquetes = (prop: Prop) => {
                 maxHeight: '80vh'
             }}
         >
-            <CardHeader
-                avatar={
-                    <Avatar
-                        variant='square'
-                        src={item.img} />
-                }
 
-                title={item.title}
-                subheader={item.material}
+            {
+                animated
+                    ? <AppearEffect
+                        x={0}
 
-            />
+                        xA={-320}
+                    >
+                        <CardHeader
+                            avatar={
+                                <Avatar
+                                    variant='square'
+                                    src={item.img} />
+                            }
+
+                            title={item.title}
+                            subheader={item.material}
+
+                        />
+
+                    </AppearEffect>
+                    : <CardHeader
+                        avatar={
+                            <Avatar
+                                variant='square'
+                                src={item.img} />
+                        }
+
+                        title={item.title}
+                        subheader={item.material}
+
+                    />
+            }
+
             <Overflow>
 
                 {animated
                     ? <AppearEffect
                         y={0}
 
-                        isImg={false}
                         yA={-32}
                         rotate={-16}>
 
@@ -108,10 +130,23 @@ export const CardRaquetes = (prop: Prop) => {
                 >
                     {item.subtitle}
                 </Typography>
-                <PriceSale
+                {animated
+                    ? <AppearEffect
+                        x={0}
+
+                        xA={320}
+                    >
+                        <PriceSale
                     original={item.price.original}
                     sale={item.price.sale} />
 
+                    </AppearEffect>
+                    : <PriceSale
+                    original={item.price.original}
+                    sale={item.price.sale} />
+
+                }
+                
             </CardContent>
         </Card>
     )
