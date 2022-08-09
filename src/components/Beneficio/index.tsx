@@ -1,7 +1,7 @@
 import { Avatar, Box, Grid, Stack, Typography } from "@mui/material"
 import { GiTennisRacket, GiSportMedal, GiPalmTree } from 'react-icons/gi'
 import { CgTennis } from 'react-icons/cg'
-import { X, logoQuickSand } from "../../assets/img"
+import { X, logoQuickSand, logoTurquoise, logoOceanAir } from "../../assets/img"
 import { Fundo } from "../../styles"
 import { Key } from "react"
 import { ResponsiveStyleValue } from "@mui/system"
@@ -9,27 +9,31 @@ export const Beneficios = () => {
     const itens = [
         {
             icone: <GiTennisRacket fontSize={128} />,
-            title: `Lorem ipsum dolor sit amet `,
+            title: `Quicksand `,
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet maxime minima earum ratione vero eius saepe a, dignissimos consectetur ipsa sed aut dolorem repellat omnis perspiciatis, rem unde facere similique.`,
-            brand: logoQuickSand
+            brand: logoQuickSand,
+            id: 1
         },
         {
             icone: <GiSportMedal fontSize={128} />,
-            title: `Lorem ipsum dolor sit amet `,
+            title: `Hero's `,
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet maxime minima earum ratione vero eius saepe a, dignissimos consectetur ipsa sed aut dolorem repellat omnis perspiciatis, rem unde facere similique.`,
-            brand: X
+            brand: X,
+            id:2
         },
         {
             icone: <CgTennis fontSize={128} />,
-            title: `Lorem ipsum dolor sit amet `,
+            title: `Turquoise`,
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet maxime minima earum ratione vero eius saepe a, dignissimos consectetur ipsa sed aut dolorem repellat omnis perspiciatis, rem unde facere similique.`,
-            brand: logoQuickSand
+            brand: logoTurquoise,
+            id: 3
         },
         {
             icone: <GiPalmTree fontSize={128} />,
-            title: `Lorem ipsum dolor sit amet `,
+            title: `Ocean Air`,
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet maxime minima earum ratione vero eius saepe a, dignissimos consectetur ipsa sed aut dolorem repellat omnis perspiciatis, rem unde facere similique.`,
-            brand: X
+            brand: logoOceanAir,
+            id: 4
         },
     ]
 
@@ -71,7 +75,7 @@ export const Beneficios = () => {
             <Grid container spacing={{ md: 4, sx: 0, lg: 4 }} rowSpacing={2} >
                 {
                     itens.map((item, index) => {
-                        if (item.brand === X) {
+                        if (item.id % 2 === 0) {
                             return <Item item={item} index={index} direction='row-reverse' />
                         } else {
                             return <Item item={item} index={index} direction='row' />
