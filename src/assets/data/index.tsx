@@ -228,8 +228,8 @@ export const Data = [
         color: ['Preto', 'Dourado', 'Amarelo'],
         material: 'Full Carbon 3k',
         role: {
-            category: 'SKU',
-            brand: logoQuickSand
+            category: 'turquoise',
+            brand: logoTurquoise
         }
     },
     // {
