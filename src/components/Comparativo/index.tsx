@@ -5,6 +5,7 @@ import { MdWork } from "react-icons/md"
 import { Data } from "../../assets/data"
 import { IRaquete } from "../../Types"
 import { DimensaoRaquete } from "../../components/Dimensions"
+import { LazyLoad } from "../../components/Animation"
 interface Prop {
     object: IRaquete
     object2: IRaquete
@@ -60,18 +61,25 @@ const ItemContent = ({
         <Grid item width='100%' >
 
             <Grid item xs={12}>
-
-                <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
+                <LazyLoad>
+                    <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
+                </LazyLoad>
                 <Divider sx={{ width: '100%' }} />
             </Grid>
 
 
             <Grid item container columnSpacing={1} sx={{ pt: 4, pb: 4 }}>
                 <Grid item xs={6}>
+                    <LazyLoad>
+
                     <ItemContentCreator content={content} left />
+                    </LazyLoad>
                 </Grid>
                 <Grid item xs={6}>
+                    <LazyLoad>
+
                     <ItemContentCreator content={content2} right />
+                    </LazyLoad>
                 </Grid>
             </Grid>
         </Grid>

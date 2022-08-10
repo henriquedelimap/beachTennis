@@ -6,6 +6,7 @@ import { Overflow } from './styles'
 import { RotasRaquetes } from './Pages/Raquetes/rotasRaquetes'
 import { NotfFound } from './Pages/NotFound'
 import { NotFoundRoute } from './Pages/NotFound/routeNotFound'
+import {m} from 'framer-motion'
 function App() {
   const [count, setCount] = useState(0)
 

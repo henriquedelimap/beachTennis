@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Overflow } from './styles'
 import App from './App'
-
+import {LazyMotion, domAnimation} from 'framer-motion'
 let theme = createTheme({
   components: {
     MuiAppBar: {
@@ -30,10 +30,10 @@ let theme = createTheme({
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-
-
+      <LazyMotion features={domAnimation}>
         <CssBaseline />
         <App />
+      </LazyMotion>
     </ThemeProvider>
   </React.StrictMode>
 )

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 
 import { Overflow } from "../../styles"
-import { AppearEffect } from "../../components/Animation"
+import { AppearEffect, LazyLoad } from "../../components/Animation"
 import { FormatPrice } from "../../Utils"
 import { IRaquete } from "../../Types"
 
@@ -25,10 +25,11 @@ export const CardRaquetes = (prop: Prop) => {
         return navigate(`${to}`)
     }
     return (
+        
         <Card
-            elevation={animated ? 0 : 1}
-            onClick={
-                () => NavigationValidate(navigation, item.id)}
+        elevation={animated ? 0 : 1}
+        onClick={
+            () => NavigationValidate(navigation, item.id)}
             sx={{
                 height: '100%',
                 cursor: 'pointer',
@@ -36,40 +37,42 @@ export const CardRaquetes = (prop: Prop) => {
                 position: 'relative',
                 maxWidth: '28rem',
                 maxHeight: '80vh'
-            }}
-        >
-            <CardHeader
-                avatar={
-                    <Avatar
-                        variant='square'
-                        src={item.img[1]} />
-                }
-                title={item.title}
-                subheader={item.material}
-            />
-            <Overflow>
-                <CardMedia
-                    component="img"
-                    height="auto"
-                    alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
-                    image={item.img[0]}
-                    sx={{ maxHeight: '52vh', objectFit: 'contain' }}
+                }}
                 >
-                </CardMedia>
-            </Overflow>
-            <CardContent>
-                <Typography
-                    variant='subtitle2'
-                    color='text.primary'
-                    sx={{ textAlign: 'center' }}
-                >
-                    {item.subtitle}
-                </Typography>
-                <PriceSale
-                    original={item.price.original}
-                    sale={item.price.sale} />
-            </CardContent>
-        </Card>
+                <LazyLoad>
+                <CardHeader
+                    avatar={
+                        <Avatar
+                            variant='square'
+                            src={item.img[1]} />
+                    }
+                    title={item.title}
+                    subheader={item.material}
+                />
+                <Overflow>
+                    <CardMedia
+                        component="img"
+                        height="auto"
+                        alt={`raquete ${item.title} feita de ${item.material}, confira mais detalhes: ${item.description}`}
+                        image={item.img[0]}
+                        sx={{ maxHeight: '52vh', objectFit: 'contain' }}
+                    >
+                    </CardMedia>
+                </Overflow>
+                <CardContent>
+                    <Typography
+                        variant='subtitle2'
+                        color='text.primary'
+                        sx={{ textAlign: 'center' }}
+                    >
+                        {item.subtitle}
+                    </Typography>
+                    <PriceSale
+                        original={item.price.original}
+                        sale={item.price.sale} />
+                </CardContent>
+        </LazyLoad>
+            </Card>
     )
 }
 
@@ -92,7 +95,7 @@ export const PriceSale = (
                 variant='body2'
                 color='text.secondary'
             >
-                {FormatPrice(original)} 
+                {FormatPrice(original)}
             </Typography>
             <Typography
                 sx={{
@@ -101,8 +104,8 @@ export const PriceSale = (
                 }}
                 variant='body1'
                 color='text.primary'
-                >
-                {FormatPrice(sale)} 
+            >
+                {FormatPrice(sale)}
             </Typography>
         </>
     )

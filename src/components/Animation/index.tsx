@@ -1,6 +1,6 @@
 import { Vector2 } from "../../assets/img"
-import { motion, Variants, AnimatePresence, AnimatePresenceProps } from 'framer-motion'
-import { Children, ReactNode } from 'react'
+import { motion, Variants, LazyMotion, m, domAnimation, useAnimation, useInView } from 'framer-motion'
+import { Children, ReactElement, ReactNode, RefObject, useEffect, useRef } from 'react'
 export const VectorBackground = () => {
     return (
         <>
@@ -55,4 +55,38 @@ export const AppearEffect = (prop: Prop) => {
         </motion.div>
 
     )
+}
+
+
+
+
+const squareVariants = {
+    visible: { opacity: 1, scale: 4, transition: { duration: 1 } },
+    hidden: { opacity: 0, scale: 0 }
+};
+
+
+export function LazyLoad({children}:{children?: ReactNode}) {
+    const controls = useAnimation();
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true });
+
+    useEffect(() => {
+        if (isInView) {
+            controls.start("visible");
+        }
+    }, [controls, isInView]);
+    return (
+        <section ref={ref}>
+            <span
+                style={{
+                    transform: isInView ? "translateX(0px)" : !isInView ? "translateX(-200px)" : "translateX(0px)",
+                    opacity: isInView ? 1 : !isInView ? 0 : 1,
+                    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                }}
+            >
+                {children}
+            </span>
+        </section>
+    );
 }

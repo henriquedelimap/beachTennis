@@ -8,13 +8,13 @@ import { logoHeros, fundoCarbono2, fundoCarbono3 } from "../../assets/img"
 import { motion, useScroll, Variants } from 'framer-motion'
 import { Absolute } from "../../assets/img/logoQuicksand"
 import { Fundo, Sticky, Overflow } from '../../styles'
-import { AppearEffect } from "../../components/Animation"
+import { AppearEffect, LazyLoad } from "../../components/Animation"
 import { Btn } from "../../components/Button"
 import { BannerGlass } from "../../components/Banner"
 import { Comparativo } from "../../components/Comparativo"
 import { Data } from "../../assets/data"
-import {  SelectItemToCompare } from "../../components/Seletor"
-import {IRaquete} from '../../Types'
+import { SelectItemToCompare } from "../../components/Seletor"
+import { IRaquete } from '../../Types'
 import { useEffect, useState } from "react"
 
 export const Home = () => {
@@ -23,7 +23,7 @@ export const Home = () => {
     const [firstItemComparative, setFirstItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
     const [secondItemComparative, setSecondItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
 
-    
+
     const [itemComparative2, setItemComparative2] = useState('DNA EXTREME 2.2 ORANGE 2022')
     const raquetes = [
 
@@ -87,51 +87,60 @@ export const Home = () => {
 
     useEffect(() => {
 
-        object1 === undefined 
-        ? setFirstItemComparative(Data.map(item => item)[0]) 
-        : setFirstItemComparative(object1)
-        
+        object1 === undefined
+            ? setFirstItemComparative(Data.map(item => item)[0])
+            : setFirstItemComparative(object1)
+
         object2 === undefined
-        ? setSecondItemComparative(Data.map(item => item)[1])
-        : setSecondItemComparative(object2)
+            ? setSecondItemComparative(Data.map(item => item)[1])
+            : setSecondItemComparative(object2)
 
 
-    }, [itemComparative1,  itemComparative2])
+    }, [itemComparative1, itemComparative2])
     return (
         <>
-            <Overflow>
+            <LazyLoad>
+
+                <Overflow>
+                    <ContainerPadding>
+                        <Title text='mais procuradas' />
+                        <Sale />
+                    </ContainerPadding>
+                </Overflow>
+            </LazyLoad>
+
+
                 <ContainerPadding>
-                    <Title text='mais procuradas' />
-                    <Sale />
+                    <Title text='compare os modelos' />
+
+                    <Sticky top={48}>
+                        <Stack sx={{ mt: 1 }} spacing={0} direction='row' justifyContent='space-around'>
+                            <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1} />
+                            <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
+                        </Stack>
+                    </Sticky>
+                    <Comparativo object={firstItemComparative} object2={secondItemComparative} />
                 </ContainerPadding>
-            </Overflow>
+            <LazyLoad>
 
-
-            <ContainerPadding>
-                <Title text='compare os modelos' />
-
-                <Sticky top={48}>
-                    <Stack sx={{ mt: 1 }} spacing={0} direction='row' justifyContent='space-around'>
-                        <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1} />
-                        <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
-                    </Stack>
-                </Sticky>
-                <Comparativo object={firstItemComparative} object2={secondItemComparative} />
-            </ContainerPadding>
-            <Box sx={{ background: '#222222', color: '#eeeeee' }}>
-                <ContainerPadding>
-                    <TitleCentred text='conheça as marcas' color='#eeeeee' />
-                    <Beneficios />
-                </ContainerPadding>
-            </Box>
+                <Box sx={{ background: '#222222', color: '#eeeeee' }}>
+                    <ContainerPadding>
+                        <TitleCentred text='conheça as marcas' color='#eeeeee' />
+                        <Beneficios />
+                    </ContainerPadding>
+                </Box>
+            </LazyLoad>
             <Stack sx={{ height: 164 }} />
 
-            <BannerGlass
-                raquetes={raquetes}
-                logo={logoHeros}
-                btnText={'tecnologia de ponta'}
-                description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
-            />
+            <LazyLoad>
+
+                <BannerGlass
+                    raquetes={raquetes}
+                    logo={logoHeros}
+                    btnText={'tecnologia de ponta'}
+                    description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
+                />
+            </LazyLoad>
 
 
         </>

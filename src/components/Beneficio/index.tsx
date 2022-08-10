@@ -5,6 +5,7 @@ import { X, logoQuickSand, logoTurquoise, logoOceanAir } from "../../assets/img"
 import { Fundo } from "../../styles"
 import { Key } from "react"
 import { ResponsiveStyleValue } from "@mui/system"
+import { LazyLoad } from "../../components/Animation"
 export const Beneficios = () => {
     const itens = [
         {
@@ -54,6 +55,8 @@ export const Beneficios = () => {
         return (
             <Grid key={index} item xs={12} md={6} lg={6} >
                 <Stack direction={direction} spacing={2} alignItems='center' sx={{ p: 2, position: 'relative' }}>
+                    <LazyLoad>
+
                     <Avatar
                         variant='square'
                         src={item.brand}
@@ -65,9 +68,16 @@ export const Beneficios = () => {
                                 filter: 'invert(100%) brightness(60%)',
                             },
                         }} />
+                        </LazyLoad>
                     <Stack spacing={1}>
+                        <LazyLoad>
+
                         <Typography align={align} variant='h5' fontWeight='100'>{item.title}</Typography>
+                        </LazyLoad>
+                        <LazyLoad>
+
                         <Typography align={align} variant='body2' paragraph fontWeight='500' >{item.description}</Typography>
+                        </LazyLoad>
                     </Stack>
 
                 </Stack>
