@@ -23,9 +23,9 @@ let theme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          background: '#ffffffaf',
-          backdropFilter: 'blur(16px)',
-          boxShadow: 'none'
+          background: 'rgba(232, 245, 255, 0.07)',
+          backdropFilter: 'blur(32px)',
+          boxShadow: '0px 12px 8px -20px #111111',
         }
       }
     },
