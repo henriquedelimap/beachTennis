@@ -6,7 +6,7 @@ import App from './App'
 import {LazyMotion, domAnimation} from 'framer-motion'
 let theme = createTheme({
   typography: {
-    fontFamily: 'Helvetica Neue'
+    fontFamily: 'Outfit'
   },
   palette: {
     primary: {
