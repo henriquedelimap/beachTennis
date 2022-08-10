@@ -106,12 +106,6 @@ export const Home = () => {
                 </ContainerPadding>
             </Overflow>
 
-            <Box sx={{ background: '#222222', color: '#eeeeee' }}>
-                <ContainerPadding>
-                    <TitleCentred text='conheça as marcas' color='#eeeeee' />
-                    <Beneficios />
-                </ContainerPadding>
-            </Box>
 
             <ContainerPadding>
                 <Title text='compare os modelos' />
@@ -124,6 +118,13 @@ export const Home = () => {
                 </Sticky>
                 <Comparativo object={firstItemComparative} object2={secondItemComparative} />
             </ContainerPadding>
+            <Box sx={{ background: '#222222', color: '#eeeeee' }}>
+                <ContainerPadding>
+                    <TitleCentred text='conheça as marcas' color='#eeeeee' />
+                    <Beneficios />
+                </ContainerPadding>
+            </Box>
+            <Stack sx={{ height: 164 }} />
 
             <BannerGlass
                 raquetes={raquetes}
@@ -132,9 +133,7 @@ export const Home = () => {
                 description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
             />
 
-            <Stack sx={{ height: 460 }}>
 
-            </Stack>
         </>
     )
 }
