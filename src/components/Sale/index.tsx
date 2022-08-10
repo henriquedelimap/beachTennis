@@ -41,7 +41,7 @@ export const Sale = () => {
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
 
                             <LazyLoad once>
-                                <img src={item.img} style={{ zIndex: 3, height: 320 }} />
+                            <img src={item.img} style={{ zIndex: 30, height: 320, position: 'relative' }} />
                             <Fundo style={{ background: item.colorRadial }} />
                             </LazyLoad>
                             <Btn position={'absolute'} top={-64} size={20} text={'30% off'} color={item.color} />
@@ -62,7 +62,7 @@ export const Fundo = styled('div')(({ right }: { right?: string | number }) => (
     height: '60%',
     borderRadius: '150rem',
     transform: 'translateX(-50%)',
-    zIndex: -1
+    zIndex: 1
 }))
 
 const Borda = styled('div')(({ }) => ({
@@ -71,7 +71,7 @@ const Borda = styled('div')(({ }) => ({
     border: '2px solid #111111',
     borderRadius: 6,
     position: 'absolute',
-    zIndex: -1,
+    zIndex: 1,
     top: -2,
     left: 2
 }))
@@ -81,7 +81,7 @@ const Borda2 = styled('div')(({ }) => ({
     border: '2px solid #111111',
     borderRadius: 6,
     position: 'absolute',
-    zIndex: -1,
+    zIndex: 1,
     top: 2,
     left: -2
 }))

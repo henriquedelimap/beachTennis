@@ -40,19 +40,19 @@ export const RaquetePage = () => {
                     
                     <Grid item xs={12}>
 
-                        <Typography sx={{ ml: -.6 }} variant='h4' fontWeight={100}>Compre sua raquete</Typography>
+                        <Typography sx={{ ml: -.6 }} variant='h3' fontFamily='Outfit'   fontWeight={100}>Compre sua raquete</Typography>
                     </Grid>
                     <Grid item xs={12}>
 
-                        <Typography variant='h5' fontWeight={600}>{raquete.title}</Typography>
+                        <Typography variant='h5' fontFamily='Outfit'   fontWeight={600}>{raquete.title}</Typography>
                     </Grid>
 
                     <Grid item container columnSpacing={.5} xs={12}>
                         {
                             raquete.chips.map(chip => (
                                 <Grid item>
-                                    {chip === 'novidade' ? <Chip sx={{fontWeight: 600}} color='success' label={chip} size="small"/> 
-                                    : <Chip  label={chip} size="small" variant='outlined' />
+                                    {chip === 'novidade' ? <Chip sx={{fontWeight: 600, fontFamily:'Outfit' }} color='success' label={chip} size="small"/> 
+                                    : <Chip  label={chip} size="small" sx={{fontFamily:'Outfit'}} variant='outlined' />
                                     }
                                 </Grid>
                             ))

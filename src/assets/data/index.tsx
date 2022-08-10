@@ -157,74 +157,81 @@ export const Data = [
 
         }
     },
-    // {
-    //     id: 7,
-    //     img: revolutionFullcarbonBlue,
-    //     title: '',
-    //     subtitle: '',
+    {
+        id: 7,
+        img: [revolutionFullcarbonBlue, revolutionFullcarbonBlue],
+        title: 'REVOLUTION TIME 1.3 BLUE',
+        subtitle: '',
+        price: {
+            original: 2.450,
+            sale: 1.699
+        },
+        chips: ['2022', 'Carbon 3k'],
+        year: '2022',
+        stored: 0,
+        description: `Quadro revolucionário caracterizado por uma ponte desenhada para suportar e potenciar o seu rendimento limitando as torções e vibrações, com uma espessura de 20mm que, aliados aos materiais internos de última geração, tornam-no extremamente dúctil.`,
+        subDescription: `Em material técnico FULL CARBON 3K de absoluta precisão que tem a sensibilidade como sua melhor arma para o controle total do jogo, embelezado com gráficos Gold Foil.
+        O SISTEMA RADIAL HOLES CONTINUUM contribui ainda mais para estabilizar a raquete em todas as fases do jogo.`,
+        weight: 0.34,
+        dimensions: [50, 2, 27],
+        color: ['Preto', 'Dourado', 'Azul'],
+        material: 'Full Carbon 3k',
+        role: {
+            category: 'turquoise',
+            brand: logoTurquoise
+        }
+    },
+    {
+        id: 8,
+        img: [revolutionFullcarbonRed, revolutionFullcarbonRed],
+        title: 'REVOLUTION TIME 1.3 RED 2022',
+        subtitle: 'Beach Tennis Turquoise REVOLUTION TIME 1.3 RED 2022',
 
-    //     price: {
-    //         original: 0,
-    //         sale: 0
-    //     },
-    //     stored: 0,
-    //     description: ``,
-    //     subDescription: ``,
-    //     weight: 0,
-    //     dimensions: [0, 0, 0],
-    //     color: ['', ''],
-    //     material: 'materialll',
-    //     role: {
-    //         category: 'SKU',
-    //         brand: logoQuickSand
+        price: {
+            original: 2.450,
+            sale: 1.699
+        },
+        chips: ['2022', 'Carbon 3k'],
+        year: '2022',
+        stored: 0,
+        description: `Quadro revolucionário caracterizado por uma ponte desenhada para suportar e potenciar o seu rendimento limitando as torções e vibrações, com uma espessura de 20mm que, aliados aos materiais internos de última geração, tornam-no extremamente dúctil.`,
+        subDescription: `Em material técnico FULL CARBON 3K de absoluta precisão que tem a sensibilidade como sua melhor arma para o controle total do jogo, embelezado com gráficos Gold Foil.
+        O SISTEMA RADIAL HOLES CONTINUUM contribui ainda mais para estabilizar a raquete em todas as fases do jogo.`,
+        weight: 0.34,
+        dimensions: [50, 2, 27],
+        color: ['Preto', 'Dourado', 'Vermelho'],
+        material: 'Full Carbon 3k',
+        role: {
+            category: 'turquoise',
+            brand: logoTurquoise
+        }
+    },
+    {
+        id: 9,
+        img: [revolutionFullcarbonYellow, revolutionFullcarbonYellow],
+        title: 'REVOLUTION TIME 1.3 YELLOW',
+        subtitle: '',
 
-    //     }
-    // },
-    // {
-    //     id: 8,
-    //     img: revolutionFullcarbonRed,
-    //     title: '',
-    //     subtitle: '',
-
-    //     price: {
-    //         original: 0,
-    //         sale: 0
-    //     },
-    //     stored: 0,
-    //     description: ``,
-    //     subDescription: ``,
-    //     weight: 0,
-    //     dimensions: [0, 0, 0],
-    //     color: ['', ''],
-    //     material: 'materialll',
-    //     role: {
-    //         category: 'SKU',
-    //         brand: logoQuickSand
-
-    //     }
-    // },
-    // {
-    //     id: 9,
-    //     img: revolutionFullcarbonYellow,
-    //     title: '',
-    //     subtitle: '',
-
-    //     price: {
-    //         original: 0,
-    //         sale: 0
-    //     },
-    //     stored: 0,
-    //     description: ``,
-    //     subDescription: ``,
-    //     weight: 0,
-    //     dimensions: [0, 0, 0],
-    //     color: ['', ''],
-    //     material: 'materialll',
-    //     role: {
-    //         category: 'SKU',
-    //         brand: logoQuickSand
-    //     }
-    // },
+        price: {
+            original: 2.450,
+            sale: 1.799
+        },
+    chips: ['2022', 'Carbon 3k'],
+    year: '2022',
+        stored: 0,
+        description: `Quadro revolucionário caracterizado por uma ponte desenhada para suportar e potenciar o seu rendimento limitando as torções e vibrações, com uma espessura de 20mm que, aliados aos materiais internos de última geração, tornam-no extremamente dúctil.
+        Em material técnico FULL CARBON 3K de absoluta precisão que tem a sensibilidade como sua melhor arma para o controle total do jogo, embelezado com gráficos Gold Foil.
+        O SISTEMA RADIAL HOLES CONTINUUM contribui ainda mais para estabilizar a raquete em todas as fases do jogo.`,
+        subDescription: ``,
+        weight: 0.34,
+        dimensions: [50, 2, 27],
+        color: ['Preto', 'Dourado', 'Amarelo'],
+        material: 'Full Carbon 3k',
+        role: {
+            category: 'SKU',
+            brand: logoQuickSand
+        }
+    },
     // {
     //     id: 10,
     //     img: revolutionFullcarbonYellow,
