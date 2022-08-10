@@ -61,7 +61,7 @@ const ItemContent = ({
 
             <Grid item xs={12}>
 
-                <Typography variant={'h4'}>{title}</Typography>
+                <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
                 <Divider sx={{ width: '100%' }} />
             </Grid>
 
@@ -83,7 +83,7 @@ const ItemContentDimensionCreator = ({
 }: { title: string, dimension: number[], dimension2: number[] }) => {
     return (
         <Grid item width='100%' >
-            <Typography variant={'h4'}>{title}</Typography>
+            <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
             <Divider sx={{ width: '100%' }} />
             <Stack direction='row' sx={{ pt: 4, pb: 4 }}>
                 <ItemContentCreator>

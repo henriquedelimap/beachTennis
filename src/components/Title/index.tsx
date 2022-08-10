@@ -11,7 +11,7 @@ export const Title = (prop: Prop) => {
     return (
         <Stack spacing={2} direction='row' alignItems='center' >
             <Decoration />
-            <Typography variant='h4' color='#1F9DBE' sx={{'&:first-letter':{textTransform: 'capitalize'}}} >{text}</Typography>
+            <Typography fontWeight={100} variant='h4' color='#1F9DBE' sx={{'&:first-letter':{textTransform: 'capitalize'}}} >{text}</Typography>
         </Stack>
     )
 }
@@ -20,7 +20,7 @@ export const TitleCentred = (prop: Prop) => {
     const cor = color === undefined ? '#1F9DBE' : color
     return (
         <Stack alignSelf='center' sx={{width: 'fit-content'}} spacing={.5} direction='column'>
-            <Typography  variant='h4' color={cor}>{text}</Typography>
+            <Typography fontWeight={100}  variant='h4' color={cor}>{text}</Typography>
             <DecorationHorizontal cor={cor} />
         </Stack>
     )
@@ -28,7 +28,7 @@ export const TitleCentred = (prop: Prop) => {
 
 
 const DecorationHorizontal = styled('div')(({theme, cor}: {theme?: Theme, cor: string})=>({
-    height: '.2rem',
+    height: '.1rem',
     width: '100%',
     background: cor
 }))
@@ -36,7 +36,7 @@ const DecorationHorizontal = styled('div')(({theme, cor}: {theme?: Theme, cor: s
 
 const Decoration = styled('div')(({})=>({
     height: '3.2rem',
-    width: '.3rem',
+    width: '.2rem',
     background:'#1F9DBE'
 
 }))
