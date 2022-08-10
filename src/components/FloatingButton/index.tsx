@@ -23,12 +23,12 @@ export const FloatingButton = (prop: Prop) => {
                 href={link}
                 >
 
-                <Stack direction='row' spacing={disappear ? 0 : 1} alignItems='center'>
+                <Stack direction='row' spacing={disappear ? 0 : {xs: 0, md: 1, lg: 1}} alignItems='center'>
 
                     <BsWhatsapp fontSize={20} />
 
                     <Collapse in={!disappear} orientation='horizontal'>
-                        <Typography variant={'body1'}>
+                        <Typography sx={{display: {xs: 'none', md: 'flex', lg: 'flex'}}} variant={'body1'}>
                             entrar em contato
                         </Typography>
                     </Collapse>
