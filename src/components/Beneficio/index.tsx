@@ -76,7 +76,7 @@ export const Beneficios = () => {
     }
     return (
         <Box>
-            <Grid container spacing={{ md: 4, sx: 0, lg: 4 }} rowSpacing={2} >
+            <Grid container spacing={{ md: 4, sx: 0, lg: 4 }} sx={{pb: 4}} rowSpacing={2} >
                 {
                     itens.map((item, index) => {
                         if (item.id % 2 === 0) {
