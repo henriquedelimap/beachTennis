@@ -1,14 +1,10 @@
 import { Chip, Grid, Stack, Typography } from "@mui/material"
 import { Data } from "../../../assets/data"
 import { useParams } from "react-router-dom"
-import { IRaquete } from "../../../Utils"
-import { CardRaquetes } from "../../../components/Cards"
 import { NotfFound } from "../../NotFound"
 import { CardPagamnto } from "./Pagamento"
 import { ContainerPadding } from "../../../components/Container"
-import { FixaTecnica } from "./FixaTecnica"
 import { Sticky } from "../../../styles"
-import { FormatPrice } from "../../../Utils"
 import { CreateCarousel } from "../../../components/Carousel"
 
 export const RaquetePage = () => {
