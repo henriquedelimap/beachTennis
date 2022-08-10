@@ -1,5 +1,6 @@
 import styled from "@emotion/styled"
 import { Stack, Typography } from "@mui/material"
+import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 import { useParams } from "react-router-dom"
 
 export const NotfFound = () => {
@@ -10,23 +11,24 @@ export const NotfFound = () => {
 
             <Scene>
                 <Box>
-
                     <Front>
                     </Front>
 
                     <Back>
-                        <p>404</p>
+                        <Stack sx={{position: 'relative', width: '100%', height:'100%'}}>
+                            <Stack sx={{position: 'absolute', top: '25%', transform: 'scale(.5)'}}>
 
+                            <LogoQuicksand />
+                            </Stack>
+                        </Stack>
                     </Back>
 
                     <Right>
                         <p>404</p>
-
                     </Right>
 
                     <Left>
                         <p>404</p>
-
                     </Left>
 
                     <Top>
@@ -34,12 +36,9 @@ export const NotfFound = () => {
                     </Top>
 
                     <Bottom></Bottom>
-
                 </Box>
 
             </Scene>
-
-
         </Stack>
     )
 }
@@ -61,7 +60,7 @@ const Box = styled('div')(({ }) => ({
     height: '100vh',
     position: 'relative',
     transformStyle: 'preserve-3d',
-    transform: 'translateZ(-3rem) translateY(13rem) translateX(-16rem) rotateX(1deg) rotateZ(0deg)'
+    transform: 'translateZ(-1vw) translateY(12vw) translateX(-8vw) rotateX(1deg) rotateZ(0deg)'
 }))
 
 const Front = styled('div')(({ }) => ({
@@ -87,7 +86,7 @@ const Back = styled('div')(({ }) => ({
 
     background: '#111111',
     border: '2px solid #111111',
-    transform: 'rotateY(180deg) translateZ( 32rem)',
+    transform: 'rotateY(0deg) translateZ(-32rem)',
     width: '64rem',
     height: '32rem',
     top: '0%',

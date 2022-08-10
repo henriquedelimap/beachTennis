@@ -106,9 +106,9 @@ export const Home = () => {
                 </ContainerPadding>
             </Overflow>
 
-            <Box sx={{ background: '#F1FCFF' }}>
+            <Box sx={{ background: '#111111', color: 'white' }}>
                 <ContainerPadding>
-                    <TitleCentred text='conheça as marcas' />
+                    <TitleCentred text='conheça as marcas' color='white' />
                     <Beneficios />
                 </ContainerPadding>
             </Box>

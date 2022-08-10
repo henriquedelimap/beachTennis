@@ -19,7 +19,7 @@ export const Beneficios = () => {
             title: `Hero's `,
             description: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet maxime minima earum ratione vero eius saepe a, dignissimos consectetur ipsa sed aut dolorem repellat omnis perspiciatis, rem unde facere similique.`,
             brand: X,
-            id:2
+            id: 2
         },
         {
             icone: <CgTennis fontSize={128} />,
@@ -58,14 +58,16 @@ export const Beneficios = () => {
                         variant='square'
                         src={item.brand}
                         sx={{
-                            width: 132, '& img': {
+                            width: 132, 
+                            '& img': {
                                 width: 124,
                                 objectFit: 'fill',
+                                filter: 'invert(100%) brightness(60%)',
                             },
                         }} />
                     <Stack spacing={1}>
-                        <Typography align={align} variant='h5'>{item.title}</Typography>
-                        <Typography align={align} variant='body2' paragraph>{item.description}</Typography>
+                        <Typography align={align} variant='h5' fontWeight='100'>{item.title}</Typography>
+                        <Typography align={align} variant='body2' paragraph fontWeight='500' >{item.description}</Typography>
                     </Stack>
 
                 </Stack>

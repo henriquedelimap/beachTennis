@@ -14,13 +14,7 @@ export const RaquetesPage = () => {
                 justifyContent='center'
                 alignItems='cneter'
                 rowSpacing={2}
-                spacing={
-                    {
-                        lg: 2,
-                        md: 2,
-                        xs: 0
-                    }
-                }
+                columnSpacing={{xs: 0, md: 2, lg: 2}}
             >
                 {
                     Data.map(

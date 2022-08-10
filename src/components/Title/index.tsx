@@ -1,8 +1,10 @@
+import { Theme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { Stack, Typography } from "@mui/material"
 
 interface Prop{
-    text: string
+    text: string,
+    color?: string
 }
 export const Title = (prop: Prop) => {
     const {text} = prop
@@ -14,20 +16,21 @@ export const Title = (prop: Prop) => {
     )
 }
 export const TitleCentred = (prop: Prop) => {
-    const {text} = prop
+    const {text, color} = prop
+    const cor = color === undefined ? '#1F9DBE' : color
     return (
         <Stack alignSelf='center' sx={{width: 'fit-content'}} spacing={.5} direction='column'>
-            <Typography  variant='h4' color='#1F9DBE'>{text}</Typography>
-            <DecorationHorizontal />
+            <Typography  variant='h4' color={cor}>{text}</Typography>
+            <DecorationHorizontal cor={cor} />
         </Stack>
     )
 }
 
 
-const DecorationHorizontal = styled('div')(({})=>({
+const DecorationHorizontal = styled('div')(({theme, cor}: {theme?: Theme, cor: string})=>({
     height: '.2rem',
     width: '100%',
-    background:'#1F9DBE'
+    background: cor
 }))
 
 

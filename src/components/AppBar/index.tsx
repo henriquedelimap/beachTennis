@@ -47,7 +47,7 @@ export const Header = ({
     return (
         <AppBar sx={{ p: 0, pb: 0, zIndex: 1000 }}>
             <Stack
-                sx={{ width: '100%', pl: 1, pr: 1 }}
+                sx={{ width: '100%', pl: 0, pr: 0 }}
                 direction='row'
                 alignItems='center'
                 justifyContent='space-between' >
@@ -89,12 +89,12 @@ export const Header = ({
 
                     </Tabs>
 
-                    <Tabs indicatorColor={undefined}>
+                    <Tabs indicatorColor={undefined} >
                     <Tab
                             value={8}
                             key={1}
                             onClick={() => setShop(true)}
-                            
+                            sx={{ justifyContent: {xs: 'end', md: 'center', lg: 'center'}}}
                             icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
                     </Tabs>
 
