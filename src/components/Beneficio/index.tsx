@@ -46,9 +46,11 @@ export const Beneficios = () => {
         }
         index: number
         direction: ResponsiveStyleValue<any>
+        right?: boolean
     }
     const Item = (prop: Prop) => {
-        const { item, index, direction } = prop
+        const { item, index, direction, right } = prop
+        const align = right ? 'right' : 'left'
         return (
             <Grid key={index} item xs={12} md={6} lg={6} >
                 <Stack direction={direction} spacing={2} alignItems='center' sx={{ p: 2, position: 'relative' }}>
@@ -62,8 +64,8 @@ export const Beneficios = () => {
                             },
                         }} />
                     <Stack spacing={1}>
-                        <Typography variant='h5'>{item.title}</Typography>
-                        <Typography paragraph>{item.description}</Typography>
+                        <Typography align={align} variant='h5'>{item.title}</Typography>
+                        <Typography align={align} variant='body2' paragraph>{item.description}</Typography>
                     </Stack>
 
                 </Stack>
@@ -78,7 +80,7 @@ export const Beneficios = () => {
                         if (item.id % 2 === 0) {
                             return <Item item={item} index={index} direction='row-reverse' />
                         } else {
-                            return <Item item={item} index={index} direction='row' />
+                            return <Item item={item} index={index} direction='row' right />
                         }
                     })
                 }
