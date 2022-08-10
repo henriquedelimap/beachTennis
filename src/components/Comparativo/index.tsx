@@ -39,11 +39,12 @@ const ItemContentCreator = ({
     content, children, right, left
 }: { content?: string, children?: ReactNode, right?: boolean, left?: boolean }) => {
     const align = right ? 'right' : left ? 'left' : 'center'
+    const contentLength = content?.length || 10
     return (
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
-                    <Typography align={align} variant='subtitle2' fontWeight='200'>
+                    <Typography align={align} variant={contentLength < 100 ? 'body1' : 'body2'} fontWeight='200'>
                         {content}
                         {children}
                     </Typography>
