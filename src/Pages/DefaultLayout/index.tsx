@@ -32,7 +32,7 @@ export const DefaultLayout = (
                 </Paper>
 
                 <Sticky bottom={0} index={-1}>
-                    <Stack justifyContent='center' alignItems='center' sx={{ height: '16vh', width: '100%' }}>
+                    <Stack justifyContent='center' alignItems='center' sx={{ height: '40vh', width: '100%' }}>
                         <OOLogo />
                     </Stack>
                 </Sticky>
