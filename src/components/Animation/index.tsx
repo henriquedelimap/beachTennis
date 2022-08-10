@@ -80,8 +80,7 @@ export function LazyLoad({children, once}:{children?: ReactNode, once?: boolean}
         <section ref={ref}>
             <span
                 style={{
-                    transform: isInView ? "translateX(0px)" : !isInView ? "translateX(-200px)" : "translateX(0px)",
-                    opacity: isInView ? 1 : !isInView ? 0.4 : 1,
+                    opacity: isInView ? 1 : !isInView ? 0.1 : 1,
                     transition: "all 0.16s cubic-bezier(0.17, 0.55, 0.55, 1) 0.16s"
                 }}
             >

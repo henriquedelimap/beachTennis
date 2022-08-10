@@ -14,9 +14,6 @@ interface Prop {
 
 const ItemHeader = ({ subtitle, title, description, img, material, role, price }: IRaquete) => {
     return (
-
-
-
         <Grid container alignItems='start' justifyContent='space-between' sx={{ width: '100%' }}>
             <Grid rowSpacing={4} item container xs={12} justifyContent='center' sx={{ minHeight: '24rem' }} >
                 <Grid item container justifyContent='center' xs={12}>
@@ -46,7 +43,7 @@ const ItemContentCreator = ({
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
-                    <Typography align={align} variant='subtitle2' fontWeight='400'>
+                    <Typography align={align} variant='subtitle1' fontWeight='200'>
                         {content}
                         {children}
                     </Typography>
@@ -67,7 +64,7 @@ const ItemContent = ({
             </Grid>
 
 
-            <Grid item container columnSpacing={1} sx={{ pt: 4, pb: 4 }}>
+            <Grid item container columnSpacing={0} sx={{ pt: 4, pb: 4 }}>
                 <Grid item xs={6}>
                     <LazyLoad>
 
