@@ -78,7 +78,7 @@ export const RaquetePage = () => {
                     md={6}
                     lg={6}
                 >
-                    <Sticky top={100}>
+                    <Sticky index={200} top={100}>
                         {/* <CardRaquetes
                             navigation={false}
                             animated={true}

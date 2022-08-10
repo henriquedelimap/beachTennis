@@ -111,7 +111,7 @@ export const Home = () => {
                 <ContainerPadding>
                     <Title text='compare os modelos' />
 
-                    <Sticky top={48}>
+                    <Sticky index={200} top={48}>
                         <Stack sx={{ mt: 1 }} spacing={0} direction='row' justifyContent='space-around'>
                             <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1} />
                             <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
