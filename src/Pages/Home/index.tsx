@@ -121,7 +121,6 @@ export const Home = () => {
                     </Sticky>
                     <Comparativo object={firstItemComparative} object2={secondItemComparative} />
                 </ContainerPadding>
-            <LazyLoad>
 
                 <Box sx={{ background: '#222222', color: '#eeeeee' }}>
                     <ContainerPadding>
@@ -129,10 +128,8 @@ export const Home = () => {
                         <Beneficios />
                     </ContainerPadding>
                 </Box>
-            </LazyLoad>
             <Stack sx={{ height: 164 }} />
 
-            <LazyLoad>
 
                 <BannerGlass
                     raquetes={raquetes}
@@ -140,7 +137,6 @@ export const Home = () => {
                     btnText={'tecnologia de ponta'}
                     description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
                 />
-            </LazyLoad>
 
 
         </>
