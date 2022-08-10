@@ -129,12 +129,12 @@ export const Home = () => {
             <Stack sx={{ height: 164 }} />
 
 
-                <BannerGlass
+                {/* <BannerGlass
                     raquetes={raquetes}
                     logo={logoHeros}
                     btnText={'tecnologia de ponta'}
                     description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
-                />
+                /> */}
 
 
         </>
