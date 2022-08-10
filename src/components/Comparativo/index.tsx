@@ -44,7 +44,7 @@ const ItemContentCreator = ({
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
-                    <Typography align={align} variant='body1'>
+                    <Typography align={align} variant='body2'>
                         {content}
                         {children}
                     </Typography>
@@ -66,7 +66,7 @@ const ItemContent = ({
             </Grid>
 
 
-            <Grid item container columnSpacing={4} sx={{ pt: 4, pb: 4 }}>
+            <Grid item container columnSpacing={1} sx={{ pt: 4, pb: 4 }}>
                 <Grid item xs={6}>
                     <ItemContentCreator content={content} left />
                 </Grid>
