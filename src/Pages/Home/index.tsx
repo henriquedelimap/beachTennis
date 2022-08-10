@@ -13,7 +13,8 @@ import { Btn } from "../../components/Button"
 import { BannerGlass } from "../../components/Banner"
 import { Comparativo } from "../../components/Comparativo"
 import { Data } from "../../assets/data"
-import { IRaquete, SelectItemToCompare } from "../../components/Seletor"
+import {  SelectItemToCompare } from "../../components/Seletor"
+import {IRaquete} from '../../Types'
 import { useEffect, useState } from "react"
 
 export const Home = () => {

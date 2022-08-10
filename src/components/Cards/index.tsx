@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 import { Overflow } from "../../styles"
 import { AppearEffect } from "../../components/Animation"
 import { FormatPrice } from "../../Utils"
-import { IRaquete } from "../../components/Seletor"
+import { IRaquete } from "../../Types"
 
 export interface Prop {
     item: IRaquete

@@ -3,7 +3,7 @@ import { PriceSale } from "../Cards"
 import { ReactNode, useEffect } from "react"
 import { MdWork } from "react-icons/md"
 import { Data } from "../../assets/data"
-import { IRaquete } from "../Seletor"
+import { IRaquete } from "../../Types"
 import { DimensaoRaquete } from "../../components/Dimensions"
 interface Prop {
     object: IRaquete

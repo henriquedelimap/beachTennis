@@ -1,7 +1,7 @@
 import { Chip, Grid, Stack, Typography } from "@mui/material"
 import { Data } from "../../../assets/data"
 import { useParams } from "react-router-dom"
-import { IRaquete } from "../../../components/Seletor"
+import { IRaquete } from "../../../Utils"
 import { CardRaquetes } from "../../../components/Cards"
 import { NotfFound } from "../../NotFound"
 import { CardPagamnto } from "./Pagamento"
