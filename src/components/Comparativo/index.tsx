@@ -46,7 +46,7 @@ const ItemContentCreator = ({
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
-                    <Typography align={align} variant='body2'>
+                    <Typography align={align} variant='subtitle2' fontWeight='400'>
                         {content}
                         {children}
                     </Typography>
@@ -89,19 +89,28 @@ const ItemContentDimensionCreator = ({
     dimension, dimension2, title,
 }: { title: string, dimension: number[], dimension2: number[] }) => {
     return (
-        <Grid item width='100%' >
+        <Grid container>
+            <Grid item xs={12}>
+
             <TitleBasic text={title} />
+            </Grid>
 
-            <Stack direction='row' sx={{ pt: 4, pb: 4 }}>
-                <ItemContentCreator>
-                    <DimensaoRaquete altura={dimension[0]} largura={dimension[1]} comprimento={dimension[2]} />
-                </ItemContentCreator>
 
-                <ItemContentCreator>
-                    <DimensaoRaquete altura={dimension2[0]} largura={dimension2[1]} comprimento={dimension2[2]} />
-                </ItemContentCreator>
+            <Grid xs={12} item container sx={{ pt: 4, pb: 4 }} columnSpacing={1}  width='100%' >
+                <Grid item xs={6} >
 
-            </Stack>
+                    <ItemContentCreator>
+                        <DimensaoRaquete altura={dimension[0]} largura={dimension[1]} comprimento={dimension[2]} />
+                    </ItemContentCreator>
+                </Grid>
+                <Grid item xs={6}>
+
+                    <ItemContentCreator>
+                        <DimensaoRaquete altura={dimension2[0]} largura={dimension2[1]} comprimento={dimension2[2]} />
+                    </ItemContentCreator>
+                </Grid>
+
+            </Grid>
         </Grid>
     )
 }

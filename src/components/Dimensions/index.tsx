@@ -9,7 +9,7 @@ interface Prop {
 
 export const DimensaoRaquete = ({ altura, largura, comprimento }: Prop) => {
     return (
-        <Box sx={{ position: 'relative' }}>
+        <Box sx={{ position: 'relative', p:1 }}>
             <Altura>
 
                 {altura}
@@ -30,16 +30,16 @@ export const DimensaoRaquete = ({ altura, largura, comprimento }: Prop) => {
 
 const Altura = styled('p')(({ }) => ({
     position: 'absolute',
-    right: -24,
-    top: '30%'
+    right: -16,
+    top: '32%'
 }))
 const Comprimento = styled('p')(({ }) => ({
     position: 'absolute',
     right: '40%',
-    top: -36
+    top: -24
 }))
 const Largura = styled('p')(({ }) => ({
     position: 'absolute',
-    left: 8,
-    bottom: -28
+    left: 16,
+    bottom: -16
 }))
