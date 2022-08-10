@@ -15,7 +15,7 @@ export const Title = (prop: Prop) => {
             <Decoration />
             <LazyLoad once>
 
-                <Typography fontFamily='Outfit' fontWeight={100} variant='h4' color='#1F9DBE' sx={{ '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
+                <Typography fontFamily='Outfit' fontWeight={100} variant='h3' color='#1F9DBE' sx={{ '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
             </LazyLoad>
         </Stack>
     )
@@ -27,7 +27,7 @@ export const TitleCentred = (prop: Prop) => {
         <Stack alignSelf='center' sx={{ width: 'fit-content' }} spacing={.5} direction='column'>
             <LazyLoad once>
 
-                <Typography fontFamily='Outfit' fontWeight={100} variant='h4' color={cor}>{text}</Typography>
+                <Typography fontFamily='Outfit' fontWeight={100} variant='h3' color={cor}>{text}</Typography>
                 <DecorationHorizontal cor={cor} />
             </LazyLoad>
         </Stack>

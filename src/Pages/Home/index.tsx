@@ -109,7 +109,7 @@ export const Home = () => {
 
 
                 <ContainerPadding>
-                    <Title text='compare os modelos' />
+                    <Title text='compare modelos' />
 
                     <Sticky index={200} top={48}>
                         <Stack sx={{ mt: 1 }} spacing={0} direction='row' justifyContent='space-around'>
@@ -122,7 +122,7 @@ export const Home = () => {
 
                 <Box sx={{ background: '#222222', color: '#eeeeee' }}>
                     <ContainerPadding>
-                        <TitleCentred text='conheça as marcas' color='#eeeeee' />
+                        <TitleCentred text='marcas' color='#eeeeee' />
                         <Beneficios />
                     </ContainerPadding>
                 </Box>
