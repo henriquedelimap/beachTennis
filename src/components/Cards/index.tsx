@@ -25,7 +25,7 @@ export const CardRaquetes = (prop: Prop) => {
         return navigate(`${to}`)
     }
     return (
-        
+
         <Card
         elevation={animated ? 0 : 1}
         onClick={
@@ -72,7 +72,7 @@ export const CardRaquetes = (prop: Prop) => {
                         sale={item.price.sale} />
                 </CardContent>
         </LazyLoad>
-            </Card>
+            </Card >
     )
 }
 

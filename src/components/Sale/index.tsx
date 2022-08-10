@@ -4,6 +4,7 @@ import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 import { MdBeachAccess, MdShop, MdShop2, MdShoppingCart, MdShopTwo } from "react-icons/md"
 import { semFundo1, semFundo2, semFundo3, Vector } from "../../assets/img"
 import { Btn } from "../Button"
+import { LazyLoad } from "../../components/Animation"
 
 export const promocoes = [
     {
@@ -31,15 +32,18 @@ export const Sale = () => {
     return (
 
         <Grid container rowSpacing={4} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
-            <LogoQuicksand  />
+            <LogoQuicksand />
             {
                 promocoes.map((item, index) => (
-                    
+
                     <Grid key={index} sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
+
                         <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
 
-                            <img src={item.img} style={{ zIndex: 3, height: 320 }} />
+                            <LazyLoad once>
+                                <img src={item.img} style={{ zIndex: 3, height: 320 }} />
                             <Fundo style={{ background: item.colorRadial }} />
+                            </LazyLoad>
                             <Btn position={'absolute'} top={-64} size={20} text={'30% off'} color={item.color} />
                         </Stack>
                     </Grid >
@@ -49,7 +53,7 @@ export const Sale = () => {
     )
 }
 
-export const Fundo = styled('div')(({right }:{right?: string | number}) => ({
+export const Fundo = styled('div')(({ right }: { right?: string | number }) => ({
     position: 'absolute',
     top: '-8%',
     left: '50%',

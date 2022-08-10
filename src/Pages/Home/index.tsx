@@ -99,7 +99,6 @@ export const Home = () => {
     }, [itemComparative1, itemComparative2])
     return (
         <>
-            <LazyLoad>
 
                 <Overflow>
                     <ContainerPadding>
@@ -107,7 +106,6 @@ export const Home = () => {
                         <Sale />
                     </ContainerPadding>
                 </Overflow>
-            </LazyLoad>
 
 
                 <ContainerPadding>

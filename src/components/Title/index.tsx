@@ -12,7 +12,7 @@ export const Title = (prop: Prop) => {
     return (
         <Stack spacing={2} direction='row' alignItems='center' >
             <Decoration />
-            <LazyLoad>
+            <LazyLoad once>
 
                 <Typography fontWeight={100} variant='h4' color='#1F9DBE' sx={{ '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
             </LazyLoad>
@@ -24,7 +24,7 @@ export const TitleCentred = (prop: Prop) => {
     const cor = color === undefined ? '#1F9DBE' : color
     return (
         <Stack alignSelf='center' sx={{ width: 'fit-content' }} spacing={.5} direction='column'>
-            <LazyLoad>
+            <LazyLoad once>
 
                 <Typography fontWeight={100} variant='h4' color={cor}>{text}</Typography>
             <DecorationHorizontal cor={cor} />

@@ -55,7 +55,7 @@ export const Beneficios = () => {
         return (
             <Grid key={index} item xs={12} md={6} lg={6} >
                 <Stack direction={direction} spacing={2} alignItems='center' sx={{ p: 2, position: 'relative' }}>
-                    <LazyLoad>
+                    <LazyLoad once>
 
                     <Avatar
                         variant='square'
@@ -70,11 +70,11 @@ export const Beneficios = () => {
                         }} />
                         </LazyLoad>
                     <Stack spacing={1}>
-                        <LazyLoad>
+                        <LazyLoad >
 
                         <Typography align={align} variant='h5' fontWeight='100'>{item.title}</Typography>
                         </LazyLoad>
-                        <LazyLoad>
+                        <LazyLoad >
 
                         <Typography align={align} variant='body2' paragraph fontWeight='500' >{item.description}</Typography>
                         </LazyLoad>

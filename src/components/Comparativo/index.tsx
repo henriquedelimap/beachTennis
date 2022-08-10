@@ -61,7 +61,7 @@ const ItemContent = ({
         <Grid item width='100%' >
 
             <Grid item xs={12}>
-                <LazyLoad>
+                <LazyLoad once>
                     <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
                 </LazyLoad>
                 <Divider sx={{ width: '100%' }} />
