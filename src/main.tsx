@@ -5,6 +5,20 @@ import { Overflow } from './styles'
 import App from './App'
 import {LazyMotion, domAnimation} from 'framer-motion'
 let theme = createTheme({
+  typography: {
+    fontFamily: 'Helvetica Neue'
+  },
+  palette: {
+    primary: {
+      main: '#0066cc',
+    },
+    secondary: {
+      main: '#cc0000',
+    },
+  },
+  shape: {
+    borderRadius: 2,
+  },
   components: {
     MuiAppBar: {
       styleOverrides: {
@@ -21,8 +35,7 @@ let theme = createTheme({
           color: '#1f1f1f'
         }
       }
-    },
-   
+    }
   }})
 
 

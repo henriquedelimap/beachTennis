@@ -6,6 +6,7 @@ import { Data } from "../../assets/data"
 import { IRaquete } from "../../Types"
 import { DimensaoRaquete } from "../../components/Dimensions"
 import { LazyLoad } from "../../components/Animation"
+import { TitleBasic } from "../../components/Title"
 interface Prop {
     object: IRaquete
     object2: IRaquete
@@ -61,10 +62,8 @@ const ItemContent = ({
         <Grid item width='100%' >
 
             <Grid item xs={12}>
-                <LazyLoad once>
-                    <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
-                </LazyLoad>
-                <Divider sx={{ width: '100%' }} />
+                <TitleBasic text={title} />
+
             </Grid>
 
 
@@ -72,13 +71,13 @@ const ItemContent = ({
                 <Grid item xs={6}>
                     <LazyLoad>
 
-                    <ItemContentCreator content={content} left />
+                        <ItemContentCreator content={content} left />
                     </LazyLoad>
                 </Grid>
                 <Grid item xs={6}>
                     <LazyLoad>
 
-                    <ItemContentCreator content={content2} right />
+                        <ItemContentCreator content={content2} right />
                     </LazyLoad>
                 </Grid>
             </Grid>
@@ -91,8 +90,8 @@ const ItemContentDimensionCreator = ({
 }: { title: string, dimension: number[], dimension2: number[] }) => {
     return (
         <Grid item width='100%' >
-            <Typography fontWeight={100}  variant={'h4'}>{title}</Typography>
-            <Divider sx={{ width: '100%' }} />
+            <TitleBasic text={title} />
+
             <Stack direction='row' sx={{ pt: 4, pb: 4 }}>
                 <ItemContentCreator>
                     <DimensaoRaquete altura={dimension[0]} largura={dimension[1]} comprimento={dimension[2]} />
@@ -114,8 +113,8 @@ export const Comparativo = (prop: Prop) => {
     const cor2 = object2.color[2] !== undefined ? `${object2.color[0]}, ${object2.color[1]}, ${object2.color[2]}` : `${object2.color[0]}, ${object2.color[1]}`
     return (
 
-        <Stack  sx={{ overflow: 'hidden' }} >
-            <Stack  direction='row' justifyContent='space-around' sx={{ width: '100%' }}>
+        <Stack sx={{ overflow: 'hidden' }} >
+            <Stack direction='row' justifyContent='space-around' sx={{ width: '100%' }}>
                 <ItemHeader {...object} />
                 <ItemHeader {...object2} />
             </Stack>

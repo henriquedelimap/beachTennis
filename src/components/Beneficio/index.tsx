@@ -6,6 +6,7 @@ import { Fundo } from "../../styles"
 import { Key } from "react"
 import { ResponsiveStyleValue } from "@mui/system"
 import { LazyLoad } from "../../components/Animation"
+import { SubTitleBasic } from "../../components/Title"
 export const Beneficios = () => {
     const itens = [
         {
@@ -70,14 +71,9 @@ export const Beneficios = () => {
                         }} />
                         </LazyLoad>
                     <Stack spacing={1}>
-                        <LazyLoad >
-
-                        <Typography align={align} variant='h5' fontWeight='100'>{item.title}</Typography>
-                        </LazyLoad>
-                        <LazyLoad >
+                        <SubTitleBasic align={align} text={item.title} />
 
                         <Typography align={align} variant='body2' paragraph fontWeight='500' >{item.description}</Typography>
-                        </LazyLoad>
                     </Stack>
 
                 </Stack>
