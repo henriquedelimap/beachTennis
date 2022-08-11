@@ -7,8 +7,8 @@ export interface IRaquete {
         original: number;
         sale: number;
     };
-    chips: string[],
-    year: string
+    chips?: string[],
+    year?: string
     stored: number;
     description: string;
     subDescription: string;

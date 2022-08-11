@@ -21,22 +21,22 @@ export const DefaultLayout = (
         disappear?: boolean
     }) => {
     return (
-        <Box  >
+        <Box sx={{ position: 'relative'}}  >
 
-            <Paper elevation={12} sx={{ position: 'relative', zIndex: '100' }}>
+            <Paper elevation={12} sx={{ position: 'relative', zIndex: '1', borderRadius: '0' }}>
                 <FloatingButton disappear={disappear} />
                 <Header buttonBack={buttonBack} />
                 {noBanner ? '' : <Banner />}
-                <Paper elevation={24} sx={{minHeight:'40vh', pb: 8}} >
+                <Box sx={{ background: 'white', borderRadius: '0', p:{xs: 1, md: 4, lg: 4 } }} >
                     <Outlet />
-                </Paper>
-
-                <Sticky bottom={0} index={-1}>
-                    <Stack justifyContent='center' alignItems='center' sx={{ height: '40vh', width: '100%' }}>
-                        <OOLogo />
-                    </Stack>
-                </Sticky>
+                </Box>
             </Paper >
+
+            <Sticky bottom={0} index={-10}>
+                <Stack justifyContent='center' alignItems='center' sx={{ height: '40vh', width: '100%' }}>
+                    <OOLogo />
+                </Stack>
+            </Sticky>
 
         </Box>
 

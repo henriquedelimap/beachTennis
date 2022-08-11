@@ -12,6 +12,11 @@ import {
     gold22,
     logoQuickSand,
     logoTurquoise,
+    expanseBlue,
+    blackDeathChallengeBlack,
+    blackDeathChallengeOrange,
+    conceptGreen,
+    expanseRed,
 } from '../img'
 
 export const Data = [
@@ -216,8 +221,8 @@ export const Data = [
             original: 2.450,
             sale: 1.799
         },
-    chips: ['2022', 'Carbon 3k'],
-    year: '2022',
+        chips: ['2022', 'Carbon 3k'],
+        year: '2022',
         stored: 0,
         description: `Quadro revolucionário caracterizado por uma ponte desenhada para suportar e potenciar o seu rendimento limitando as torções e vibrações, com uma espessura de 20mm que, aliados aos materiais internos de última geração, tornam-no extremamente dúctil.
         Em material técnico FULL CARBON 3K de absoluta precisão que tem a sensibilidade como sua melhor arma para o controle total do jogo, embelezado com gráficos Gold Foil.
@@ -232,58 +237,36 @@ export const Data = [
             brand: logoTurquoise
         }
     },
-    // {
-    //     id: 10,
-    //     img: revolutionFullcarbonYellow,
-    //     title: '',
-    //     subtitle: '',
+    {
+        id: 10,
+        img: [spitfire, spitfire],
+        title: 'q',
+        subtitle: '',
 
-    //     price: {
-    //         original: 0,
-    //         sale: 0
-    //     },
-    //     stored: 0,
-    //     description: ``,
-    //     subDescription: ``,
-    //     weight: 0,
-    //     dimensions: [0, 0, 0],
-    //     color: ['', ''],
-    //     material: 'materialll',
-    //     role: {
-    //         category: 'SKU',
-    //         brand: logoQuickSand
-
-    //     }
-    // },
-    // {
-    //     id: 11,
-    //     img: spitfire,
-    //     title: '',
-    //     subtitle: '',
-        
-    //     price: {
-    //         original: 0,
-    //         sale: 0
-    //     },
-    //     stored: 0,
-    //     description: ``,
-    //     subDescription: ``,
-    //     weight: 0,
-    //     dimensions: [0, 0, 0],
-    //     color: ['', ''],
-    //     material: 'materialll',
-    //     role: {
-    //         category: 'SKU',
-    //         brand: logoQuickSand
-
-    //     }
-    // },
+        price: {
+            original: 0,
+            sale: 0
+        },
+        chips: ['2022', ''],
+        year: '2022',
+        stored: 0,
+        description: ``,
+        subDescription: ``,
+        weight: 0,
+        dimensions: [0, 0, 0],
+        color: ['', ''],
+        material: 'materialll',
+        role: {
+            category: 'quicksand',
+            brand: logoQuickSand
+        }
+    },
     {
         id: 12,
         img: [gold22, gold22],
         title: 'GOLD',
         subtitle: 'Beach Tennis Quicksand GOLD',
-        
+
         price: {
             original: 1.900,
             sale: 1.499
@@ -303,6 +286,130 @@ export const Data = [
 
         }
     },
+    {
+        id: 13,
+        img: [expanseBlue, expanseBlue],
+        title: 'EXPANSE 1.1 BLUE 2022',
+        subtitle: 'Beach Tennis Turquoise EXPANSE BLUE 2022',
 
-    
+        price: {
+            original: 1.890,
+            sale: 1.650
+        },
+        chips: ['2022'],
+        year: '2022',
+        stored: 0,
+        description: `A ponte caracterizada pelo STABILIZER SYSTEM potencializa essas características, reduzindo as torções na região do coração e tornando a raquete única pela sua potência e desempenho de precisão.​`,
+        subDescription: `As características deste modelo são o quadro FULL CARBON 3K caracterizado por uma espessura de 22mm e o interior em EXTRA SOFT EVA que conferem à ferramenta uma jogabilidade excepcional tanto no ataque como na defesa potenciada pelo RADIAL HOLES SYSTEM que aumenta o seu manuseio e a aerodinâmica, e caracterizado pelos gráficos elegantes e particulares em Silver Foil.`,
+        weight: 335,
+        dimensions: [50, 3, 30],
+        color: ['Dourado', 'Preto'],
+        material: '100% Full Carbon 12K',
+        role: {
+            category: 'quicksand',
+            brand: logoQuickSand
+
+        }
+    },
+    {
+        id: 14,
+        img: [blackDeathChallengeBlack, blackDeathChallengeBlack],
+        title: '',
+        subtitle: '',
+
+        price: {
+            original: 1.900,
+            sale: 1.499
+        },
+        chips: ['2022', ''],
+        year: '2022',
+        stored: 0,
+        description: `​`,
+        subDescription: ``,
+        weight: 335,
+        dimensions: [50, 3, 30],
+        color: ['Dourado', 'Preto'],
+        material: '100% Full Carbon 12K',
+        role: {
+            category: 'quicksand',
+            brand: logoQuickSand
+
+        }
+    },
+    {
+        id: 15,
+        img: [blackDeathChallengeOrange, blackDeathChallengeOrange],
+        title: '',
+        subtitle: '',
+
+        price: {
+            original: 1.900,
+            sale: 1.499
+        },
+        chips: ['2022', ''],
+        year: '2022',
+        stored: 0,
+        description: `​`,
+        subDescription: ``,
+        weight: 335,
+        dimensions: [50, 3, 30],
+        color: ['Dourado', 'Preto'],
+        material: '100% Full Carbon 12K',
+        role: {
+            category: 'quicksand',
+            brand: logoQuickSand
+
+        }
+    },
+    {
+        id: 16,
+        img: [conceptGreen, conceptGreen],
+        title: '',
+        subtitle: '',
+
+        price: {
+            original: 1.900,
+            sale: 1.499
+        },
+        chips: ['2022', ''],
+        year: '2022',
+        stored: 0,
+        description: `​`,
+        subDescription: ``,
+        weight: 335,
+        dimensions: [50, 3, 30],
+        color: ['Dourado', 'Preto'],
+        material: '100% Full Carbon 12K',
+        role: {
+            category: 'quicksand',
+            brand: logoQuickSand
+
+        }
+    },
+    {
+        id: 17,
+        img: [expanseRed, expanseRed],
+        title: 'EXPANSE 1.1 RED',
+        subtitle: 'Beach Tennis Turquoise EXPANSE 1.1 RED 2022',
+
+        price: {
+            original: 1.890,
+            sale: 1.599
+        },
+        chips: ['2022', 'Full Carbon 12K'],
+        year: '2022',
+        stored: 0,
+        description: `​A ponte caracterizada pelo STABILIZER SYSTEM potencializa essas características, reduzindo as torções na região do coração e tornando a raquete única pela sua potência e desempenho de precisão.`,
+        subDescription: `As características deste modelo são o quadro FULL CARBON 3K caracterizado por uma espessura de 22mm e o interior em EXTRA SOFT EVA que conferem à ferramenta uma jogabilidade excepcional tanto no ataque como na defesa potenciada pelo RADIAL HOLES SYSTEM que aumenta o seu manuseio e a aerodinâmica, e caracterizado pelos gráficos elegantes e particulares em Silver Foil.`,
+        weight: .34,
+        dimensions: [50, 2, 27],
+        color: ['Vermelho', 'Preto', 'Prata'],
+        material: '100% Full Carbon 12K, Extra Soft Eva',
+        role: {
+            category: 'turquoise',
+            brand: logoTurquoise
+        }
+    },
+
 ]
+

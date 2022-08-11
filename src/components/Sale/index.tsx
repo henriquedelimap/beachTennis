@@ -30,21 +30,19 @@ export const Sale = () => {
 
 
     return (
-
-        <Grid container rowSpacing={4} justifyContent='center' alignContent='center' sx={{ width: '100%', position: 'relative' }} >
-            <LogoQuicksand />
+        <Grid container >
             {
                 promocoes.map((item, index) => (
-
-                    <Grid key={index} sx={{ width: '100%' }} alignItems='center' justifyContent='center' item xs={4} md={4} lg={4}>
-
-                        <Stack alignItems='center' justifyContent='center' sx={{ position: 'relative', width: { lg: '100%', md: '100%', xs: '100%' } }}>
+                    
+                    <Grid key={index}  item xs={4} md={4} lg={4}>
+                        
+                        <Stack alignItems='center'  sx={{ position: 'relative', width:  '100%', p: 2 }}>
 
                             <LazyLoad once>
-                            <img src={item.img} style={{ zIndex: 30, height: 320, position: 'relative' }} />
+                                <img src={item.img} style={{ zIndex: 30, height: 320, position: 'relative', top: 38 }} />
                             <Fundo style={{ background: item.colorRadial }} />
                             </LazyLoad>
-                            <Btn position={'absolute'} top={-64} size={20} text={'30% off'} color={item.color} />
+                            <Btn position={'absolute'} top={-32} size={20} text={'30% off'} color={item.color} />
                         </Stack>
                     </Grid >
                 ))
@@ -55,7 +53,7 @@ export const Sale = () => {
 
 export const Fundo = styled('div')(({ right }: { right?: string | number }) => ({
     position: 'absolute',
-    top: '-8%',
+    top: '8%',
     left: '50%',
     right: right,
     width: '50%',
@@ -65,23 +63,3 @@ export const Fundo = styled('div')(({ right }: { right?: string | number }) => (
     zIndex: 1
 }))
 
-const Borda = styled('div')(({ }) => ({
-    width: '100%',
-    height: '100%',
-    border: '2px solid #111111',
-    borderRadius: 6,
-    position: 'absolute',
-    zIndex: 1,
-    top: -2,
-    left: 2
-}))
-const Borda2 = styled('div')(({ }) => ({
-    width: '100%',
-    height: '100%',
-    border: '2px solid #111111',
-    borderRadius: 6,
-    position: 'absolute',
-    zIndex: 1,
-    top: 2,
-    left: -2
-}))

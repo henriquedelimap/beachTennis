@@ -17,10 +17,19 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 2,
+    borderRadius: '1.6rem'
   },
   components: {
     MuiAppBar: {
+      styleOverrides: {
+        root: {
+          background: 'rgba(232, 245, 255, 0.07)',
+          backdropFilter: 'blur(32px)',
+          boxShadow: '0px 12px 8px -20px #111111',
+        }
+      }
+    },
+    MuiButton: {
       styleOverrides: {
         root: {
           background: 'rgba(232, 245, 255, 0.07)',

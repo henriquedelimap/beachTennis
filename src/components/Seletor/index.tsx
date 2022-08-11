@@ -18,21 +18,18 @@ export const SelectItemToCompare = (prop: Prop) => {
     const handleComparative = (value: string) => {
         return setItemComparative(value)
     }
-    const optConfig = raquetes.map(raquete => raquete.role.category).filter((elem, pos, self) => self.indexOf(elem) == pos)
-    console.log(optConfig);
-
-         
+    const optConfig = raquetes.map(raquete => raquete.role.category).filter((elem, pos, self) => self.indexOf(elem) == pos)         
 
     return (
-        <FormControl variant="outlined" sx={{ width: '100%', pl: .4, pr: .4 }}>
+        <FormControl variant="outlined" sx={{ width: '100%', borderRadius: '.32rem', bgcolor: 'white'}}>
             
             <InputLabel htmlFor={id} >escolha</InputLabel>
-            <Select sx={{ p: .5 }} size="small" onChange={(e) => handleComparative(e.target.value)} native defaultValue='' id={id} label='raquete'
+            <Select sx={{  borderRadius: '.32rem', bgcolor: 'white', boxShadow: '0px 1px 12px #f5f5f7'}} size="small" onChange={(e) => handleComparative(e.target.value)} native defaultValue='' id={id} label='raquete'
             >
                 <option aria-label="None" value={itemComparative} />
                 {
                     optConfig.map(opt => (
-                        <optgroup label={opt}>
+                        <optgroup  label={opt}>
                             {
                                 matchProductsByBrands(opt, raquetes).map((raquete, index) => (
                                     <option key={index} value={raquete}>{raquete}</option>

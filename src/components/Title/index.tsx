@@ -14,8 +14,7 @@ export const Title = (prop: Prop) => {
         <Stack spacing={2} direction='row' alignItems='center' >
             <Decoration />
             <LazyLoad once>
-
-                <Typography noWrap fontFamily='Outfit' fontWeight={100} variant='h2' color='#1F9DBE' sx={{ '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
+                <Typography noWrap fontFamily='Outfit' fontWeight={100} variant='h2' color='#1F9DBE' sx={{p: 3.2, pl:0, '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
             </LazyLoad>
         </Stack>
     )
@@ -24,17 +23,16 @@ export const TitleCentred = (prop: Prop) => {
     const { text, color } = prop
     const cor = color === undefined ? '#1F9DBE' : color
     return (
-        <Stack alignSelf='center' sx={{ width: 'fit-content' }} spacing={0} direction='column'>
-            <LazyLoad once>
-
-                <Typography fontFamily='Outfit' fontWeight={100} variant='h2' color={cor}>{text}</Typography>
+        <LazyLoad once>
+            <Stack  sx={{ width: '100%' }} spacing={0} direction='column'>
+                <Typography sx={{p:3.2}} align='center' fontFamily='Outfit' fontWeight={100} variant='h2' color={cor}>{text}</Typography>
                 <DecorationHorizontal cor={cor} />
-            </LazyLoad>
-        </Stack>
+            </Stack>
+        </LazyLoad>
     )
 }
 
-export const TitleBasic = ({ text}: { text?: string}) => {
+export const TitleBasic = ({ text }: { text?: string }) => {
     return (
         <>
             <LazyLoad once>
@@ -44,7 +42,7 @@ export const TitleBasic = ({ text}: { text?: string}) => {
         </>
     )
 }
-export const SubTitleBasic = ({ text, align}: { text?: string, align?: string}) => {
+export const SubTitleBasic = ({ text, align }: { text?: string, align?: string }) => {
     const alinha = align === 'right' ? 'right' : 'left'
     return (
         <>

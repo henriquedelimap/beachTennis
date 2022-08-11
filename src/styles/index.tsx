@@ -2,7 +2,8 @@ import styled from "@emotion/styled";
 import {MotionValue} from 'framer-motion'
 
 export const Overflow = styled('div')(({})=>({
-    overflow: 'hidden'
+    overflowX: 'hidden',
+    position: 'relative'
 }))
 
 export const Fundo = styled('div')(({top, left, rotate, right}:{top?: number, left?: number, rotate?: number, right?: any})=>({
@@ -18,6 +19,6 @@ export const Sticky = styled('div')(({bottom, top, index}: {bottom?: number, top
     top: top,
     bottom: bottom,
     left: 0,
-    background: '#ffffff',
+    background: 'transparent',
     zIndex: index
 }))

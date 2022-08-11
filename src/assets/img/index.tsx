@@ -28,7 +28,17 @@ import {Vector, Vector2} from './Vector'
 import {LogoBeachTennis} from './logoBeachTennis'
 import {RaqueteIMG} from './raqueteImg'
 import gold22 from './gold22.jpeg'
+import expanseBlue from './expanseBlue.png'
+import expanseRed from './expanseRed.png'
+import conceptGreen from './conceptGreen.png'
+import blackDeathChallengeOrange from './blackDeathChallengeOrange.png'
+import blackDeathChallengeBlack from './blackDeathChallengeBlack.png'
 export {
+    blackDeathChallengeBlack,
+    blackDeathChallengeOrange,
+    conceptGreen,
+    expanseRed,
+    expanseBlue,
     blackDeathGold,
     blackDeathSilver,
     dnaBlue,

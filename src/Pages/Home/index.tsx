@@ -1,15 +1,16 @@
 import styled from "@emotion/styled"
-import { Typography, Container, Box, Divider, Stack, Button } from "@mui/material"
+import { Typography, Container, Box, Divider, Stack, Button, Grid, Paper } from "@mui/material"
 import { Title, TitleCentred } from "../../components/Title"
 import { Sale, promocoes } from "../../components/Sale"
 import { Beneficios } from "../../components/Beneficio"
 import { ContainerPadding } from "../../components/Container"
 import { logoHeros, fundoCarbono2, fundoCarbono3 } from "../../assets/img"
 import { motion, useScroll, Variants } from 'framer-motion'
-import { Absolute } from "../../assets/img/logoQuicksand"
 import { Fundo, Sticky, Overflow } from '../../styles'
 import { AppearEffect, LazyLoad } from "../../components/Animation"
 import { Btn } from "../../components/Button"
+import { LogoQuicksand } from "../../assets/img/logoQuicksand"
+
 import { BannerGlass } from "../../components/Banner"
 import { Comparativo } from "../../components/Comparativo"
 import { Data } from "../../assets/data"
@@ -98,46 +99,53 @@ export const Home = () => {
 
     }, [itemComparative1, itemComparative2])
     return (
-        <>
+        <Box>
+            <Grid container rowSpacing={1.6} sx={{ position: 'relative' }}>
 
-                <Overflow>
-                    <ContainerPadding>
+                <Grid xs={12} item   >
+                    <Box sx={{ bgcolor: 'white', borderRadius: '3.2rem', position: 'relative' }}>
                         <Title text='mais procuradas' />
-                        <Sale />
-                    </ContainerPadding>
-                </Overflow>
+                        <Overflow>
+                            <Sale />
+                            <LogoQuicksand />
+                        </Overflow>
+                    </Box>
+                </Grid>
 
+                <Grid xs={12} item  >
+                    <Box sx={{ bgcolor: 'white', borderRadius: '3.2rem' }}>
 
-                <ContainerPadding>
-                    <Title text='compare modelos' />
+                        <Title text='compare modelos' />
 
-                    <Sticky index={200} top={48}>
-                        <Stack sx={{ mt: 1 }} spacing={0} direction='row' justifyContent='space-around'>
-                            <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1} />
-                            <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
-                        </Stack>
-                    </Sticky>
-                    <Comparativo object={firstItemComparative} object2={secondItemComparative} />
-                </ContainerPadding>
+                        <Sticky index={200} top={8}>
+                            <Grid container columnSpacing={{ xs: .5, md: 4, lg: 4 }}>
+                                <Grid item xs={6}>
 
-                <Box sx={{ background: '#222222', color: '#eeeeee' }}>
-                    <ContainerPadding>
+                                    <SelectItemToCompare setItemComparative={setItemComparative1} id='primeira' raquetes={Data} itemComparative={itemComparative1} />
+                                </Grid>
+                                <Grid item xs={6}>
+
+                                    <SelectItemToCompare setItemComparative={setItemComparative2} id='segunda' raquetes={Data} itemComparative={itemComparative2} />
+                                </Grid>
+                            </Grid>
+                        </Sticky>
+
+                        <Comparativo object={firstItemComparative} object2={secondItemComparative} />
+                    </Box>
+                </Grid>
+
+                <Grid xs={12} item sx={{ color: '#ffffff' }}>
+                    <Box sx={{ borderRadius: '0rem', bgcolor: '#1d1d1f',  }}>
                         <TitleCentred text='marcas' color='#eeeeee' />
+
                         <Beneficios />
-                    </ContainerPadding>
-                </Box>
-            <Stack sx={{ height: 164 }} />
+                    </Box>
+                </Grid>
 
 
-                {/* <BannerGlass
-                    raquetes={raquetes}
-                    logo={logoHeros}
-                    btnText={'tecnologia de ponta'}
-                    description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni aut magnam sed velit rerum odio necessitatibus hic numquam molestias dicta.'}
-                /> */}
+            </Grid>
 
-
-        </>
+        </Box>
     )
 }
 

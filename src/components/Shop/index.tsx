@@ -13,12 +13,12 @@ export const DrawerShop = (prop: Prop) => {
     const {shop, setShop} = prop
     return ( 
         <Drawer anchor='right' variant='temporary' open={shop} onClose={()=>setShop(false)} >
-            <Stack spacing={2} sx={{p:2.5}}>
+            <Stack spacing={0} sx={{p:0}}>
             <Typography variant={'h5'}>
                 vamos comprar
             </Typography>
             <Divider />
-            <Stack alignItems='center' justifyContent='center' sx={{p:2, height: height - 320}} >
+            <Stack alignItems='center' justifyContent='center' sx={{p:0, height: height - 320}} >
                 <CarrinhoSVG />
             </Stack>
             </Stack>

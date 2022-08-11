@@ -30,5 +30,7 @@ export const ScrollToTop = (props: { children: any; }) => {
   return <>{props.children}</>
 }
 
+
+
 export const FormatPrice = (price: number) => `R$ ${price.toFixed(3)},00`
 export const matchProductsByBrands = (opt: string, raquetes: IRaquete[]) => raquetes?.map(raquete => raquete?.role.category === opt ? raquete.title : '').filter(i=>i)

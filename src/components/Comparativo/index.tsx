@@ -7,6 +7,7 @@ import { IRaquete } from "../../Types"
 import { DimensaoRaquete } from "../../components/Dimensions"
 import { LazyLoad } from "../../components/Animation"
 import { TitleBasic } from "../../components/Title"
+import { ContainerPadding } from "../../components/Container"
 interface Prop {
     object: IRaquete
     object2: IRaquete
@@ -14,7 +15,7 @@ interface Prop {
 
 const ItemHeader = ({ subtitle, title, description, img, material, role, price }: IRaquete) => {
     return (
-        <Grid container alignItems='start' justifyContent='space-between' sx={{ width: '100%' }}>
+        <Grid  container alignItems='start' justifyContent='space-between' sx={{ width: '100%' }}>
             <Grid rowSpacing={4} item container xs={12} justifyContent='center' sx={{ minHeight: '24rem' }} >
                 <Grid item container justifyContent='center' xs={12}>
 
@@ -40,6 +41,7 @@ const ItemContentCreator = ({
 }: { content?: string, children?: ReactNode, right?: boolean, left?: boolean }) => {
     const align = right ? 'right' : left ? 'left' : 'center'
     const contentLength = content?.length || 10
+
     return (
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
@@ -57,11 +59,10 @@ const ItemContent = ({
     content, content2, title
 }: { content: string, title: string, content2: string }) => {
     return (
-        <Grid item width='100%' >
+        <Grid item width='100%' bgcolor='white' >
 
             <Grid item xs={12}>
                 <TitleBasic text={title} />
-
             </Grid>
 
 
@@ -87,7 +88,7 @@ const ItemContentDimensionCreator = ({
     dimension, dimension2, title,
 }: { title: string, dimension: number[], dimension2: number[] }) => {
     return (
-        <Grid container>
+        <Grid container >
             <Grid item xs={12}>
 
             <TitleBasic text={title} />
@@ -120,13 +121,13 @@ export const Comparativo = (prop: Prop) => {
     const cor2 = object2.color[2] !== undefined ? `${object2.color[0]}, ${object2.color[1]}, ${object2.color[2]}` : `${object2.color[0]}, ${object2.color[1]}`
     return (
 
-        <Stack sx={{ overflow: 'hidden' }} >
+        <Stack sx={{ overflow: 'hidden'}} >
             <Stack direction='row' justifyContent='space-around' sx={{ width: '100%' }}>
                 <ItemHeader {...object} />
                 <ItemHeader {...object2} />
             </Stack>
 
-            <Grid container>
+            <ContainerPadding>
                 <ItemContent title={'cores'} content={cor1} content2={cor2} />
                 <ItemContent title={'materiais'} content={object.material} content2={object2.material} />
                 <ItemContent title={'descrições'} content={object.description} content2={object2.description} />
@@ -134,7 +135,7 @@ export const Comparativo = (prop: Prop) => {
                     dimension={object.dimensions}
                     dimension2={object2.dimensions}
                 />
-            </Grid>
+            </ContainerPadding>
 
         </Stack>
     )

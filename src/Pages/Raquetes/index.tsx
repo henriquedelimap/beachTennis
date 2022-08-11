@@ -9,9 +9,9 @@ import { LazyLoad } from "../../components/Animation"
 export const RaquetesPage = () => {
     const height = useWindowDimensions().height
     return (
-        <ContainerPadding>
-            <Title text='raquetes' />
+        <>
 
+            <Title text='raquetes' />
             <Grid
                 container
                 justifyContent='center'
@@ -47,6 +47,6 @@ export const RaquetesPage = () => {
                         
                     }
             </Grid>
-        </ContainerPadding>
+        </>
     )
 }
