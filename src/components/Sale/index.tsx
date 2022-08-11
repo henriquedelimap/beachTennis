@@ -56,8 +56,8 @@ export const Fundo = styled('div')(({ right }: { right?: string | number }) => (
     top: '8%',
     left: '50%',
     right: right,
-    width: '50%',
-    height: '60%',
+    width: '40%',
+    height: '50%',
     borderRadius: '150rem',
     transform: 'translateX(-50%)',
     zIndex: 1
