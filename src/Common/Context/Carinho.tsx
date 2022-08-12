@@ -26,6 +26,7 @@ export const CarrinhoProvider = (prop: Prop) => {
 export const useCarrinhoContext = () => {
     const {carrinho, setCarrinho} = useContext(CarrinhoContext) as CarrinhoContextType
     const {enqueueSnackbar} = useSnackbar()
+
     function adicionarProduto(novoProduto: IRaquete) {
         const alreadyExist = carrinho.some(itemCarrinho => itemCarrinho.id === novoProduto.id)
         enqueueSnackbar(`${novoProduto.title} foi adicionado ao carrinho`,  { variant: 'success' })
@@ -38,8 +39,15 @@ export const useCarrinhoContext = () => {
             return item
         }))
     }
+    function removerProduto(id: number) {
+        const produto = carrinho.find(item => item.id === id)
+        const lastOne = produto?.quantity === 1
+        if(lastOne){
+            return setCarrinho(prev => prev.filter(item => item.id !== id))
+        }
+    }
 
     return {
-        carrinho, setCarrinho, adicionarProduto
+        carrinho, setCarrinho, adicionarProduto, removerProduto
     }
 } 
