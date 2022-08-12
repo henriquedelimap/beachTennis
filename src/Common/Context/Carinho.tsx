@@ -30,7 +30,7 @@ export const useCarrinhoContext = () => {
     function adicionarProduto(novoProduto: IRaquete) {
         const alreadyExist = carrinho.some(itemCarrinho => itemCarrinho.id === novoProduto.id)
 
-        enqueueSnackbar(`1 ${novoProduto.title} foi adicionado ao carrinho`,  { variant: 'success', preventDuplicate: true })
+        enqueueSnackbar(`${novoProduto.title} foi adicionado ao carrinho`,  { variant: 'success', preventDuplicate: true })
         if(!alreadyExist){
             novoProduto.quantity = 1
             return setCarrinho(prev => [...prev, novoProduto])
@@ -44,13 +44,13 @@ export const useCarrinhoContext = () => {
         const produto = carrinho.find(item => item.id === id)
         const lastOne = produto?.quantity === 1
         if(lastOne){
+            enqueueSnackbar(`${produto?.title} foi removido do carrinho`,  { variant: 'error', preventDuplicate: true })
             return setCarrinho(prev => prev.filter(item => item.id !== id))
         }
         setCarrinho((prev: IRaquete[])  => prev.map((item: IRaquete) => {
             if(item.id === id) item.quantity -= 1
             return item
         }))
-        enqueueSnackbar(`1 ${produto?.title} foi removido do carrinho`,  { variant: 'error', preventDuplicate: true })
 
     }
 
