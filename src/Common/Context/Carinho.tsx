@@ -45,6 +45,11 @@ export const useCarrinhoContext = () => {
         if(lastOne){
             return setCarrinho(prev => prev.filter(item => item.id !== id))
         }
+        setCarrinho((prev: IRaquete[])  => prev.map((item: IRaquete) => {
+            if(item.id === id) item.quantity -= 1
+            return item
+        }))
+
     }
 
     return {
