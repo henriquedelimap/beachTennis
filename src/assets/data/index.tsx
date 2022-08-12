@@ -22,6 +22,7 @@ import {
 export const Data = [
     {
         id: 1,
+        quantity: 0,        
         img: [blackDeathGold, blackDeathGold],
         title: 'black death 10.2 gold',
         subtitle: 'black death 10.2 gold',
@@ -45,6 +46,8 @@ export const Data = [
     },
     {
         id: 2,
+        quantity: 0,
+        
         img: [blackDeathSilver, blackDeathSilver],
         title: 'BLACK DEATH 10.2 SILVER ',
         subtitle: 'Beach Tennis Turquoise BLACK DEATH 10.2 SILVER ',
@@ -69,6 +72,8 @@ export const Data = [
     },
     {
         id: 3,
+        quantity: 0,
+        
         img: [dnaBlue, dnaBlue],
         title: 'DNA EXTREME 2.2 BLUE',
         subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2 BLUE',
@@ -93,6 +98,8 @@ export const Data = [
     },
     {
         id: 4,
+        quantity: 0,
+        
         img: [dnaGold, dnaGold],
         title: `DNA  GOLD`,
         subtitle: 'Beach Tennis Turquoise DNA GOLD',
@@ -116,6 +123,8 @@ export const Data = [
     },
     {
         id: 5,
+        quantity: 0,
+        
         img: [dnaRed, dnaRed],
         title: `DNA EXTREME 2.2 RED`,
         subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2 RED',
@@ -140,6 +149,8 @@ export const Data = [
     },
     {
         id: 6,
+        quantity: 0,
+        
         img: [dnaOrange, dnaOrange],
         title: 'DNA EXTREME 2.2 ORANGE',
         subtitle: 'Beach Tennis Turquoise DNA EXTREME 2.2 ORANGE',
@@ -164,6 +175,8 @@ export const Data = [
     },
     {
         id: 7,
+        quantity: 0,
+        
         img: [revolutionFullcarbonBlue, revolutionFullcarbonBlue],
         title: 'REVOLUTION TIME 1.3 BLUE',
         subtitle: '',
@@ -188,6 +201,8 @@ export const Data = [
     },
     {
         id: 8,
+        quantity: 0,
+        
         img: [revolutionFullcarbonRed, revolutionFullcarbonRed],
         title: 'REVOLUTION TIME 1.3 RED 2022',
         subtitle: 'Beach Tennis Turquoise REVOLUTION TIME 1.3 RED 2022',
@@ -213,6 +228,8 @@ export const Data = [
     },
     {
         id: 9,
+        quantity: 0,
+        
         img: [revolutionFullcarbonYellow, revolutionFullcarbonYellow],
         title: 'REVOLUTION TIME 1.3 YELLOW',
         subtitle: '',
@@ -239,6 +256,8 @@ export const Data = [
     },
     {
         id: 10,
+        quantity: 0,
+        
         img: [spitfire, spitfire],
         title: 'q',
         subtitle: '',
@@ -263,6 +282,8 @@ export const Data = [
     },
     {
         id: 12,
+        quantity: 0,
+        
         img: [gold22, gold22],
         title: 'GOLD',
         subtitle: 'Beach Tennis Quicksand GOLD',
@@ -288,6 +309,8 @@ export const Data = [
     },
     {
         id: 13,
+        quantity: 0,
+        
         img: [expanseBlue, expanseBlue],
         title: 'EXPANSE 1.1 BLUE 2022',
         subtitle: 'Beach Tennis Turquoise EXPANSE BLUE 2022',
@@ -313,6 +336,8 @@ export const Data = [
     },
     {
         id: 14,
+        quantity: 0,
+        
         img: [blackDeathChallengeBlack, blackDeathChallengeBlack],
         title: '',
         subtitle: '',
@@ -338,6 +363,8 @@ export const Data = [
     },
     {
         id: 15,
+        quantity: 0,
+        
         img: [blackDeathChallengeOrange, blackDeathChallengeOrange],
         title: '',
         subtitle: '',
@@ -363,6 +390,8 @@ export const Data = [
     },
     {
         id: 16,
+        quantity: 0,
+        
         img: [conceptGreen, conceptGreen],
         title: '',
         subtitle: '',
@@ -388,6 +417,8 @@ export const Data = [
     },
     {
         id: 17,
+        quantity: 0,
+        
         img: [expanseRed, expanseRed],
         title: 'EXPANSE 1.1 RED',
         subtitle: 'Beach Tennis Turquoise EXPANSE 1.1 RED 2022',

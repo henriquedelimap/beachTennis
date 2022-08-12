@@ -1,5 +1,6 @@
 export interface IRaquete {
     id: number;
+    quantity: number;
     img: any[];
     title: string;
     subtitle: string;

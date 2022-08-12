@@ -6,6 +6,8 @@ import { CardPagamnto } from "./Pagamento"
 import { ContainerPadding } from "../../../components/Container"
 import { Sticky } from "../../../styles"
 import { CreateCarousel } from "../../../components/Carousel"
+import { useContext } from "react"
+import { CarrinhoContext } from "../../../Common/Context/Carinho"
 
 export const RaquetePage = () => {
     const { id } = useParams()

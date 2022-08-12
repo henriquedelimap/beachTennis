@@ -3,7 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { Overflow } from './styles'
 import App from './App'
-import {LazyMotion, domAnimation} from 'framer-motion'
+import { LazyMotion, domAnimation } from 'framer-motion'
+import { SnackbarProvider } from 'notistack'
 let theme = createTheme({
   typography: {
     fontFamily: 'Outfit'
@@ -17,7 +18,7 @@ let theme = createTheme({
     },
   },
   shape: {
-    borderRadius: '1.6rem'
+    borderRadius: 16
   },
   components: {
     MuiAppBar: {
@@ -61,17 +62,22 @@ let theme = createTheme({
         },
       },
     },
-  }})
+  }
+})
 
 theme = responsiveFontSizes(theme)
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <LazyMotion features={domAnimation}>
-        <CssBaseline />
-        <App />
-      </LazyMotion>
+      <SnackbarProvider maxSnack={3}>
+
+        <LazyMotion features={domAnimation}>
+          <CssBaseline />
+          <App />
+        </LazyMotion>
+      </SnackbarProvider>
     </ThemeProvider>
   </React.StrictMode>
 )

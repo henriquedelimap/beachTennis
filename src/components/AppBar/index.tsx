@@ -43,7 +43,7 @@ export const Header = ({
 
     const [open, setOpen] = useState(false)
     const [shop, setShop] = useState(false)
-    const [value, setValue] = useState(0)
+    const [value, setValue] = useState('')
     const menu = [
         {
             label: 'novidade',
@@ -64,9 +64,6 @@ export const Header = ({
 
     ]
 
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-        setValue(newValue);
-    };
     return (
         <HideOnScroll {...props}>
 
@@ -98,27 +95,33 @@ export const Header = ({
                     </Stack>
                     <Stack direction='row'>
 
-                        <Tabs indicatorColor={undefined} sx={{ p: 0, display: { md: 'none', xs: 'none', lg: 'flex' } }} centered onChange={handleChange} >
+                        <Tabs value={value} indicatorColor={undefined} sx={{ p: 0, display: { md: 'none', xs: 'none', lg: 'flex' } }} centered  >
                             {
                                 menu.map((item, index) => (
                                     <Tab
                                         key={index}
-                                        onClick={() => navigate(`/${item.to}`)}
+                                        onClick={() => {
+                                            navigate(`/${item.to}`)
+                                            setValue(item.to)
+                                        }}  
                                         sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
-                                        value={index}
+                                        value={item.label}
                                         label={item.label} />
 
                                 ))
                             }
-
-
                         </Tabs>
 
-                        <Tabs indicatorColor={undefined} >
+
+
+                        <Tabs value={value} indicatorColor={undefined} >
                             <Tab
-                                value={8}
+                                value={'carrinho'}
                                 key={1}
-                                onClick={() => setShop(true)}
+                                onClick={() => {
+                                    setShop(true)
+                                    setValue('carrinho')
+                                }}
                                 sx={{ justifyContent: { xs: 'end', md: 'center', lg: 'center' } }}
                                 icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
                         </Tabs>

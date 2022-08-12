@@ -40,7 +40,7 @@ export const RaquetesPage = () => {
 
                                     <CardRaquetes
                                         animated={false}
-                                        item={item}
+                                        raquete={item}
                                         />
                                 </Grid>
                         ))
