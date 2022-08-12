@@ -71,7 +71,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <SnackbarProvider maxSnack={3} anchorOrigin={{
+      <SnackbarProvider maxSnack={3} dense anchorOrigin={{
     vertical: 'bottom',
     horizontal: 'left',
   }}>
