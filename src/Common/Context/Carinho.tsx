@@ -42,7 +42,7 @@ export const useCarrinhoContext = () => {
     function removerProduto(id: number) {
         const produto = carrinho.find(item => item.id === id)
         const lastOne = produto?.quantity === 1
-        enqueueSnackbar(`${produto.title} foi removido do carrinho`,  { variant: 'error' })
+        enqueueSnackbar(`${produto?.title} foi removido do carrinho`,  { variant: 'error' })
         if(lastOne){
             return setCarrinho(prev => prev.filter(item => item.id !== id))
         }
