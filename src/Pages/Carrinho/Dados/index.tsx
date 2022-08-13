@@ -19,7 +19,7 @@ const MyInput = ({ label, helperFocused, helper }: { label?: string, helperFocus
 
     return (
         <FormControl>
-            <OutlinedInput sx={{ minWidth: '16rem' }} placeholder={label} />
+            <OutlinedInput sx={{ minWidth: '12rem' }} placeholder={label} />
             <MyFormHelperText />
         </FormControl>
     )
