@@ -1,6 +1,7 @@
 import { FormControl, FormHelperText, Input, InputBase, InputLabel, OutlinedInput, Stack, TextField, useFormControl } from "@mui/material"
 import { useEffect, useMemo } from "react"
 import { Sticky } from "../../../styles";
+import { Address } from "./Adress";
 
 
 
@@ -30,6 +31,7 @@ export const FormularioDados = () => {
         <Stack spacing={{ xs: 0, md: 1.6, lg: 1.6 }}>
             <MyInput helperFocused='insira seu nome completo' label='nome completo' helper=' ' />
             <MyInput helperFocused='(34) 9.1234-5678' label='telefone' helper=' ' />
+            <Address />
         </Stack>
     )
 }
