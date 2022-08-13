@@ -1,7 +1,7 @@
-import { FormControl, FormHelperText, Input, InputBase, InputLabel, OutlinedInput, Stack, TextField, useFormControl } from "@mui/material"
-import { useEffect, useMemo, useState } from "react"
-import { Sticky } from "../../../styles";
-import InputMask from 'react-input-mask'
+import { FormControl, FormHelperText, Grid, OutlinedInput, Stack, useFormControl } from "@mui/material"
+import { useMemo, useState } from "react"
+import { usePerfilContext } from "../../../Common/Context/DadosPessoais";
+
 
 
 // inpute Helper
@@ -18,43 +18,91 @@ const MyFormHelperText = ({ helperFocused, helper }: { helperFocused?: string, h
 }
 
 
-// mask input
 
-export const MyMaskInput = ({ label, helperFocused, helper, mask }: { label?: string, helperFocused?: string, helper?: string, mask: string }) => {
-    const MyMask = (
-        function TextMaskCustom() {
-            return <InputMask  placeholder={label} style={{ border: 'none', outline: 'none', padding: '1.1rem', width: '100%', fontSize: 16 }} maskPlaceholder={null} mask={mask} />
-        }
-    )
-    const [value, setValue] = useState('')
+const MyInput = ({ label, helperFocused, helper, readOnly }: { label: string, helperFocused?: string, helper?: string, readOnly: boolean }) => {
+    const { setPerfil, perfil } = usePerfilContext()
+    const { rua, bairro, cidade, estado, nome, sobrenome, telefone, cep } = perfil
 
-    return (
-        <FormControl >
-            <OutlinedInput  inputComponent={MyMask} value={value} onChange={(e) => setValue(e.target.value)} />
-            <MyFormHelperText helperFocused={helperFocused} helper={helper} />
-        </FormControl>
-    )
-}
+    let value
+    switch (label) {
+        case 'rua':
+            value = perfil.rua
+            break;
+        case 'bairro':
+            value = perfil.bairro
+            break;
+        case 'cidade':
+            value = perfil.cidade
+            break;
+        case 'estado':
+            value = perfil.estado
+            break;
+        case 'nome':
+            value = perfil.nome
+            break;
+        case 'sobrenome':
+            value = perfil.sobrenome
+            break;
+        case 'telefone':
+            value = perfil.telefone
+            break;
+        case 'cep':
+            value = perfil.cep
+            break;
 
-// input basic
+        default:
+            break;
+    }
 
-const MyInput = ({ label, helperFocused, helper }: { label?: string, helperFocused?: string, helper?: string }) => {
 
     return (
         <FormControl sx={{ width: '100%' }}>
-            <OutlinedInput sx={{ minWidth: 100, maxWidth: 1200 }} placeholder={label} />
+            <OutlinedInput inputProps={{
+                readOnly: readOnly,
+            }}
+                onChange={(e) => setPerfil({ [`${label}`]: e.target.value })}
+                fullWidth
+                value={value}
+                placeholder={label}
+            />
             <MyFormHelperText helperFocused={helperFocused} helper={helper} />
         </FormControl>
     )
 }
 
 export const FormularioDados = () => {
+
     return (
-        <Stack spacing={{ xs: 0, md: 1.6, lg: 1.6 }}>
-            <MyInput helperFocused='insira seu nome completo' label='nome completo' helper=' ' />
-            <MyInput helperFocused='(34) 9.1234-5678' label='telefone' helper=' ' />
-            <MyMaskInput helperFocused='(34) 9.1234-5678' label='telefone' mask=" +5\5 9.9999-9999"  helper=' ' />
-            <MyMaskInput helperFocused='aaaaaaaaa' label='cep' mask=" 999.999-99"  helper=' ' />
+        <Stack spacing={.8} >
+            <MyInput readOnly={false} helperFocused='insira seu nome' label='nome' helper=' ' />
+            <MyInput readOnly={false} helperFocused='insira seu último sobrenome' label='sobrenome' helper=' ' />
+            <MyInput readOnly={false} helperFocused='insira seu telefone' label='telefone' helper='(00) 0.0000-0000' />
+            <MyInput readOnly={false} helperFocused='insira seu cep' label='cep' helper='00.000-000' />
+
         </Stack>
+    )
+}
+
+export const AdressForm = () => {
+    return (
+        <Grid container columnSpacing={2} >
+            <Grid item xs={6}>
+
+                <MyInput readOnly={false} helperFocused='rua' label='rua' helper=' ' />
+            </Grid>
+            <Grid item xs={6}>
+                <MyInput readOnly={false} helperFocused='bairro' label='bairro' helper=' ' />
+
+            </Grid>
+            <Grid item xs={6}>
+
+                <MyInput readOnly={false} helperFocused='cidade' label='cidade' helper=' ' />
+            </Grid>
+            <Grid item xs={6}>
+
+                <MyInput readOnly={false} helperFocused='estado' label='estado' helper=' ' />
+            </Grid>
+
+        </Grid>
     )
 }

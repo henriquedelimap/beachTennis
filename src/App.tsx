@@ -6,6 +6,7 @@ import { NotFoundRoute } from './Pages/NotFound/routeNotFound'
 import { CarrinhoProvider } from './Common/Context/Carinho'
 import { RotasCarrinho } from './Pages/Carrinho/routesCarrinho'
 import { CarrinhoPage } from './Pages/Carrinho'
+import { DadosPessoaisProvider } from './Common/Context/DadosPessoais'
 function App() {
 
   return (
@@ -13,18 +14,21 @@ function App() {
       <ScrollToTop>
 
         <CarrinhoProvider>
-          <Routes>
+          <DadosPessoaisProvider>
 
-            <Route path='/' element={<DefaultLayout cart={true} />} >
-              <Route path='/' element={<Home />} />
-              <Route path='raquetes' element={<RaquetesPage />} />
-              <Route path='emBreve' element={<EmBreve />} />
-              <Route path='sobreNos' element={<SobreNos />} />
-            </Route>
-            <Route path='raquetes/:id' element={<RotasRaquetes />} />
-            <Route path='carrinho' element={<RotasCarrinho />} />
-            <Route path='*' element={<NotFoundRoute />} />
-          </Routes>
+            <Routes>
+
+              <Route path='/' element={<DefaultLayout cart={true} />} >
+                <Route path='/' element={<Home />} />
+                <Route path='raquetes' element={<RaquetesPage />} />
+                <Route path='emBreve' element={<EmBreve />} />
+                <Route path='sobreNos' element={<SobreNos />} />
+              </Route>
+              <Route path='raquetes/:id' element={<RotasRaquetes />} />
+              <Route path='carrinho' element={<RotasCarrinho />} />
+              <Route path='*' element={<NotFoundRoute />} />
+            </Routes>
+          </DadosPessoaisProvider>
         </CarrinhoProvider>
       </ScrollToTop>
 

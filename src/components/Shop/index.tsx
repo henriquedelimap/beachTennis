@@ -34,7 +34,7 @@ export const DrawerShop = (prop: Prop) => {
                 </Grid>
                 <Box sx={{ bgcolor: 'transparent', position: 'fixed', bottom: '0', width: { xs: '85vw', md: '45vw', lg: '45vw' }, height: 75 }}>
 
-                    <Button sx={{ p: 3.2, width: '100%', borderRadius: 0}} onClick={() => navigate('carrinho')} >
+                    <Button sx={{ p: 3.2, width: '100%', borderRadius: 0}} onClick={() => navigate('/carrinho')} >
                         <Typography>finalizar compra</Typography>
                     </Button>
                 </Box>
