@@ -46,7 +46,7 @@ const ItemContentCreator = ({
         <Card sx={{ width: '100%' }} elevation={0}>
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
-                    <Typography align={align} variant={contentLength < 100 ? 'body1' : 'body2'} fontWeight='200'>
+                    <Typography align={align} variant={contentLength < 100 ? 'body1' : 'subtitle1'} fontWeight={contentLength < 100 ? '200' : '400'}>
                         {content?.toLowerCase()}
                         {children}
                     </Typography>
