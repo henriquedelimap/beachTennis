@@ -15,7 +15,7 @@ export const Title = (prop: Prop) => {
         <Stack spacing={2} direction='row' alignItems='center' >
             <Decoration />
             <LazyLoad once>
-                <Typography noWrap fontFamily='Outfit' fontWeight={100} variant='h2' color='#1F9DBE' sx={{p: 3.2, pl:0, pt: pt, '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
+                <Typography  fontFamily='Outfit' fontWeight={100} variant='h2' color='#1F9DBE' sx={{p: 3.2, pl:0, pt: pt, '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
             </LazyLoad>
         </Stack>
     )

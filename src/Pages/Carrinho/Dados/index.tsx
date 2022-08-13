@@ -18,8 +18,8 @@ const MyInput = ({ label, helperFocused, helper }: { label?: string, helperFocus
     }
 
     return (
-        <FormControl>
-            <OutlinedInput sx={{ minWidth: '12rem' }} placeholder={label} />
+        <FormControl sx={{width:'100%'}}>
+            <OutlinedInput sx={{minWidth: 100, maxWidth: 1200}} placeholder={label} />
             <MyFormHelperText />
         </FormControl>
     )
@@ -27,11 +27,9 @@ const MyInput = ({ label, helperFocused, helper }: { label?: string, helperFocus
 
 export const FormularioDados = () => {
     return (
-        <>
-            <Stack spacing={{xs: 0, md: 1.6, lg: 1.6}}>
-                <MyInput helperFocused='insira seu nome completo' label='nome completo' helper=' ' />
-                <MyInput helperFocused='(34) 9.1234-5678' label='telefone' helper=' ' />
-            </Stack>
-        </>
+        <Stack   spacing={{ xs: 0, md: 1.6, lg: 1.6 }}>
+            <MyInput helperFocused='insira seu nome completo' label='nome completo' helper=' ' />
+            <MyInput helperFocused='(34) 9.1234-5678' label='telefone' helper=' ' />
+        </Stack>
     )
 }
