@@ -46,7 +46,7 @@ export const RaquetePage = () => {
                     </Grid>
                     <Grid item xs={12}>
 
-                        <Typography variant='h5' fontFamily='Outfit'   fontWeight={600}>{raquete.title}</Typography>
+                        <Typography variant='h5' fontFamily='Outfit'   fontWeight={600}>{raquete.title.toLowerCase()}</Typography>
                     </Grid>
 
                     <Grid item container columnSpacing={.5} xs={12}>

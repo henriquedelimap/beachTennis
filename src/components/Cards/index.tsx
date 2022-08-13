@@ -52,7 +52,7 @@ export const CardRaquetes = (prop: Prop) => {
                             onClick={() => NavigationValidate(navigation, raquete.id)}
                             />
                     }
-                    title={raquete.title}
+                    title={raquete.title.toLowerCase()}
                     subheader={raquete.material}
                     action={
                         <IconButton onClick={()=>{

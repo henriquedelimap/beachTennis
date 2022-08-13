@@ -24,7 +24,7 @@ const ItemHeader = ({ subtitle, title, description, img, material, role, price }
 
                 <Stack direction='column' alignItems='center' justifyContent='center'>
                     <Typography align='center' variant='body1' sx={{ p: .5, pb: 2 }}>
-                        {title}
+                        {title.toLowerCase()}
                     </Typography>
 
                     <PriceSale original={price.original} sale={price.sale} />
@@ -47,7 +47,7 @@ const ItemContentCreator = ({
             <CardContent>
                 <Stack direction='column' alignItems='center' justifyContent='center'>
                     <Typography align={align} variant={contentLength < 100 ? 'body1' : 'body2'} fontWeight='200'>
-                        {content}
+                        {content?.toLowerCase()}
                         {children}
                     </Typography>
                 </Stack>

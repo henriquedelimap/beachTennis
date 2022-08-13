@@ -71,7 +71,7 @@ export const Beneficios = () => {
                         }} />
                         </LazyLoad>
                     <Stack spacing={1}>
-                        <SubTitleBasic align={align} text={item.title} />
+                        <SubTitleBasic align={align} text={item.title.toLowerCase()} />
 
                         <Typography align={align} variant='body2' paragraph fontWeight='500' >{item.description}</Typography>
                     </Stack>

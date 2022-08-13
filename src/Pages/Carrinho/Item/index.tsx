@@ -32,7 +32,7 @@ export const ItemCarrinho = () => {
                                 component='img'
                                 image={item.img[0]} />
                             <CardContent sx={{width: '100%', display: 'flex', justifyContent:'space-between'}}>
-                                <Typography variant={'subtitle2'}>{item.title}</Typography>
+                                <Typography variant={'subtitle2'}>{item.title.toLowerCase()}</Typography>
                                 
                                 <Stack direction='row' alignItems='center' spacing={2}>
                                     <IconButton onClick={()=>removerProduto(item.id)}>

@@ -69,9 +69,9 @@ export const Header = ({
     return (
         <HideOnScroll {...props}>
 
-            <AppBar sx={{ p: { xs: 0, md: 1, lg: 1 }, pb: 0, pt: 0, zIndex: 1500 }}>
+            <AppBar sx={{ zIndex: 1500 }}>
                 <Stack
-                    sx={{ width: '100%', pl: 0, pr: 0 }}
+                    sx={{ width: '100%' }}
                     direction='row'
                     alignItems='center'
                     justifyContent='space-between' >
@@ -109,7 +109,6 @@ export const Header = ({
                                         sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
                                         value={item.label}
                                         label={item.label} />
-
                                 ))
                             }
                         </Tabs>
@@ -118,15 +117,11 @@ export const Header = ({
                         {
                             !cart 
                             ? ''
-                            : <Tabs value={value} indicatorColor={undefined} >
+                            : <Tabs value={value}  >
                                 <Tab
                                     value={'carrinho'}
-                                    key={1}
-                                    onClick={() => {
-                                        setShop(true)
-                                        setValue('carrinho')
-                                    }}
-                                    sx={{ justifyContent: { xs: 'end', md: 'center', lg: 'center' } }}
+                                    key={'carrinho'}
+                                    onClick={() => setShop(true)}
                                     icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
                             </Tabs>
                         }
