@@ -33,10 +33,12 @@ function HideOnScroll(props: Props) {
 
 export const Header = ({
     buttonBack,
-    props
+    props,
+    cart
 }: {
     buttonBack?: boolean
     props?: Props
+    cart?: boolean
 }) => {
     const navigate = useNavigate()
     const params = useParams()
@@ -103,7 +105,7 @@ export const Header = ({
                                         onClick={() => {
                                             navigate(`/${item.to}`)
                                             setValue(item.to)
-                                        }}  
+                                        }}
                                         sx={{ display: { md: 'none', xs: 'none', lg: 'flex' } }}
                                         value={item.label}
                                         label={item.label} />
@@ -113,18 +115,21 @@ export const Header = ({
                         </Tabs>
 
 
-
-                        <Tabs value={value} indicatorColor={undefined} >
-                            <Tab
-                                value={'carrinho'}
-                                key={1}
-                                onClick={() => {
-                                    setShop(true)
-                                    setValue('carrinho')
-                                }}
-                                sx={{ justifyContent: { xs: 'end', md: 'center', lg: 'center' } }}
-                                icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
-                        </Tabs>
+                        {
+                            !cart 
+                            ? ''
+                            : <Tabs value={value} indicatorColor={undefined} >
+                                <Tab
+                                    value={'carrinho'}
+                                    key={1}
+                                    onClick={() => {
+                                        setShop(true)
+                                        setValue('carrinho')
+                                    }}
+                                    sx={{ justifyContent: { xs: 'end', md: 'center', lg: 'center' } }}
+                                    icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
+                            </Tabs>
+                        }
 
                     </Stack>
 

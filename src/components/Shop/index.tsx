@@ -1,10 +1,12 @@
-import { Divider, Drawer, Grid, Paper, Typography, Stack, Card, CardHeader, CardMedia, CardContent, IconButton } from "@mui/material"
+import { Divider, Drawer, Grid, Paper, Typography, Stack, Card, CardHeader, CardMedia, CardContent, IconButton, Button } from "@mui/material"
 import { Box } from "@mui/system"
 import { CarrinhoSVG } from "../../assets/img/carrinho"
 import { Dispatch } from "react"
 import { useWindowDimensions } from "../../Utils"
 import { useCarrinhoContext } from "../../Common/Context/Carinho"
 import { MdAdd, MdRemove } from "react-icons/md"
+import { ItemCarrinho } from "../../Pages/Carrinho/Item"
+import { useNavigate } from "react-router-dom"
 
 interface Prop {
     shop: boolean,
@@ -12,6 +14,7 @@ interface Prop {
 }
 export const DrawerShop = (prop: Prop) => {
     const height = useWindowDimensions().height
+    const navigate = useNavigate()
     const { shop, setShop } = prop
     const { carrinho, removerProduto, adicionarProduto } = useCarrinhoContext()
     return (
@@ -22,37 +25,11 @@ export const DrawerShop = (prop: Prop) => {
                 </Typography>
                 <Divider />
                 <Grid container rowSpacing={2} sx={{ p: { xs: 1, md: 3.2, lg: 3.2 }, height: '100%', width: { xs: '85vw', md: '45vw', lg: '45vw' } }} >
-                    {
-                        carrinho.map(item => (
-                            <Grid item xs={12}>
-
-                                <Card sx={{ width: '100%' }}>
-                                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                                        <CardMedia
-                                            sx={{ height: '6rem', width: 'auto' }}
-                                            component='img'
-                                            image={item.img[0]} />
-                                        <CardContent sx={{width: '100%', display: 'flex', justifyContent:'space-between'}}>
-                                            <Typography variant={'subtitle2'}>{item.title}</Typography>
-                                            
-                                            <Stack direction='row' alignItems='center' spacing={2}>
-                                                <IconButton onClick={()=>removerProduto(item.id)}>
-                                                    <MdRemove />
-                                                </IconButton>
-                                                <Typography>
-                                                    {item.quantity}
-                                                </Typography>
-                                                <IconButton onClick={()=>adicionarProduto(item)}>
-                                                    <MdAdd />
-                                                </IconButton>
-                                            </Stack>
-                                        </CardContent>
-                                    </Box>
-                                </Card>
-                            </Grid>
-                        ))
-                    }
+                    <ItemCarrinho />
                 </Grid>
+                <Button onClick={()=>navigate('carrinho')} >
+                    <Typography>finalizar compra</Typography>
+                </Button>
             </Stack>
         </Drawer>
     )

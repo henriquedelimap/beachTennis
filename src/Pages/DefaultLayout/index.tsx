@@ -14,18 +14,20 @@ export const DefaultLayout = (
     {
         noBanner,
         buttonBack,
-        disappear
+        disappear,
+        cart
     }: {
         noBanner?: boolean
         buttonBack?: boolean,
-        disappear?: boolean
+        disappear?: boolean,
+        cart?: boolean
     }) => {
     return (
         <Box sx={{ position: 'relative'}}  >
 
             <Paper elevation={12} sx={{ position: 'relative', zIndex: '1', borderRadius: '0' }}>
                 <FloatingButton disappear={disappear} />
-                <Header buttonBack={buttonBack} />
+                <Header buttonBack={buttonBack} cart={cart} />
                 {noBanner ? '' : <Banner />}
                 <Box sx={{ background: 'white', borderRadius: '0', p:{xs: 1, md: 4, lg: 4 } }} >
                     <Outlet />
