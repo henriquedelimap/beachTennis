@@ -1,6 +1,6 @@
-import { FormControl, FormHelperText, Grid, OutlinedInput, Stack, useFormControl } from "@mui/material"
+import { Button, FormControl, FormHelperText, Grid, OutlinedInput, Stack, Typography, useFormControl } from "@mui/material"
 import { useMemo, useState } from "react"
-import { usePerfilContext } from "../../../Common/Context/DadosPessoais";
+import { IDadosPessoais, usePerfilContext } from "../../../Common/Context/DadosPessoais";
 
 
 
@@ -20,65 +20,35 @@ const MyFormHelperText = ({ helperFocused, helper }: { helperFocused?: string, h
 
 
 const MyInput = ({ label, helperFocused, helper, readOnly }: { label: string, helperFocused?: string, helper?: string, readOnly: boolean }) => {
-    const { setPerfil, perfil } = usePerfilContext()
-    const { rua, bairro, cidade, estado, nome, sobrenome, telefone, cep } = perfil
+    const { setPerfil, perfil, adicionaDadosAoPerfil, register, handleSubmit, onSubmit } = usePerfilContext()
 
-    let value
-    switch (label) {
-        case 'rua':
-            value = perfil.rua
-            break;
-        case 'bairro':
-            value = perfil.bairro
-            break;
-        case 'cidade':
-            value = perfil.cidade
-            break;
-        case 'estado':
-            value = perfil.estado
-            break;
-        case 'nome':
-            value = perfil.nome
-            break;
-        case 'sobrenome':
-            value = perfil.sobrenome
-            break;
-        case 'telefone':
-            value = perfil.telefone
-            break;
-        case 'cep':
-            value = perfil.cep
-            break;
-
-        default:
-            break;
-    }
-
-
+    
     return (
         <FormControl sx={{ width: '100%' }}>
             <OutlinedInput inputProps={{
                 readOnly: readOnly,
             }}
-                onChange={(e) => setPerfil({ [`${label}`]: e.target.value })}
+                onChange={(e)=>adicionaDadosAoPerfil(label, e.target.value)}
                 fullWidth
-                value={value}
                 placeholder={label}
             />
+            {perfil.nome}
             <MyFormHelperText helperFocused={helperFocused} helper={helper} />
         </FormControl>
     )
 }
 
 export const FormularioDados = () => {
+    const { setPerfil, perfil, adicionaDadosAoPerfil, register, handleSubmit, onSubmit } = usePerfilContext()
 
     return (
         <Stack spacing={.8} >
+
             <MyInput readOnly={false} helperFocused='insira seu nome' label='nome' helper=' ' />
             <MyInput readOnly={false} helperFocused='insira seu último sobrenome' label='sobrenome' helper=' ' />
             <MyInput readOnly={false} helperFocused='insira seu telefone' label='telefone' helper='(00) 0.0000-0000' />
             <MyInput readOnly={false} helperFocused='insira seu cep' label='cep' helper='00.000-000' />
-
+                
         </Stack>
     )
 }
