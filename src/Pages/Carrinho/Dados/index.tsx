@@ -23,7 +23,7 @@ const MyFormHelperText = ({ helperFocused, helper }: { helperFocused?: string, h
 export const MyMaskInput = ({ label, helperFocused, helper, mask }: { label?: string, helperFocused?: string, helper?: string, mask: string }) => {
     const MyMask = (
         function TextMaskCustom() {
-            return <InputMask  placeholder={label} style={{ border: 'none', outline: 'none', padding: '1.1rem', width: '100%', fontSize: 16 }} maskChar=' ' mask={mask} />
+            return <InputMask  placeholder={label} style={{ border: 'none', outline: 'none', padding: '1.1rem', width: '100%', fontSize: 16 }} maskPlaceholder={null} mask={mask} />
         }
     )
     const [value, setValue] = useState('')
