@@ -27,7 +27,7 @@ const MyInput = ({ label, helperFocused, helper }: { label?: string, helperFocus
 
 export const FormularioDados = () => {
     return (
-        <Stack   spacing={{ xs: 0, md: 1.6, lg: 1.6 }}>
+        <Stack spacing={{ xs: 0, md: 1.6, lg: 1.6 }}>
             <MyInput helperFocused='insira seu nome completo' label='nome completo' helper=' ' />
             <MyInput helperFocused='(34) 9.1234-5678' label='telefone' helper=' ' />
         </Stack>
