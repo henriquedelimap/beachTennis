@@ -25,7 +25,7 @@ export const ItemCarrinho = () => {
             carrinho.map((item: IRaquete) => (
                 <Grid item xs={12}>
 
-                    <Card sx={{ width: '100%' }}>
+                    <Card sx={{ width: '100%' }} >
                         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                             <CardMedia
                                 sx={{ height: '6rem', width: 'auto' }}

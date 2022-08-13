@@ -6,15 +6,16 @@ import { LazyLoad } from "../../components/Animation"
 
 interface Prop {
     text: string,
-    color?: string
+    color?: string,
+    pt?: number
 }
 export const Title = (prop: Prop) => {
-    const { text } = prop
+    const { text, pt } = prop
     return (
         <Stack spacing={2} direction='row' alignItems='center' >
             <Decoration />
             <LazyLoad once>
-                <Typography noWrap fontFamily='Outfit' fontWeight={100} variant='h2' color='#1F9DBE' sx={{p: 3.2, pl:0, '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
+                <Typography noWrap fontFamily='Outfit' fontWeight={100} variant='h2' color='#1F9DBE' sx={{p: 3.2, pl:0, pt: pt, '&:first-letter': { textTransform: 'capitalize' } }} >{text}</Typography>
             </LazyLoad>
         </Stack>
     )
