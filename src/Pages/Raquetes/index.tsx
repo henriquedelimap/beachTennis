@@ -31,8 +31,8 @@ export const RaquetesPage = () => {
             <Grid
                 container
                 justifyContent='center'
-                rowSpacing={2}
-                columnSpacing={{ xs: 0, md: 2, lg: 2 }}
+                rowSpacing={{xs: 1, md: 2, lg: 2}}
+                columnSpacing={{ xs: 1, md: 2, lg: 2 }}
             >
                 <Grid item container xs={2} alignItems='center' justifyContent='center' >
                     <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
