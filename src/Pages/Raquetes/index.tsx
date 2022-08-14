@@ -38,7 +38,7 @@ export const RaquetesPage = () => {
                 <Grid item container xs={2} alignItems='center' justifyContent='center' sx={{position: 'relative'}} >
                     <Box sx={{position: 'absolute', top: 18, widht: '100%', height: `calc(50vh * ${Data.length})`}} >
 
-                    <Sticky top={64} index={200}>
+                    <Sticky top={50}  index={200}>
                         <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
                     </Sticky>
                     </Box>
