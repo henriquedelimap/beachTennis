@@ -53,16 +53,16 @@ export const RaquetesPage = () => {
         >
           <Grid item container xs={1} />
           <Grid item container xs={12} rowSpacing={1} columnSpacing={.5}>
-            <Grid item xs={2}>
+            <Grid item xs={3} md={2}>
               <Filter label='marca' value={marcaValue} setValue={setMarcaValue} itensToFilter={marcas} />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3} md={4}>
               <Filter label='material' value={materialValue} setValue={setMaterialValue} itensToFilter={materiais} />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={3} md={4}>
               <Filter label='cor' value={corValue} setValue={setCorValue} itensToFilter={cores} />
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={3} md={2}>
               <Filter label='preço' value={precoValue} setValue={setPrecoValue} itensToFilter={precos} />
 
             </Grid>
