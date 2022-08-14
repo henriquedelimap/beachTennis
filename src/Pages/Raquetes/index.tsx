@@ -35,10 +35,10 @@ export const RaquetesPage = () => {
                 rowSpacing={{xs: 1, md: 2, lg: 2}}
                 columnSpacing={{ xs: 1, md: 2, lg: 2 }}
             >
-                <Grid item container xs={2} alignItems='center' justifyContent='center' sx={{position: 'relative'}} >
+                <Grid item container xs={2} alignItems='start' justifyContent='start' sx={{position: 'relative'}} >
                     <Box sx={{position: 'absolute', top: 18, widht: '100%', height: `calc(50vh * ${Data.length})`}} >
 
-                    <Sticky top={50}  index={200}>
+                    <Sticky top={'25%'}  index={200}>
                         <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
                     </Sticky>
                     </Box>
