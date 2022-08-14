@@ -1,14 +1,14 @@
 import { Avatar, Box, Card, CardContent, CardHeader, CardMedia, Grid, IconButton, Stack, Typography } from "@mui/material"
 import { BsHeart } from "react-icons/bs"
-import { MdAdd, MdAddShoppingCart, MdAdUnits, MdMoreVert } from "react-icons/md"
-import { useNavigate } from "react-router-dom"
+
+
 import { useContext, useEffect, useState } from "react"
 
 import { Overflow } from "../../styles"
-import { AppearEffect, LazyLoad } from "../../components/Animation"
 import { FormatPrice } from "../../Utils"
 import { IRaquete } from "../../Types"
 import { CarrinhoContextType, useCarrinhoContext } from "../../Common/Context/Carinho"
+import { FormatedCard } from "./FormatCard"
 
 export interface Prop {
     raquete: IRaquete
@@ -18,96 +18,38 @@ export interface Prop {
 }
 
 interface Formated{
-    maxHeight: string
+    imgMaxHeight: string
+    cardMaxHeight: string
 }
+
 export const CardRaquetes = (prop: Prop) => {
-    const navigate = useNavigate()
     const { raquete, animated, navigation, cardFormat } = prop
     const [formated, setFormated] = useState<Formated>({
-        maxHeight: ''
+        imgMaxHeight: '',
+        cardMaxHeight: ''
     })
     useEffect(()=>{
         switch (cardFormat) {
             case 'list':
                 setFormated({
-                    maxHeight: '24vh'
+                    imgMaxHeight: '24vh',
+                    cardMaxHeight: '20vh'
+
                 })
                 break;    
                 default:
                     setFormated({
-                    maxHeight: '53vh'
+                    imgMaxHeight: '53vh',
+                    cardMaxHeight: '80vh'
+
                 })
                 break;
         }
     }, [cardFormat])
 
-
-    
-    const {carrinho, setCarrinho, adicionarProduto} = useCarrinhoContext()
-    const adicionado = carrinho.find(item => item.id === raquete.id)
-
-    function NavigationValidate(nav: boolean | undefined, to?: number) {
-        if (nav === false) {
-            return null
-        }
-        return navigate(`${to}`)
-    }
     return (
 
-        <Card
-            elevation={animated ? 0 : 1}
-            
-            sx={{
-                height: '100%',
-                
-                width: '100%',
-                position: 'relative',
-                maxWidth: '28rem',
-                maxHeight: '80vh',
-            }}
-        >
-            <LazyLoad>
-                <CardHeader
-                        sx={{cursor: 'pointer',}}
-                    avatar={
-                        <Avatar
-                            variant='square'
-                            src={raquete.img[0]}
-                            onClick={() => NavigationValidate(navigation, raquete.id)}
-                            />
-                    }
-                    title={raquete.title.toLowerCase()}
-                    subheader={raquete.material}
-                    action={
-                        <IconButton onClick={()=>{
-                            adicionarProduto(raquete)
-                        }}>
-                            <MdAddShoppingCart color={adicionado ? 'green' : ''} />
-                        </IconButton>
-                    }
-                />
-                <Overflow>
-                    <CardMedia
-                        component="img"
-                        height="auto"
-                        alt={`raquete ${raquete.title} feita de ${raquete.material}, confira mais detalhes: ${raquete.description}`}
-                        image={raquete.img[0]}
-                        onClick={() => NavigationValidate(navigation, raquete.id)}
-                        sx={{ maxHeight: formated?.maxHeight, objectFit: 'contain' }}
-                    >
-                    </CardMedia>
-                </Overflow>
-                <CardContent onClick={() => NavigationValidate(navigation, raquete.id)}>
-
-                    <Stack>
-                        <PriceSale
-                            original={raquete.price.original}
-                            sale={raquete.price.sale} />
-                    </Stack>
-
-                </CardContent>
-            </LazyLoad>
-        </Card >
+        <FormatedCard cardFormat={cardFormat} raquete={raquete} animated={animated} navigation={navigation} />
     )
 }
 
