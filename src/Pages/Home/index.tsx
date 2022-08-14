@@ -1,17 +1,14 @@
-import styled from "@emotion/styled"
-import { Typography, Container, Box, Divider, Stack, Button, Grid, Paper } from "@mui/material"
+
+import { Typography, Container, Box,  Grid, Paper } from "@mui/material"
 import { Title, TitleCentred } from "../../components/Title"
 import { Sale, promocoes } from "../../components/Sale"
 import { Beneficios } from "../../components/Beneficio"
-import { ContainerPadding } from "../../components/Container"
-import { logoHeros, fundoCarbono2, fundoCarbono3 } from "../../assets/img"
+
 import { motion, useScroll, Variants } from 'framer-motion'
 import { Fundo, Sticky, Overflow } from '../../styles'
-import { AppearEffect, LazyLoad } from "../../components/Animation"
-import { Btn } from "../../components/Button"
+
 import { LogoQuicksand } from "../../assets/img/logoQuicksand"
 
-import { BannerGlass } from "../../components/Banner"
 import { Comparativo } from "../../components/Comparativo"
 import { Data } from "../../assets/data"
 import { SelectItemToCompare } from "../../components/Seletor"
@@ -19,7 +16,6 @@ import { IRaquete } from '../../Types'
 import { useEffect, useState } from "react"
 
 export const Home = () => {
-    const { scrollYProgress } = useScroll()
     const [itemComparative1, setItemComparative1] = useState('black death 10.2 gold 2022')
     const [firstItemComparative, setFirstItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
     const [secondItemComparative, setSecondItemComparative] = useState<IRaquete>(Data.map(item => item)[0])

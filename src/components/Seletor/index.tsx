@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction, useEffect } from "react"
 import { matchProductsByBrands } from "../../Utils"
 import { Sticky } from "../../styles"
 import { IRaquete } from "../../Types"
+import { useProdutosContext } from "../../Common/Context/Produtos"
 
 interface Prop {
     setItemComparative: Dispatch<SetStateAction<string>>
@@ -11,14 +12,15 @@ interface Prop {
     id: string
 }
 
-
 export const SelectItemToCompare = (prop: Prop) => {
     const { raquetes, id, itemComparative, setItemComparative } = prop
+    const { produtos} = useProdutosContext()
 
     const handleComparative = (value: string) => {
         return setItemComparative(value)
     }
-    const optConfig = raquetes.map(raquete => raquete.role.category).filter((elem, pos, self) => self.indexOf(elem) == pos)         
+    const marcas = raquetes.map(raquete => raquete.role.category).filter((elem, pos, self) => self.indexOf(elem) == pos)         
+    
 
     return (
         <FormControl variant="outlined" sx={{ width: '100%', borderRadius: '.32rem', bgcolor: 'white'}}>
@@ -28,7 +30,7 @@ export const SelectItemToCompare = (prop: Prop) => {
             >
                 <option aria-label="None" value={itemComparative} />
                 {
-                    optConfig.map(opt => (
+                    marcas.map(opt => (
                         <optgroup  label={opt}>
                             {
                                 matchProductsByBrands(opt, raquetes).map((raquete, index) => (
