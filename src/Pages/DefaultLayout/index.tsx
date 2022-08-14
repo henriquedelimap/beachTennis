@@ -24,7 +24,7 @@ export const DefaultLayout = (
     }) => {
     return (
         <Box sx={{ position: 'relative'}}  >
-            <Stack sx={{height: 46, bgcolor: '#ffffff'}} />
+            <Stack sx={{height: 38, bgcolor: '#ffffff'}} />
             <Paper elevation={12} sx={{ position: 'relative', zIndex: '1', borderRadius: '0' }}>
                 <FloatingButton disappear={disappear} />
                 <Header buttonBack={buttonBack} cart={cart} />

@@ -49,52 +49,28 @@ export const DadosPessoaisProvider = (prop: Prop) => {
 export const usePerfilContext = () => {
     const { perfil, setPerfil } = useContext(DadosPessoaisContext) as IDadosPessoaisContext
     const { register, handleSubmit } = useForm()
-    const onSubmit: SubmitHandler<any> = data => {
-        let nome = data.nome
-        let sobrenome = data.sobrenome
+    const onSubmit: SubmitHandler<any> = data => setPerfil(data);
+    ;
 
-        setPerfil({
-            nome: nome,
-            sobrenome: sobrenome
-        })
-    };
-    
 
     const cep = perfil.cep === undefined ? '0000000' : perfil.cep
 
-    if (perfil.cep !== '') {
-        ApiCep.SearchCep(cep).then((res) => {
-            let rua = res.data.logradouro;
-            let bairro = res.data.bairro;
-            let cidade = res.data.localidade;
-            let estado = res.data.uf;
+    // if (perfil.cep !== '') {
+    //     ApiCep.SearchCep(cep).then((res) => {
+    //         let rua = res.data.logradouro;
+    //         let bairro = res.data.bairro;
+    //         let cidade = res.data.localidade;
+    //         let estado = res.data.uf;
 
-            setPerfil({
-                rua: rua,
-                bairro: bairro,
-                cidade: cidade,
-                estado: estado
-            })
-        })
-    }
-    
-  
-
-
-
+    //         setPerfil({
+    //             rua: rua,
+    //             bairro: bairro,
+    //             cidade: cidade,
+    //             estado: estado
+    //         })
+    //     })
+    // }
     function adicionaDadosAoPerfil(label: string, value: string) {
-
-        let nome = label === 'nome' ? value : ''
-        let sobrenome = label === 'sobrenome' ? value : ''
-        let telefone = label === 'telefone' ? value : ''
-        let cep = label === 'cep' ? value : ''
-
-        setPerfil( {
-            nome: nome,
-            sobrenome: sobrenome,
-            telefone: telefone,
-            cep: cep,
-        })
     };
 
     return {

@@ -8,7 +8,7 @@ import { DrawerShop } from "../Shop"
 import { ModalPhone } from "../ModalPhone"
 import { LogoBeachTennis } from "../../assets/img/logoBeachTennis"
 import { ContainerPadding } from "../../components/Container"
-import {useSnackbar} from 'notistack'
+import { useSnackbar } from 'notistack'
 
 interface Props {
 
@@ -66,7 +66,7 @@ export const Header = ({
 
     ]
 
-    const {closeSnackbar} = useSnackbar()
+    const { closeSnackbar } = useSnackbar()
     return (
         <HideOnScroll {...props}>
 
@@ -116,18 +116,18 @@ export const Header = ({
 
 
                         {
-                            !cart 
-                            ? ''
-                            : <Tabs value={value}  >
-                                <Tab
-                                    value={'carrinho'}
-                                    key={'carrinho'}
-                                    onClick={() => {
-                                        closeSnackbar()
-                                        setShop(true)
-                                    }}
-                                    icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
-                            </Tabs>
+                            !cart
+                                ? ''
+                                : <Tabs value={value}  >
+                                    <Tab
+                                        value={'carrinho'}
+                                        key={'carrinho'}
+                                        onClick={() => {
+                                            closeSnackbar()
+                                            setShop(true)
+                                        }}
+                                        icon={<MdOutlineShoppingCart fontSize={24} />} ></Tab>
+                                </Tabs>
                         }
 
                     </Stack>
