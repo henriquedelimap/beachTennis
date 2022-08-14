@@ -4,10 +4,8 @@ import { BsHeart } from "react-icons/bs"
 
 import { useContext, useEffect, useState } from "react"
 
-import { Overflow } from "../../styles"
 import { FormatPrice } from "../../Utils"
 import { IRaquete } from "../../Types"
-import { CarrinhoContextType, useCarrinhoContext } from "../../Common/Context/Carinho"
 import { FormatedCard } from "./FormatCard"
 
 export interface Prop {
@@ -17,38 +15,9 @@ export interface Prop {
     cardFormat: string
 }
 
-interface Formated{
-    imgMaxHeight: string
-    cardMaxHeight: string
-}
-
 export const CardRaquetes = (prop: Prop) => {
     const { raquete, animated, navigation, cardFormat } = prop
-    const [formated, setFormated] = useState<Formated>({
-        imgMaxHeight: '',
-        cardMaxHeight: ''
-    })
-    useEffect(()=>{
-        switch (cardFormat) {
-            case 'list':
-                setFormated({
-                    imgMaxHeight: '24vh',
-                    cardMaxHeight: '20vh'
-
-                })
-                break;    
-                default:
-                    setFormated({
-                    imgMaxHeight: '53vh',
-                    cardMaxHeight: '80vh'
-
-                })
-                break;
-        }
-    }, [cardFormat])
-
     return (
-
         <FormatedCard cardFormat={cardFormat} raquete={raquete} animated={animated} navigation={navigation} />
     )
 }

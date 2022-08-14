@@ -66,9 +66,9 @@ export const RaquetesPage = () => {
                                 container
                                 justifyContent='center'
                                 alignItems='center'
-                                xs={cardFormat === 'default' ? 6 : 12}
+                                xs={12}
                                 md={4}
-                                lg={cardFormat === 'default' ? 3 : 12}
+                                lg={4}
                             >
 
                                 <CardRaquetes

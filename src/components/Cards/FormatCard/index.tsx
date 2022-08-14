@@ -27,7 +27,7 @@ interface Prop {
 export const FormatedCard = (prop: Prop) => {
     const { cardFormat, raquete, animated, navigation } = prop
     const { adicionarProduto, removerProduto, carrinho } = useCarrinhoContext()
-    const [form, setForm] = useState(<></>)
+    const [cardFormated, setCardFormated] = useState(<></>)
     const navigate = useNavigate()
 
     const adicionado = carrinho.find(item => item.id === raquete.id)
@@ -38,10 +38,11 @@ export const FormatedCard = (prop: Prop) => {
         }
         return navigate(`${to}`)
     }
-        useEffect(() => {
-            switch (cardFormat) {
-                case 'list':
-                    setForm(<Card sx={{ width: '100%' }} >
+    useEffect(() => {
+        switch (cardFormat) {
+            case 'list':
+                setCardFormated(
+                    <Card sx={{ width: '100%' }} >
                         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                             <CardMedia
                                 sx={{ height: '6rem', width: 'auto' }}
@@ -51,26 +52,22 @@ export const FormatedCard = (prop: Prop) => {
                                 <Typography variant={'subtitle2'}>{raquete.title.toLowerCase()}</Typography>
 
                                 <Stack direction='row' alignItems='center' spacing={2}>
-                                    <IconButton onClick={() => removerProduto(raquete.id)}>
-                                        <MdRemove />
-                                    </IconButton>
-                                    <Typography>
-                                        {raquete.quantity}
-                                    </Typography>
-                                    <IconButton onClick={() => adicionarProduto(raquete)}>
-                                        <MdAdd />
+                                <IconButton onClick={() => {
+                                        adicionarProduto(raquete)
+                                    }}>
+                                        <MdAddShoppingCart color={adicionado ? 'green' : ''} />
                                     </IconButton>
                                 </Stack>
                             </CardContent>
                         </Box>
-                    </Card>)
+                    </Card>
+                )
 
-                    break;
-                default:
-
-                    setForm(<Card
+                break;
+            default:
+                setCardFormated(
+                    <Card
                         elevation={animated ? 0 : 1}
-
                         sx={{
                             height: '100%',
                             width: '100%',
@@ -120,11 +117,12 @@ export const FormatedCard = (prop: Prop) => {
 
                             </CardContent>
                         </LazyLoad>
-                    </Card >)
+                    </Card >
+                )
 
-                    break;
-            }
-        }, [cardFormat])
+                break;
+        }
+    }, [cardFormat])
 
-    return form
+    return cardFormated
 }
