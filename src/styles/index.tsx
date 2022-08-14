@@ -14,11 +14,12 @@ export const Fundo = styled('div')(({top, left, rotate, right}:{top?: number, le
     transform: `translateX(${rotate})`,
 }))
 
-export const Sticky = styled('div')(({bottom, top, index}: {bottom?: number, top?: number | string, index: number})=>({
+export const Sticky = styled('div')(({bottom, top, index, right}: {bottom?: number, top?: number | string, index: number, right?: number | string})=>({
     position: 'sticky',
     top: top,
     bottom: bottom,
     left: 0,
+    right: right,
     background: 'transparent',
     zIndex: index
 }))

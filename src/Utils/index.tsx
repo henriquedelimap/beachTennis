@@ -1,3 +1,4 @@
+import { useScrollTrigger } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { IRaquete } from "../Types";
@@ -34,3 +35,4 @@ export const ScrollToTop = (props: { children: any; }) => {
 
 export const FormatPrice = (price: number) => `R$ ${price.toFixed(3)},00`
 export const matchProductsByBrands = (opt: string, raquetes: IRaquete[]) => raquetes?.map(raquete => raquete?.role.category === opt ? raquete.title.toLowerCase() : '').filter(i=>i)
+
