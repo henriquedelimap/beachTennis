@@ -2,7 +2,7 @@ import { Avatar, Box, Card, CardContent, CardHeader, CardMedia, Grid, IconButton
 import { BsHeart } from "react-icons/bs"
 import { MdAdd, MdAddShoppingCart, MdAdUnits, MdMoreVert } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 
 import { Overflow } from "../../styles"
 import { AppearEffect, LazyLoad } from "../../components/Animation"
@@ -16,9 +16,32 @@ export interface Prop {
     navigation?: boolean
     cardFormat: string
 }
+
+interface Formated{
+    maxHeight: string
+}
 export const CardRaquetes = (prop: Prop) => {
     const navigate = useNavigate()
     const { raquete, animated, navigation, cardFormat } = prop
+    const [formated, setFormated] = useState<Formated>({
+        maxHeight: ''
+    })
+    useEffect(()=>{
+        switch (cardFormat) {
+            case 'list':
+                setFormated({
+                    maxHeight: '24vh'
+                })
+                break;    
+                default:
+                    setFormated({
+                    maxHeight: '53vh'
+                })
+                break;
+        }
+    }, [cardFormat])
+
+
     
     const {carrinho, setCarrinho, adicionarProduto} = useCarrinhoContext()
     const adicionado = carrinho.find(item => item.id === raquete.id)
@@ -70,7 +93,7 @@ export const CardRaquetes = (prop: Prop) => {
                         alt={`raquete ${raquete.title} feita de ${raquete.material}, confira mais detalhes: ${raquete.description}`}
                         image={raquete.img[0]}
                         onClick={() => NavigationValidate(navigation, raquete.id)}
-                        sx={{ maxHeight: cardFormat === 'default' ? '52vh' : '6rem', objectFit: 'contain' }}
+                        sx={{ maxHeight: formated?.maxHeight, objectFit: 'contain' }}
                     >
                     </CardMedia>
                 </Overflow>
