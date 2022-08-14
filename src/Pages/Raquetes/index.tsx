@@ -8,8 +8,9 @@ import { IRaquete } from "../../Types"
 import { Filter, ToggleCardFormat } from "./Filter"
 import { MdFormatListBulleted, MdOutlineDashboard } from "react-icons/md"
 import { useProdutosContext } from "../../Common/Context/Produtos"
+import { Sticky } from "../../styles"
 export const RaquetesPage = () => {
-
+    const height = useWindowDimensions().height
     const [marcaValue, setMarcaValue] = useState('')
     const [materialValue, setMaterialValue] = useState('')
     const [corValue, setCorValue] = useState('')
@@ -34,8 +35,13 @@ export const RaquetesPage = () => {
                 rowSpacing={{xs: 1, md: 2, lg: 2}}
                 columnSpacing={{ xs: 1, md: 2, lg: 2 }}
             >
-                <Grid item container xs={2} alignItems='center' justifyContent='center' >
-                    <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
+                <Grid item container xs={2} alignItems='center' justifyContent='center' sx={{position: 'relative'}} >
+                    <Box sx={{position: 'absolute', top: 18, widht: '100%', height: `calc(50vh * ${Data.length})`}} >
+
+                    <Sticky top={16} index={200}>
+                        <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
+                    </Sticky>
+                    </Box>
                 </Grid>
                 <Grid item container xs={10} rowSpacing={1} columnSpacing={.5}>
                     <Grid item xs={6}>
