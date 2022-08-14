@@ -51,8 +51,8 @@ export const RaquetePage = () => {
 
                     <Grid item container columnSpacing={.5} xs={12}>
                         {
-                            raquete.chips.map(chip => (
-                                <Grid item>
+                            raquete.chips.map((chip, index) => (
+                                <Grid key={index} item>
                                     {chip === 'novidade' ? <Chip sx={{fontWeight: 600, fontFamily:'Outfit' }} color='success' label={chip} size="small"/> 
                                     : <Chip  label={chip} size="small" sx={{fontFamily:'Outfit'}} variant='outlined' />
                                     }

@@ -1,13 +1,13 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useEffect, useState } from "react";
 import { IRaquete } from "../../Types";
-import {useSnackbar} from 'notistack'
+import { useSnackbar } from 'notistack'
 interface Prop {
     children?: ReactNode
 }
 
 export interface CarrinhoContextType {
     carrinho: IRaquete[]
-    setCarrinho: Dispatch<SetStateAction< IRaquete[]>>
+    setCarrinho: Dispatch<SetStateAction<IRaquete[]>>
 }
 
 export const CarrinhoContext = createContext<CarrinhoContextType | undefined[]>([undefined])
@@ -17,40 +17,43 @@ CarrinhoContext.displayName = 'Carrinho'
 export const CarrinhoProvider = (prop: Prop) => {
     const [carrinho, setCarrinho] = useState<IRaquete[]>([])
     return (
-        <CarrinhoContext.Provider value={{carrinho, setCarrinho}}>
+        <CarrinhoContext.Provider value={{ carrinho, setCarrinho }}>
             {prop.children}
         </CarrinhoContext.Provider>
     )
 }
 
 export const useCarrinhoContext = () => {
-    const {carrinho, setCarrinho} = useContext(CarrinhoContext) as CarrinhoContextType
-    const {enqueueSnackbar} = useSnackbar()
+    const { carrinho, setCarrinho } = useContext(CarrinhoContext) as CarrinhoContextType
+    const { enqueueSnackbar } = useSnackbar()
 
     function adicionarProduto(novoProduto: IRaquete) {
-        const alreadyExist = carrinho.some(itemCarrinho => itemCarrinho.id === novoProduto.id)
-        console.log(alreadyExist);
-        
-        enqueueSnackbar(`${novoProduto.title.toLowerCase()} foi adicionado ao carrinho`,  { variant: 'success', preventDuplicate: true })
-        if(!alreadyExist){
+        const temOProduto = carrinho.some(itemCarrinho => itemCarrinho.id === novoProduto.id)
+
+        // enqueueSnackbar(`${novoProduto.title.toLowerCase()}  foi adicionado ao carrinho`,  { variant: 'success', preventDuplicate: true })
+        enqueueSnackbar(`${carrinho.map(itemCarrinho => itemCarrinho.id)}  foi adicionado ao carrinho`, { variant: 'success', preventDuplicate: true })
+
+        if (!temOProduto) {
             novoProduto.quantity = 1
-            return setCarrinho(prev => [...prev, novoProduto])
-        } 
+            return setCarrinho(prev => 
+                [...prev, novoProduto]
+            )
+        }
         setCarrinho((prev: IRaquete[]) => prev.map((item: IRaquete) => {
-            if(item.id === novoProduto.id) item.quantity += 1
+            if (item.id === novoProduto.id) item.quantity += 1
             return item
         }))
     }
-    
+
     function removerProduto(id: number) {
         const produto = carrinho.find(item => item.id === id)
         const lastOne = produto?.quantity === 1
-        if(lastOne){
-            enqueueSnackbar(`${produto?.title.toLowerCase()} foi removido do carrinho`,  { variant: 'error', preventDuplicate: true })
+        if (lastOne) {
+            enqueueSnackbar(`${produto?.title.toLowerCase()} foi removido do carrinho`, { variant: 'error', preventDuplicate: true })
             return setCarrinho(prev => prev.filter(item => item.id !== id))
         }
-        setCarrinho((prev: IRaquete[])  => prev.map((item: IRaquete) => {
-            if(item.id === id) item.quantity -= 1
+        setCarrinho((prev: IRaquete[]) => prev.map((item: IRaquete) => {
+            if (item.id === id) item.quantity -= 1
             return item
         }))
     }

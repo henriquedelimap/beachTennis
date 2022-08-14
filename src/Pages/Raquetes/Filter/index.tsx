@@ -1,7 +1,6 @@
 import { Grid, Stack, Box, OutlinedInput, Chip, Select, MenuItem, FormControl, InputLabel, SelectChangeEvent, ToggleButtonGroup, ToggleButton } from "@mui/material"
 import { Data } from "../../../assets/data"
 import { Dispatch, SetStateAction, useState, VoidFunctionComponent } from "react"
-import { useProdutosContext } from "../../../Common/Context/Produtos"
 import { MdFormatListBulleted, MdOutlineDashboard } from "react-icons/md"
 
 
@@ -29,8 +28,8 @@ export const Filter = (props: Props) => {
                 onChange={handleChange}
             >
                 {
-                    itensToFilter?.map((item: string) => (
-                        <MenuItem value={item}>{item}</MenuItem>
+                    itensToFilter?.map((item: string, index) => (
+                        <MenuItem key={index} value={item}>{item}</MenuItem>
                     ))
                 }
             </Select>

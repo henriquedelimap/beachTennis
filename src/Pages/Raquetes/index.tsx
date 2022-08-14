@@ -5,9 +5,9 @@ import { CardRaquetes } from '../../components/Cards'
 import { Title } from "../../components/Title"
 import { SetStateAction, useState } from "react"
 import { IRaquete } from "../../Types"
-import { useProdutosContext } from "../../Common/Context/Produtos"
 import { Filter, ToggleCardFormat } from "./Filter"
 import { MdFormatListBulleted, MdOutlineDashboard } from "react-icons/md"
+import { useProdutosContext } from "../../Common/Context/Produtos"
 export const RaquetesPage = () => {
 
     const [marcaValue, setMarcaValue] = useState('')

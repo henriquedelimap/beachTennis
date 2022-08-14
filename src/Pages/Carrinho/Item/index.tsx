@@ -22,9 +22,8 @@ export const ItemCarrinho = () => {
     return (
         <>
         {
-            carrinho.map((item: IRaquete) => (
-                <Grid item xs={12}>
-
+            carrinho.map((item: IRaquete, index) => (
+                <Grid item xs={12} key={index}>
                     <Card sx={{ width: '100%' }} >
                         <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                             <CardMedia

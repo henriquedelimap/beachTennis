@@ -63,8 +63,8 @@ export const Header = ({
             label: 'sobre nós',
             to: 'sobreNos'
         },
-
     ]
+    const values = [' ',  'raquetes', 'em breve', 'sobre nós']
 
     const { closeSnackbar } = useSnackbar()
     return (
@@ -98,7 +98,7 @@ export const Header = ({
                     </Stack>
                     <Stack direction='row'>
 
-                        <Tabs value={value} indicatorColor={undefined} sx={{ p: 0, display: { md: 'none', xs: 'none', lg: 'flex' } }} centered  >
+                        <Tabs value={values} indicatorColor={undefined} sx={{ p: 0, display: { md: 'none', xs: 'none', lg: 'flex' } }} centered  >
                             {
                                 menu.map((item, index) => (
                                     <Tab
@@ -120,6 +120,7 @@ export const Header = ({
                                 ? ''
                                 : <Tabs value={value}  >
                                     <Tab
+
                                         value={'carrinho'}
                                         key={'carrinho'}
                                         onClick={() => {

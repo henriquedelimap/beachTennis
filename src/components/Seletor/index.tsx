@@ -3,7 +3,6 @@ import { Dispatch, SetStateAction, useEffect } from "react"
 import { matchProductsByBrands } from "../../Utils"
 import { Sticky } from "../../styles"
 import { IRaquete } from "../../Types"
-import { useProdutosContext } from "../../Common/Context/Produtos"
 
 interface Prop {
     setItemComparative: Dispatch<SetStateAction<string>>
@@ -14,7 +13,7 @@ interface Prop {
 
 export const SelectItemToCompare = (prop: Prop) => {
     const { raquetes, id, itemComparative, setItemComparative } = prop
-    const { produtos} = useProdutosContext()
+
 
     const handleComparative = (value: string) => {
         return setItemComparative(value)
