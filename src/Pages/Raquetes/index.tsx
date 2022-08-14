@@ -37,7 +37,7 @@ export const RaquetesPage = () => {
       <Stack sx={{ position: 'relative' }} >
 
         <Slide direction='right' in={trigger}>
-          <Box sx={{ position: 'absolute', top: 71, left: {xs:-2, md: -30, lg: -30}, widht: '100%', height: '100%' }} >
+          <Box sx={{ position: 'absolute', top: 71, left: {xs:-8, md: -30, lg: -30}, widht: '100%', height: '100%' }} >
 
             <Sticky top={'25%'} index={200}>
               <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
