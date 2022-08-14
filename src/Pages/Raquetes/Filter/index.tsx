@@ -55,18 +55,18 @@ export const ToggleCardFormat = (prop: IToggle) => {
             sx={{flexDirection: 'column'}}
         >
             <ToggleButton value='default' sx={{ border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
-                background: 'rgba(232, 245, 255, 0.07)',
+                background: 'rgba(232, 245, 255, 0.2)',
                 backdropFilter: 'blur(32px)',
-                borderRadius: '0 1rem 0 0',
                 boxShadow: '0px 12px 8px -20px #111111',
+                borderRadius: '0 1rem 0 0',
             }}}>
                 <MdOutlineDashboard fontSize={22} />
             </ToggleButton>
             <ToggleButton value='list' sx={{ border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
-                background: 'rgba(232, 245, 255, 0.07)',
-                borderRadius: '0 0 1rem  0',
+                background: 'rgba(232, 245, 255, 0.2)',
                 backdropFilter: 'blur(32px)',
                 boxShadow: '0px 12px 8px -20px #111111',
+                borderRadius: '0 0 1rem  0',
                 
 
             }}}>
