@@ -1,11 +1,12 @@
-import { Grid, Stack, Box, OutlinedInput, Chip, Select, MenuItem, FormControl, InputLabel, SelectChangeEvent } from "@mui/material"
+import { Grid, Stack, Box, OutlinedInput, Chip, Select, MenuItem, FormControl, InputLabel, SelectChangeEvent, ToggleButtonGroup, ToggleButton } from "@mui/material"
 import { Data } from "../../../assets/data"
-import { Dispatch, SetStateAction, useState } from "react"
+import { Dispatch, SetStateAction, useState, VoidFunctionComponent } from "react"
 import { useProdutosContext } from "../../../Common/Context/Produtos"
+import { MdFormatListBulleted, MdOutlineDashboard } from "react-icons/md"
 
 
-interface Props { 
-    value: string 
+interface Props {
+    value: string
     setValue: Dispatch<SetStateAction<string>>
     itensToFilter: string[]
     label: string
@@ -34,5 +35,41 @@ export const Filter = (props: Props) => {
                 }
             </Select>
         </FormControl>
+    )
+}
+
+interface IToggle {
+    cardFormat: string 
+    handleChange: (e: any)=>void
+}
+
+export const ToggleCardFormat = (prop: IToggle) => {         
+    const {handleChange, cardFormat} = prop
+    return (
+        <ToggleButtonGroup
+            value={cardFormat}
+            exclusive
+            size='large'
+            onChange={handleChange}
+            fullWidth
+            sx={{flexDirection: 'column'}}
+        >
+            <ToggleButton value='default' sx={{ borderRadius: '0',border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
+                background: 'rgba(232, 245, 255, 0.07)',
+                backdropFilter: 'blur(32px)',
+                boxShadow: '0px 12px 8px -20px #111111',
+            }}}>
+                <MdOutlineDashboard />
+            </ToggleButton>
+            <ToggleButton value='list' sx={{borderRadius: '0', border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
+                background: 'rgba(232, 245, 255, 0.07)',
+                backdropFilter: 'blur(32px)',
+                boxShadow: '0px 12px 8px -20px #111111',
+            }}}>
+                <MdFormatListBulleted />
+            </ToggleButton>
+
+
+        </ToggleButtonGroup>
     )
 }

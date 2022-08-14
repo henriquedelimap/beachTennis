@@ -39,6 +39,17 @@ let theme = createTheme({
         }
       }
     },
+    
+    MuiToggleButtonGroup: {
+      styleOverrides: {
+        root: {
+          background: 'rgba(232, 245, 255, 0.07)',
+          backdropFilter: 'blur(32px)',
+          boxShadow: '0px 12px 8px -20px #111111',
+        },
+      }
+      
+    },
     MuiListItemText: {
       styleOverrides: {
         root: {

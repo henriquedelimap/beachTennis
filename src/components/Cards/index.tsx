@@ -14,10 +14,11 @@ export interface Prop {
     raquete: IRaquete
     animated?: boolean
     navigation?: boolean
+    cardFormat: string
 }
 export const CardRaquetes = (prop: Prop) => {
     const navigate = useNavigate()
-    const { raquete, animated, navigation } = prop
+    const { raquete, animated, navigation, cardFormat } = prop
     
     const {carrinho, setCarrinho, adicionarProduto} = useCarrinhoContext()
     const adicionado = carrinho.find(item => item.id === raquete.id)
@@ -69,7 +70,7 @@ export const CardRaquetes = (prop: Prop) => {
                         alt={`raquete ${raquete.title} feita de ${raquete.material}, confira mais detalhes: ${raquete.description}`}
                         image={raquete.img[0]}
                         onClick={() => NavigationValidate(navigation, raquete.id)}
-                        sx={{ maxHeight: '52vh', objectFit: 'contain' }}
+                        sx={{ maxHeight: cardFormat === 'default' ? '52vh' : '6rem', objectFit: 'contain' }}
                     >
                     </CardMedia>
                 </Overflow>
