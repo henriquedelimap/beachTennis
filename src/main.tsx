@@ -44,7 +44,7 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           background: 'rgba(232, 245, 255, 0.07)',
-          backdropFilter: 'blur(32px)',
+          backdropFilter: 'blur(4px)',
           boxShadow: '0px 12px 8px -20px #111111',
           height: '100%',
           borderRadius: '0 1rem 1rem 0'
