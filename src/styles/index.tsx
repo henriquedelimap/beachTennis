@@ -14,7 +14,7 @@ export const Fundo = styled('div')(({top, left, rotate, right}:{top?: number, le
     transform: `translateX(${rotate})`,
 }))
 
-export const Sticky = styled('div')(({bottom, top, index}: {bottom?: number, top?: number, index: number})=>({
+export const Sticky = styled('div')(({bottom, top, index}: {bottom?: number, top?: number | string, index: number})=>({
     position: 'sticky',
     top: top,
     bottom: bottom,
