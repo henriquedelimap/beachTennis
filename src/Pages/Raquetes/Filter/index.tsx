@@ -56,16 +56,12 @@ export const ToggleCardFormat = (prop: IToggle) => {
             <ToggleButton value='default' sx={{marginLeft: '-.4rem', border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
                 boxShadow: '0px 12px 8px -20px #111111',
                 borderRadius: '0 1rem 0 0',
-                marginLeft: '0rem'
             }}}>
                 <MdOutlineDashboard  style={{margin:6}}  fontSize={22} />
             </ToggleButton>
             <ToggleButton value='list' sx={{marginLeft: '-.4rem', border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
                 boxShadow: '0px 12px 8px -20px #111111',
                 borderRadius: '0 0 1rem 0',
-                marginLeft: '0rem'
-                
-
             }}}>
                 <MdFormatListBulleted style={{margin:6}} fontSize={22} />
             </ToggleButton>
