@@ -39,9 +39,10 @@ export const CardRaquetes = (prop: Prop) => {
                     card: {
                         height: '100%',
                         width: '100%',
-                        maxHeight: '20vh',
+                        maxHeight: '32vh',
                         position: 'relative',
                         maxWidth: '28rem',
+                        pb: .8
                     },
                     cardMedia: { 
                         display: 'none'
