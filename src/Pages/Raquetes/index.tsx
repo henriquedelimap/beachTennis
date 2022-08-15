@@ -47,7 +47,7 @@ export const RaquetesPage = () => {
                 size='small'
                 bgcolor='#00aa000f'
                 orientation='vertical'
-                buttons={[{ label: 'promo', icone: <FaMoneyBillWave color='green' fontSize={26} /> }]}
+                buttons={[{ label: 'promo', icone: <FaMoneyBillWave color='green' fontSize={32} /> }]}
               />
 
             </Sticky>
