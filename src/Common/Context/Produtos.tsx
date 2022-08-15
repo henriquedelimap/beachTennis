@@ -28,7 +28,7 @@ export const ProdutosContext = createContext<IProdutosContextType | IRaquete[]>(
         weight: 0,
         dimensions: [0, 0, 0],
         color: ['', ''],
-        material: '',
+        material: [''],
         role: {
             category: '',
             brand: null

@@ -129,7 +129,7 @@ export const Comparativo = (prop: Prop) => {
 
             <ContainerPadding>
                 <ItemContent title={'cores'} content={cor1} content2={cor2} />
-                <ItemContent title={'materiais'} content={object.material} content2={object2.material} />
+                <ItemContent title={'materiais'} content={object.material[0]} content2={object2.material[0]} />
                 <ItemContent title={'descrições'} content={object.description} content2={object2.description} />
                 <ItemContentDimensionCreator title={'dimensões'}
                     dimension={object.dimensions}
