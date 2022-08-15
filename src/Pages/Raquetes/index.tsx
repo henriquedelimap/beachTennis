@@ -7,6 +7,8 @@ import { SetStateAction, useEffect, useState } from "react"
 import { Filter, ToggleCardFormat } from "./Filter"
 import { Sticky } from "../../styles"
 import { useGlobalContext } from "../../Common/Context/GlobalConfig"
+import { MdDashboard, MdFormatListBulleted, MdMoney, MdMoneyOffCsred, MdSailing } from "react-icons/md"
+import {FaMoneyBillWave} from 'react-icons/fa'
 export const RaquetesPage = () => {
 
   const [marcaValue, setMarcaValue] = useState('')
@@ -20,7 +22,7 @@ export const RaquetesPage = () => {
   const cores = Data.map(raquete => raquete.color[0]).filter((elem, pos, self) => self.indexOf(elem) == pos)
 
   const [cardFormat, setCardFormat] = useState<string>('default')
-  
+
   const handleChange = (e: any) => {
     setCardFormat(e.target.value as string)
   }
@@ -41,6 +43,11 @@ export const RaquetesPage = () => {
         <Slide direction='right' in={trigger}>
           <Box sx={{ position: 'absolute', top: 71, left: { xs: -8, md: -30, lg: -30 }, widht: '100%', height: '100%' }} >
             <Sticky top={'25%'} index={200}>
+              <ToggleCardFormat
+                size='large'
+                orientation='vertical'
+                buttons={[{ label: 'promo', icone: <FaMoneyBillWave color='green' fontSize={26} /> }]}
+              />
 
             </Sticky>
           </Box>
@@ -69,7 +76,17 @@ export const RaquetesPage = () => {
             </Grid>
             <Grid item container xs={1} />
             <Grid item xs={12}>
-              <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
+              <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} buttons={[
+                {
+                  label: 'default',
+                  icone: <MdDashboard fontSize={22} />
+                },
+                {
+                  label: 'list',
+                  icone: <MdFormatListBulleted fontSize={22} />
+                }
+              ]
+              } />
             </Grid>
 
           </Grid>
@@ -96,7 +113,7 @@ export const RaquetesPage = () => {
                     animated={false}
                     raquete={item}
                     cardFormat={cardFormat}
-                    
+
                   />
                 </Grid>
               ))
