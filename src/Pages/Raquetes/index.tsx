@@ -8,7 +8,7 @@ import { Filter, ToggleCardFormat } from "./Filter"
 import { Sticky } from "../../styles"
 import { useGlobalContext } from "../../Common/Context/GlobalConfig"
 import { MdDashboard, MdFormatListBulleted, MdMoney, MdMoneyOffCsred, MdSailing } from "react-icons/md"
-import {FaMoneyBillWave} from 'react-icons/fa'
+import { FaMoneyBillWave } from 'react-icons/fa'
 export const RaquetesPage = () => {
 
   const [marcaValue, setMarcaValue] = useState('')
@@ -19,8 +19,10 @@ export const RaquetesPage = () => {
   const marcas = Data.map(raquete => raquete.role.category).filter((elem, pos, self) => self.indexOf(elem) == pos)
   const materiais = Data.map(raquete => raquete.material).filter((elem, pos, self) => self.indexOf(elem) == pos)
   const precos = Data.map(raquete => FormatPrice(raquete.price.sale)).filter((elem, pos, self) => self.indexOf(elem) == pos)
-  const cores = Data.map(raquete => raquete.color[0]).filter((elem, pos, self) => self.indexOf(elem) == pos)
-
+  const cor1 = Data.map(raquete =>raquete.color[1] )
+  const cor2 = Data.map(raquete =>raquete.color[2] )
+  const cor3 = Data.map(raquete =>raquete.color[3] )
+  const cores = [...cor1, ...cor2, ...cor3].filter((elem, pos, self) => self.indexOf(elem) == pos)
   const [cardFormat, setCardFormat] = useState<string>('default')
 
   const handleChange = (e: any) => {

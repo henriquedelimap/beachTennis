@@ -254,32 +254,32 @@ export const Data = [
             brand: logoTurquoise
         }
     },
-    {
-        id: 10,
-        quantity: 0,
+    // {
+    //     id: 10,
+    //     quantity: 0,
         
-        img: [spitfire, spitfire],
-        title: 'q',
-        subtitle: '',
+    //     img: [spitfire, spitfire],
+    //     title: 'q',
+    //     subtitle: '',
 
-        price: {
-            original: 0,
-            sale: 0
-        },
-        chips: ['2022', ''],
-        year: '2022',
-        stored: 0,
-        description: ``,
-        subDescription: ``,
-        weight: 0,
-        dimensions: [0, 0, 0],
-        color: ['', ''],
-        material: 'materialll',
-        role: {
-            category: 'quicksand',
-            brand: logoQuickSand
-        }
-    },
+    //     price: {
+    //         original: 0,
+    //         sale: 0
+    //     },
+    //     chips: ['2022', ''],
+    //     year: '2022',
+    //     stored: 0,
+    //     description: ``,
+    //     subDescription: ``,
+    //     weight: 0,
+    //     dimensions: [0, 0, 0],
+    //     color: ['', ''],
+    //     material: 'materialll',
+    //     role: {
+    //         category: 'quicksand',
+    //         brand: logoQuickSand
+    //     }
+    // },
     {
         id: 12,
         quantity: 0,
