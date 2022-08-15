@@ -41,10 +41,11 @@ export const RaquetesPage = () => {
       <Stack sx={{ position: 'relative' }} >
 
         <Slide direction='right' in={trigger}>
-          <Box sx={{ position: 'absolute', top: 71, left: { xs: -8, md: -30, lg: -30 }, widht: '100%', height: '100%' }} >
+          <Box sx={{ position: 'absolute', top: 78, left: { xs: -4, md: -30, lg: -30 }, widht: '100%', height: '100%' }} >
             <Sticky top={'25%'} index={200}>
               <ToggleCardFormat
-                size='large'
+                size='small'
+                bgcolor='#00aa000f'
                 orientation='vertical'
                 buttons={[{ label: 'promo', icone: <FaMoneyBillWave color='green' fontSize={26} /> }]}
               />
@@ -76,7 +77,7 @@ export const RaquetesPage = () => {
             </Grid>
             <Grid item container xs={1} />
             <Grid item xs={12}>
-              <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} buttons={[
+              <ToggleCardFormat bgcolor='transparent' handleChange={handleChange} cardFormat={cardFormat} buttons={[
                 {
                   label: 'default',
                   icone: <MdDashboard fontSize={22} />

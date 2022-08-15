@@ -46,13 +46,14 @@ interface IToggle {
     size?: "small" | "medium" | "large" | undefined
     orientation?: "horizontal" | "vertical" | undefined
     buttons: IButton[]
+    bgcolor: string
 }
 interface IButton {
     icone: any
     label: string
 }
 export const ToggleCardFormat = (prop: IToggle) => {
-    const { handleChange, cardFormat, size, orientation, buttons } = prop
+    const { handleChange, cardFormat, size, orientation, buttons, bgcolor } = prop
 
     const orient = orientation === undefined ? 'horizontal' : orientation
     const tamanho = size === undefined ? 'small' : size
@@ -68,7 +69,9 @@ export const ToggleCardFormat = (prop: IToggle) => {
         >{
                 buttons?.map(({label, icone}: IButton) => (
                     <ToggleButton value={label} sx={{
-                        border: '2px solid transparent', '&.Mui-selected, &.Mui-selected:hover': {
+                        border: '2px solid transparent', 
+                        bgcolor: bgcolor, 
+                        '&.Mui-selected, &.Mui-selected:hover': {
                             boxShadow: '0px 12px 8px -20px #111111',
                         }
                     }}>
