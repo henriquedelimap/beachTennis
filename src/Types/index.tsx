@@ -16,7 +16,7 @@ export interface IRaquete {
     weight: number;
     dimensions: number[];
     color: string[];
-    material: string;
+    material: string[];
     role: {
         category: string
         brand: any
