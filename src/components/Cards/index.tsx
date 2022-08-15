@@ -10,20 +10,18 @@ import { FormatPrice } from "../../Utils"
 import { IRaquete } from "../../Types"
 import { useCarrinhoContext } from "../../Common/Context/Carinho"
 import { MdAdd, MdAddShoppingCart, MdAdUnits, MdMoreVert, MdRemove } from "react-icons/md"
-import { useGlobalContext } from "../../Common/Context/GlobalConfig";
 
 export interface Prop {
     raquete: IRaquete
     animated?: boolean
     navigation?: boolean
-    change: string
+    cardFormat: string
 }
 
 export const CardRaquetes = (prop: Prop) => {
     const { adicionarProduto } = useCarrinhoContext()
-    const { raquete, animated, navigation, change } = prop
+    const { raquete, animated, navigation, cardFormat } = prop
     const navigate = useNavigate()
-    const {cardFormat} = useGlobalContext()
     const [cardFormated, setCardFormated] = useState({ card: {}, cardMedia: {} })
 
     function NavigationValidate(nav: boolean | undefined, to?: number) {
@@ -67,7 +65,6 @@ export const CardRaquetes = (prop: Prop) => {
                 break;
         }
     }, [cardFormat])
-    
     return (
         <Card
             elevation={animated ? 0 : 1}

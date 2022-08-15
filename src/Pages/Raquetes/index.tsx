@@ -3,13 +3,11 @@ import { FormatPrice, useWindowDimensions } from "../../Utils"
 import { Data } from "../../assets/data"
 import { CardRaquetes } from '../../components/Cards'
 import { Title } from "../../components/Title"
-import { SetStateAction, useState } from "react"
+import { SetStateAction, useEffect, useState } from "react"
 import { Filter, ToggleCardFormat } from "./Filter"
 import { Sticky } from "../../styles"
 import { useGlobalContext } from "../../Common/Context/GlobalConfig"
 export const RaquetesPage = () => {
-  const {config, setConfig} = useGlobalContext()
-  const [cardFormat, setCardFormat] = useState<string>('default')
 
   const [marcaValue, setMarcaValue] = useState('')
   const [materialValue, setMaterialValue] = useState('')
@@ -21,7 +19,11 @@ export const RaquetesPage = () => {
   const precos = Data.map(raquete => FormatPrice(raquete.price.sale)).filter((elem, pos, self) => self.indexOf(elem) == pos)
   const cores = Data.map(raquete => raquete.color[0]).filter((elem, pos, self) => self.indexOf(elem) == pos)
 
-
+  const [cardFormat, setCardFormat] = useState<string>('default')
+  
+  const handleChange = (e: any) => {
+    setCardFormat(e.target.value as string)
+  }
 
   const trigger = useScrollTrigger({
     target: window ? window : undefined,
@@ -37,7 +39,7 @@ export const RaquetesPage = () => {
       <Stack sx={{ position: 'relative' }} >
 
         <Slide direction='right' in={trigger}>
-          <Box sx={{ position: 'absolute', top: 71, left: {xs:-8, md: -30, lg: -30}, widht: '100%', height: '100%' }} >
+          <Box sx={{ position: 'absolute', top: 71, left: { xs: -8, md: -30, lg: -30 }, widht: '100%', height: '100%' }} >
             <Sticky top={'25%'} index={200}>
 
             </Sticky>
@@ -67,7 +69,7 @@ export const RaquetesPage = () => {
             </Grid>
             <Grid item container xs={1} />
             <Grid item xs={12}>
-              <ToggleCardFormat  />
+              <ToggleCardFormat handleChange={handleChange} cardFormat={cardFormat} />
             </Grid>
 
           </Grid>
@@ -93,7 +95,8 @@ export const RaquetesPage = () => {
                   <CardRaquetes
                     animated={false}
                     raquete={item}
-                    change={cardFormat}
+                    cardFormat={cardFormat}
+                    
                   />
                 </Grid>
               ))

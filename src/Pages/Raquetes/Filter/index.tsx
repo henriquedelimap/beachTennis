@@ -43,19 +43,14 @@ interface IToggle {
     cardFormat?: string 
     handleChange?: (e: any)=>void
 }
-
-export const ToggleCardFormat = () => {         
-    const { configurar, cardFormat, setCardFormat} = useGlobalContext()
-    const handleConfig = ( e?:any) => {
-        configurar({'cardFormat': e.target.value })
-        setCardFormat(e.target.value)
-    }
+export const ToggleCardFormat = (prop: IToggle) => {         
+    const {handleChange, cardFormat} = prop
     return (
         <ToggleButtonGroup
             value={cardFormat}
             exclusive
             size='small'
-            onChange={handleConfig}
+            onChange={handleChange}
             fullWidth
             orientation="horizontal"
         >
