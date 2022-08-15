@@ -14,7 +14,7 @@ import {
 import { IRaquete } from "Types";
 import { useCarrinhoContext } from "../../../Common/Context/Carinho";
 import { Overflow } from "../../../styles";
-import { AppearEffect, LazyLoad } from "../../../components/Animation"
+import { AppearEffect, LazyLoad } from "../../Animation"
 import { MdAdd, MdAddShoppingCart, MdAdUnits, MdMoreVert, MdRemove } from "react-icons/md"
 import { useNavigate } from "react-router-dom"
 import { PriceSale } from "..";
