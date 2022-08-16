@@ -46,5 +46,5 @@ export const FloatingButton = (prop: Prop) => {
                 </Stack>
             </Fab>
         </Fade>
-    )
+    ) 
 }

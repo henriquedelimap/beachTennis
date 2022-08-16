@@ -33,6 +33,7 @@ import expanseRed from './expanseRed.png'
 import conceptGreen from './conceptGreen.png'
 import blackDeathChallengeOrange from './blackDeathChallengeOrange.png'
 import blackDeathChallengeBlack from './blackDeathChallengeBlack.png'
+import logoPix from './logoPix.png'
 export {
     blackDeathChallengeBlack,
     blackDeathChallengeOrange,
@@ -71,4 +72,5 @@ export {
     Vector2,
     LogoBeachTennis,
     RaqueteIMG,
+    logoPix
 }

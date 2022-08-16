@@ -1,6 +1,7 @@
 import { ApiCep } from "../../Pages/Carrinho/Dados/buscarCep/Services";
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { consultarCep } from "correios-brasil/dist";
 
 export interface IDadosPessoais {
     [x: string]: any
@@ -54,22 +55,25 @@ export const usePerfilContext = () => {
 
 
     const cep = perfil.cep === undefined ? '0000000' : perfil.cep
+    function consultaCep(cep: any) {
+        ApiCep.SearchCep(cep).then((res) => {
+            console.log(res);
+            
+            let rua = res.data.logradouro;
+            let bairro = res.data.bairro;
+            let cidade = res.data.localidade;
+            let estado = res.data.uf;
 
-    // if (perfil.cep !== '') {
-    //     ApiCep.SearchCep(cep).then((res) => {
-    //         let rua = res.data.logradouro;
-    //         let bairro = res.data.bairro;
-    //         let cidade = res.data.localidade;
-    //         let estado = res.data.uf;
+            setPerfil({
+                rua: rua,
+                bairro: bairro,
+                cidade: cidade,
+                estado: estado
+            })
+        })
+    }
 
-    //         setPerfil({
-    //             rua: rua,
-    //             bairro: bairro,
-    //             cidade: cidade,
-    //             estado: estado
-    //         })
-    //     })
-    // }
+
     function adicionaDadosAoPerfil(label: string, value: string) {
     };
 
@@ -79,6 +83,7 @@ export const usePerfilContext = () => {
         adicionaDadosAoPerfil,
         register,
         handleSubmit,
-        onSubmit
+        onSubmit,
+        consultaCep
     }
 }

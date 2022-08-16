@@ -38,7 +38,6 @@ export const RaquetesPage = () => {
   
       let arrayFinal 
 
-      
       item.role.category === value 
       ? arrayFinal = item
       : item.material[0] === value || item.material[1]=== value 
@@ -51,9 +50,7 @@ export const RaquetesPage = () => {
       ? arrayFinal = item : ''
       return arrayFinal
     })
-    
     setArraySelected(selectedMarca)
-    console.log(precoValue);
     
   }, [marcaValue, materialValue, corValue, precoValue])
 
