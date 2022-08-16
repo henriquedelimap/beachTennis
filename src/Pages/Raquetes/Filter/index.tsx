@@ -7,7 +7,7 @@ import { IconType } from "react-icons"
 
 
 interface Props {
-    value: string
+    value?: string
     setValue: Dispatch<SetStateAction<string>>
     itensToFilter: string[]
     label: string
@@ -15,9 +15,8 @@ interface Props {
 export const Filter = (props: Props) => {
     const { value, setValue, itensToFilter, label } = props
 
-    const handleChange = (event: SelectChangeEvent) => {
-        setValue(event.target.value as string);
-
+    const handleChange = (event: any) => {
+        setValue(event.target.value as string);        
     };
 
     return (

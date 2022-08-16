@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction, useEffect } from "react"
 import { matchProductsByBrands } from "../../Utils"
 import { Sticky } from "../../styles"
 import { IRaquete } from "../../Types"
+import { marcas } from "../../assets/data/FormatData"
 
 interface Prop {
     setItemComparative: Dispatch<SetStateAction<string>>
@@ -17,9 +18,7 @@ export const SelectItemToCompare = (prop: Prop) => {
 
     const handleComparative = (value: string) => {
         return setItemComparative(value)
-    }
-    const marcas = raquetes.map(raquete => raquete.role.category).filter((elem, pos, self) => self.indexOf(elem) == pos)         
-    
+    }    
 
     return (
         <FormControl variant="outlined" sx={{ width: '100%', borderRadius: '.32rem', bgcolor: 'white'}}>

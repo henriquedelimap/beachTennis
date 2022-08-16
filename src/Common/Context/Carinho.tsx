@@ -27,7 +27,7 @@ export const useCarrinhoContext = () => {
     const { carrinho, setCarrinho } = useContext(CarrinhoContext) as CarrinhoContextType
     const { enqueueSnackbar } = useSnackbar()
 
-    function adicionarProduto(novoProduto: IRaquete) {
+    function adicionarProduto(novoProduto: IRaquete ) {
         const temOProduto = carrinho.some(itemCarrinho => itemCarrinho.id === novoProduto.id)
 
         // enqueueSnackbar(`${novoProduto.title.toLowerCase()}  foi adicionado ao carrinho`,  { variant: 'success', preventDuplicate: true })

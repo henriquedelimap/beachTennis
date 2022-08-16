@@ -12,7 +12,7 @@ import { useCarrinhoContext } from "../../Common/Context/Carinho"
 import { MdAdd, MdAddShoppingCart, MdAdUnits, MdMoreVert, MdRemove } from "react-icons/md"
 
 export interface Prop {
-    raquete: IRaquete
+    raquete?: IRaquete
     animated?: boolean
     navigation?: boolean
     cardFormat: string
@@ -76,12 +76,12 @@ export const CardRaquetes = (prop: Prop) => {
                     avatar={
                         <Avatar
                             variant='square'
-                            src={raquete.img[0]}
-                            onClick={() => NavigationValidate(navigation, raquete.id)}
+                            src={raquete?.img[0]}
+                            onClick={() => NavigationValidate(navigation, raquete?.id)}
                         />
                     }
-                    title={raquete.title.toLowerCase()}
-                    subheader={raquete.material}
+                    title={raquete?.title.toLowerCase()}
+                    subheader={raquete?.material}
                     action={
                         <IconButton onClick={() => {
                             adicionarProduto(raquete)
@@ -94,19 +94,19 @@ export const CardRaquetes = (prop: Prop) => {
                     <CardMedia
                         component="img"
                         height="auto"
-                        alt={`raquete ${raquete.title} feita de ${raquete.material}, confira mais detalhes: ${raquete.description}`}
-                        image={raquete.img[0]}
-                        onClick={() => NavigationValidate(navigation, raquete.id)}
+                        alt={`raquete ${raquete?.title} feita de ${raquete?.material}, confira mais detalhes: ${raquete?.description}`}
+                        image={raquete?.img[0]}
+                        onClick={() => NavigationValidate(navigation, raquete?.id)}
                         sx={cardFormated.cardMedia}
                     >
                     </CardMedia>
                 </Overflow>
-                <CardContent onClick={() => NavigationValidate(navigation, raquete.id)}>
+                <CardContent onClick={() => NavigationValidate(navigation, raquete?.id)}>
 
                     <Stack>
                         <PriceSale
-                            original={raquete.price.original}
-                            sale={raquete.price.sale} />
+                            original={raquete?.price.original}
+                            sale={raquete?.price.sale} />
                     </Stack>
 
                 </CardContent>
@@ -123,8 +123,8 @@ export const PriceSale = (
         original,
         sale
     }: {
-        original: number,
-        sale: number
+        original?: number,
+        sale?: number
     }) => {
     return (
         <>

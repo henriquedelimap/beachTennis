@@ -17,59 +17,12 @@ import { useEffect, useState } from "react"
 
 export const Home = () => {
     const [itemComparative1, setItemComparative1] = useState('black death 10.2 gold 2022')
+    const [itemComparative2, setItemComparative2] = useState('DNA EXTREME 2.2 ORANGE 2022')
+
     const [firstItemComparative, setFirstItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
     const [secondItemComparative, setSecondItemComparative] = useState<IRaquete>(Data.map(item => item)[0])
 
-
-    const [itemComparative2, setItemComparative2] = useState('DNA EXTREME 2.2 ORANGE 2022')
-    const raquetes = [
-
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '0%',
-            index: 1500
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '15%',
-            index: 4
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '30%',
-            index: 3
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '45%',
-            index: 2
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '61.6%',
-            index: 4
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '76.6%',
-            index: 3
-        },
-        {
-            title: '',
-            img: promocoes[0].img,
-            xA: '91.6%',
-            index: 2
-        },
-
-
-
-    ]
+    
     let object1 = Data.map(item => {
         if (item.title === itemComparative1) {
             return item
@@ -83,17 +36,14 @@ export const Home = () => {
     }).filter(i => i)[0]
 
     useEffect(() => {
-
         object1 === undefined
             ? setFirstItemComparative(Data.map(item => item)[0])
             : setFirstItemComparative(object1)
-
         object2 === undefined
             ? setSecondItemComparative(Data.map(item => item)[1])
             : setSecondItemComparative(object2)
-
-
     }, [itemComparative1, itemComparative2])
+    
     return (
         <Box>
             <Grid container rowSpacing={1.6} sx={{ position: 'relative' }}>

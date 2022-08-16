@@ -28,8 +28,6 @@ export const useGlobalContext = () => {
   const { config, setConfig } = useContext(GlobalConfigContext) as GlobalConfigContextType
   const [cardFormated, setCardFormated] = useState<any>({})
   const [cardFormat, setCardFormat] = useState('list')
-  const { enqueueSnackbar } = useSnackbar()
-  console.log('card formay', cardFormat);
   
   const configurar = (configuracao: { cardFormat: string }) => {
     setCardFormat(configuracao.cardFormat)

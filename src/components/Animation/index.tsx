@@ -43,28 +43,20 @@ export const AppearEffect = (prop: Prop) => {
         }
     };
     return (
-
         <motion.div
             initial="offscreen"
             whileInView="onscreen"
         >
             <motion.div style={{ zIndex: index }} variants={cardVariants}>{children}</motion.div>
-
-
-
         </motion.div>
-
     )
 }
-
-
 
 
 const squareVariants = {
     visible: { opacity: 1, scale: 4, transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 }
 };
-
 
 export function LazyLoad({children, once}:{children?: ReactNode, once?: boolean}) {
     const controls = useAnimation();
