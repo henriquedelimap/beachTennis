@@ -31,7 +31,7 @@ export const SelectItemToCompare = (prop: Prop) => {
                     marcas.map(opt => (
                         <optgroup  label={opt}>
                             {
-                                matchProductsByBrands(opt, raquetes).map((raquete, index) => (
+                                matchProductsByBrands(opt, raquetes)?.map((raquete, index) => (
                                     <option key={index} value={raquete}>{raquete}</option>
                                 ))
                             }
