@@ -9,7 +9,6 @@ import { HideOnScroll } from "../AppBar"
 export const Banner = () => {
     const images = [banner1, banner2, banner3, banner4]
     return (
-        <HideOnScroll>
             <Box>
                 <Paper elevation={0}>
                     <Carousel
@@ -47,7 +46,6 @@ export const Banner = () => {
                     </Carousel>
                 </Paper>
             </Box>
-        </HideOnScroll>
     )
 }
 
