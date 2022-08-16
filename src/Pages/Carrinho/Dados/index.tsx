@@ -3,7 +3,7 @@ import { useCarrinhoContext } from "../../../Common/Context/Carinho";
 import { useMemo, useState } from "react"
 import { IDadosPessoais, usePerfilContext } from "../../../Common/Context/DadosPessoais";
 import { Title } from "../../../components/Title"
-import { MdSearch } from "react-icons/md";
+import { MdInfo, MdSearch } from "react-icons/md";
 
 
 
@@ -77,7 +77,7 @@ export const FormularioCarrinho = () => {
                         onChange={(e: any)=>consultaCep(`${e.target.value}`)}
                         endAdornment={
                             <Button>
-                                <MdSearch />
+                                <MdInfo fontSize={18} />
                             </Button>
                         }
                     />
