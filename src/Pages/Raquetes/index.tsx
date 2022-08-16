@@ -9,7 +9,9 @@ import { MdDashboard, MdFormatListBulleted } from "react-icons/md"
 import { FaMoneyBillWave } from 'react-icons/fa'
 import { marcas, materiais, cores, precos } from "../../assets/data/FormatData"
 import { IRaquete } from "../../Types"
+import { FormatPrice } from "../../Utils"
 export const RaquetesPage = () => {
+  const [value, setValue] = useState('')
   const [marcaValue, setMarcaValue] = useState('')
   const [materialValue, setMaterialValue] = useState('')
   const [corValue, setCorValue] = useState('')
@@ -18,25 +20,43 @@ export const RaquetesPage = () => {
   const handleChange = (e: any) => {
     setCardFormat(e.target.value as string)
   }
-  
+
   const trigger = useScrollTrigger({
     target: window ? window : undefined,
     disableHysteresis: true,
     threshold: 100,
   })
-  
+
   const produtos = Data?.map(item => item)
   const [arraySelected, setArraySelected] = useState<IRaquete[]>(produtos)
-  
-  let selectedMarca = Data?.filter(item => item.role.category === marcaValue)
-  let selectedMaterial = Data?.filter(item => item.material[0] === materialValue)
-  useEffect(() => {
-      if(marcaValue !== '' ){
-        setArraySelected(selectedMarca )
-      }
-  }, [marcaValue, materialValue])
 
-  console.log( );
+  
+  
+  
+  useEffect(() => {
+    let selectedMarca = Data.filter(function (item) {
+  
+      let arrayFinal 
+
+      
+      item.role.category === value 
+      ? arrayFinal = item
+      : item.material[0] === value || item.material[1]=== value 
+      ? arrayFinal = item
+      : item.color[0] === value || item.color[1]=== value || item.color[2]=== value
+      ? arrayFinal = item
+      : (FormatPrice(item.price.sale) === value)
+      ? arrayFinal = item
+      : value === '' 
+      ? arrayFinal = item : ''
+      return arrayFinal
+    })
+    
+    setArraySelected(selectedMarca)
+    console.log(precoValue);
+    
+  }, [marcaValue, materialValue, corValue, precoValue])
+
 
 
 
@@ -103,6 +123,8 @@ export const RaquetesPage = () => {
               xs={3}
               md={2}>
               <Filter
+                setGlobalValue={setValue}
+                globalValue={value}
                 label='marca'
                 value={marcaValue}
                 setValue={setMarcaValue}
@@ -115,6 +137,8 @@ export const RaquetesPage = () => {
               xs={3}
               md={4}>
               <Filter
+                setGlobalValue={setValue}
+                globalValue={value}
                 label='material'
                 value={materialValue}
                 setValue={setMaterialValue}
@@ -127,6 +151,8 @@ export const RaquetesPage = () => {
               xs={3}
               md={4}>
               <Filter
+                setGlobalValue={setValue}
+                globalValue={value}
                 label='cor'
                 value={corValue}
                 setValue={setCorValue}
@@ -139,6 +165,8 @@ export const RaquetesPage = () => {
               xs={3}
               md={2}>
               <Filter
+                setGlobalValue={setValue}
+                globalValue={value}
                 label='preço'
                 value={precoValue}
                 setValue={setPrecoValue}
@@ -171,7 +199,7 @@ export const RaquetesPage = () => {
             </Grid>
           </Grid>
           {
-            arraySelected?.map((item, index) => (
+            arraySelected.map((item, index) => (
               <Grid
                 key={index}
                 item
@@ -190,7 +218,7 @@ export const RaquetesPage = () => {
               </Grid>
             ))
           }
-          
+
           {/* {
             Data.map(
               (

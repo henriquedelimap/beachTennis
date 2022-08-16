@@ -11,11 +11,14 @@ interface Props {
     setValue: Dispatch<SetStateAction<string>>
     itensToFilter: string[]
     label: string
+    setGlobalValue: Dispatch<SetStateAction<string>>
+    globalValue: string
 }
 export const Filter = (props: Props) => {
-    const { value, setValue, itensToFilter, label } = props
+    const { value, setValue, itensToFilter, label, setGlobalValue, globalValue } = props
 
     const handleChange = (event: any) => {
+        setGlobalValue(event.target.value as string)
         setValue(event.target.value as string);        
     };
 
@@ -25,7 +28,7 @@ export const Filter = (props: Props) => {
             <Select
                 labelId={`select-${label}`}
                 id={`select-${label}`}
-                value={value}
+                value={value === globalValue ? value : ''}
                 label={label}
                 onChange={handleChange}
             >
