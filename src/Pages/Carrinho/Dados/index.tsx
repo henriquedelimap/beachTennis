@@ -81,7 +81,7 @@ export const FormularioCarrinho = () => {
                             </Button>
                         }
                     />
-                    <MyFormHelperText helperFocused='insira seu cep' helper='00.000-000' />
+                    <MyFormHelperText helperFocused='insira seu cep sem ponto e sem traço' helper='00 000 000' />
                 </FormControl>
             </Stack>
 
