@@ -31,7 +31,7 @@ export const useCarrinhoContext = () => {
         const temOProduto = carrinho.some(itemCarrinho => itemCarrinho.id === novoProduto.id)
 
         // enqueueSnackbar(`${novoProduto.title.toLowerCase()}  foi adicionado ao carrinho`,  { variant: 'success', preventDuplicate: true })
-        enqueueSnackbar(`${carrinho.map(itemCarrinho => itemCarrinho.id)}  foi adicionado ao carrinho`, { variant: 'success', preventDuplicate: true })
+        enqueueSnackbar(`${novoProduto.title}  foi adicionado ao carrinho`, { variant: 'success', preventDuplicate: true })
 
         if (!temOProduto) {
             novoProduto.quantity = 1
