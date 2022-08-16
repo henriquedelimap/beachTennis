@@ -16,7 +16,7 @@ interface Props {
     children: ReactElement;
 }
 
-function HideOnScroll(props: Props) {
+export function HideOnScroll(props: Props) {
     const { children, window } = props;
     const trigger = useScrollTrigger({
         target: window ? window() : undefined,

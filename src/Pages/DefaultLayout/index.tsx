@@ -1,5 +1,5 @@
 import { Banner } from '../../components/Banner'
-import { Header } from '../../components/AppBar'
+import { Header, HideOnScroll } from '../../components/AppBar'
 import { FloatingButton } from '../../components/FloatingButton'
 import { Beneficios } from '../../components/Beneficio'
 import { Data } from '../../assets/data'
@@ -28,7 +28,7 @@ export const DefaultLayout = (
             <Paper elevation={12} sx={{ position: 'relative', zIndex: '1', borderRadius: '0' }}>
                 <FloatingButton disappear={disappear} />
                 <Header buttonBack={buttonBack} cart={cart} />
-                {noBanner ? '' : <Banner />}
+                    {noBanner ? '' : <Banner />}
                 <Box sx={{ background: 'white', borderRadius: '0', p:{xs: 1, md: 4, lg: 4 } }} >
                     <Outlet />
                 </Box>

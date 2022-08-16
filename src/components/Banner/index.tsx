@@ -5,46 +5,49 @@ import { Fundo } from "../../styles"
 import { banner1, banner2, banner3, banner4 } from "../../assets/img"
 
 import { AppearEffect } from '../Animation'
+import { HideOnScroll } from "../AppBar"
 export const Banner = () => {
     const images = [banner1, banner2, banner3, banner4]
     return (
-        <Box>
-            <Paper elevation={0}>
-                <Carousel
-                    navButtonsProps={{
-                        style: {
-                            display: 'none',
-                            backgroundColor: 'transparent',
-                            borderRadius: 0
-                        }
-                    }}
-                    navButtonsWrapperProps={{
-                        style: {
-                            display: 'none',
+        <HideOnScroll>
+            <Box>
+                <Paper elevation={0}>
+                    <Carousel
+                        navButtonsProps={{
+                            style: {
+                                display: 'none',
+                                backgroundColor: 'transparent',
+                                borderRadius: 0
+                            }
+                        }}
+                        navButtonsWrapperProps={{
+                            style: {
+                                display: 'none',
 
-                            bottom: '0',
-                            top: 'unset',
-                            boxShadow: 'none'
+                                bottom: '0',
+                                top: 'unset',
+                                boxShadow: 'none'
+                            }
+                        }}
+                        indicatorIconButtonProps={{
+                            style: {
+                                display: 'none',
+                                padding: '0',
+                                color: 'transparent'
+                            }
+                        }}
+                    >
+                        {
+                            images.map((image, index) => (
+                                <Stack key={index} alignItems='center'  >
+                                    <img style={{ maxWidth: '100%', minWidth: '64rem', minHeight: '25rem' }} src={image} />
+                                </Stack>
+                            ))
                         }
-                    }}
-                    indicatorIconButtonProps={{
-                        style: {
-                            display: 'none',
-                            padding: '0',
-                            color: 'transparent'
-                        }
-                    }}
-                >
-                    {
-                        images.map((image, index) => (
-                            <Stack key={index} alignItems='center'  >
-                                <img style={{ maxWidth: '100%', minWidth: '64rem', minHeight: '25rem' }} src={image} />
-                            </Stack>
-                        ))
-                    }
-                </Carousel>
-            </Paper>
-        </Box>
+                    </Carousel>
+                </Paper>
+            </Box>
+        </HideOnScroll>
     )
 }
 
@@ -83,7 +86,7 @@ export const BannerGlass = (prop: Prop) => {
                 }}
                 alignItems='center'
                 justifyContent='center'
-                >
+            >
                 <Box sx={{
                     position: 'absolute',
                     width: '100%',
@@ -111,7 +114,7 @@ export const BannerGlass = (prop: Prop) => {
                     {description}
 
                 </Typography>
-                    
+
                 <Btn
                     size={18}
                     color={'#f1f1f11f'}
