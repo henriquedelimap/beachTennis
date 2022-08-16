@@ -104,7 +104,7 @@ export const FormularioCarrinho = () => {
 
             <Box sx={{ bgcolor: 'transparent', width: '100%', height: 75 }}>
 
-                <Button href={link} type='submit' sx={{ p: 3.2, width: '100%', borderRadius: 0 }}>
+                <Button  type='submit' sx={{ p: 3.2, width: '100%', borderRadius: 0 }}>
                     <Typography>finalizar pedido</Typography>
                 </Button>
             </Box>
